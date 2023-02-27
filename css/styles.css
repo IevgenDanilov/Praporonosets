@@ -145,7 +145,8 @@ img {
   font-size: 26px;
   line-height: 1.17;
   text-decoration: none;
-  margin: 0 95px 0 0;
+  /* margin: 0 95px 0 0; */
+  margin: 0;
   padding: 25px 0 25px 0;
   /* outline: 2px solid tomato; */
 }
@@ -171,9 +172,16 @@ img {
   color: var(--accent-color);
 }
 
+.nav {
+  display: flex;
+  flex-grow: 1;
+}
+
 .site-nav {
   display: flex;
-  margin: auto 0;
+  flex-grow: 1;
+  justify-content: center;
+  /* margin: auto 0; */
 }
 
 .site-nav .link.current {
@@ -212,7 +220,8 @@ img {
 .hero {
   background-image: url('../images1/bg-flags.jpg');
 
-  background-size: 1300px;
+  background-size: 1300px 700px;
+
   background-position: center;
   background-repeat: no-repeat;
   padding-bottom: 200px;
