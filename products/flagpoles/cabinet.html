@@ -11,6 +11,7 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css" />
   <link rel="stylesheet" href="../../css/styles.css" />
+  <link rel="stylesheet" href="../../css/products.css" />
 </head>
 
 <body>
@@ -37,104 +38,104 @@
     </div>
   </header>
 
-  <main class="section">
+  <main class="">
     <!-- <h1>Список проектов портфолио</h1> -->
 
-    <section>
+
+    <section class="section products">
       <div class="container">
         <!-- Фильтр проектов -->
-        <p>СЛАЙДЕРИ</p>
-        <ul class="filter flex list">
+        <ul id="myBtnContainer" class="filter flex list">
           <li>
-            <button type="button" class="button secondary">Комплект</button>
+            <button type="button" class="button secondary active" onclick="filterSelection('all')">Усі</button>
           </li>
           <li>
-            <button type="button" class="button secondary">Підставка</button>
+            <button type="button" class="button secondary" onclick="filterSelection('sets')">Комплекти</button>
           </li>
           <li>
-            <button type="button" class="button secondary">Древко</button>
+            <button type="button" class="button secondary" onclick="filterSelection('stands')">Підставки</button>
           </li>
           <li>
-            <button type="button" class="button secondary">Навершя</button>
+            <button type="button" class="button secondary" onclick="filterSelection('poles')">Древка</button>
+          </li>
+          <li>
+            <button type="button" class="button secondary" onclick="filterSelection('pommel')">Навершя</button>
           </li>
         </ul>
 
         <!-- Список проектов -->
+        <div>
+          <ul class="products-list list">
+            <li class="products-item stands">
+              <a href=""><img src="../../images/products/premium_1.jpg" alt="Підставка для прапору" width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка 1-місна, золото</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <!-- <p>Колір: горіх, редвуд, вільха</p> -->
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <a href=""><img src="../../images/products/premium_2.jpg" alt="Підставка для прапору" width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка 2-місна, золото</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <!-- <p>Колір: горіх, редвуд, вільха</p> -->
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <a href=""><img src="../../images/products/premium_3.jpg" alt="Підставка для прапору" width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка 3-місна, золото</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <!-- <p>Колір: горіх, редвуд, вільха</p> -->
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <a href=""><img src="../../images/products/classic_1.jpg" alt="Підставка для прапору" width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка 1-місна, хром]</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <!-- <p>Колір: горіх, редвуд, вільха</p> -->
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <a href=""><img src="../../images/products/classic_2.jpg" alt="Підставка для прапору" width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка 2-місна, хром</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <!-- <p>Колір: горіх, редвуд, вільха</p> -->
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <a href=""><img src="../../images/products/classic_3.jpg" alt="Підставка для прапору" width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка 3-місна, хром</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <!-- <p>Колір: горіх, редвуд, вільха</p> -->
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
 
-        <ul class="projects list">
-          <li class="projects-item">
-            <a href=""><img src="../../images/products/premium_1_oak.jpg" alt="Підставка для прапору" width="200" />
-              <div class="projects-item-description">
-                <p>Підставка PREMIUM 1</p>
-                <p>Підставка</p>
-              </div>
-            </a>
-          </li>
-          <li class="projects-item">
-            <a href=""><img src="../../images/products/premium_1_oak.jpg" alt="Підставка для прапору" width="200" />
-              <div class="projects-item-description">
-                <p>Підставка PREMIUM 1</p>
-                <p>Підставка</p>
-              </div>
-            </a>
-          </li>
-          <li class="projects-item">
-            <a href=""><img src="../../images/products/premium_1_oak.jpg" alt="Підставка для прапору" width="200" />
-              <div class="projects-item-description">
-                <p>Підставка PREMIUM 1</p>
-                <p>Підставка</p>
-              </div>
-            </a>
-          </li>
-          <li class="projects-item">
-            <a href=""><img src="../../images/products/premium_1_oak.jpg" alt="Підставка для прапору" width="200" />
-              <div class="projects-item-description">
-                <p>Підставка PREMIUM 1</p>
-                <p>Підставка</p>
-              </div>
-            </a>
-          </li>
-          <li class="projects-item">
-            <a href=""><img src="../../images/products/premium_1_oak.jpg" alt="Підставка для прапору" width="200" />
-              <div class="projects-item-description">
-                <p>Підставка PREMIUM 1</p>
-                <p>Підставка</p>
-              </div>
-            </a>
-          </li>
-          <li class="projects-item">
-            <a href=""><img src="../../images/products/premium_1_oak.jpg" alt="Підставка для прапору" width="200" />
-              <div class="projects-item-description">
-                <p>Підставка PREMIUM 1</p>
-                <p>Підставка</p>
-              </div>
-            </a>
-          </li>
-          <li class="projects-item">
-            <a href=""><img src="../../images/products/premium_1_oak.jpg" alt="Підставка для прапору" width="200" />
-              <div class="projects-item-description">
-                <p>Підставка PREMIUM 1</p>
-                <p>Підставка</p>
-              </div>
-            </a>
-          </li>
-          <li class="projects-item">
-            <a href=""><img src="../../images/products/premium_1_oak.jpg" alt="Підставка для прапору" width="200" />
-              <div class="projects-item-description">
-                <p>Підставка PREMIUM 1</p>
-                <p>Підставка</p>
-              </div>
-            </a>
-          </li>
-          <li class="projects-item">
-            <a href=""><img src="../../images/products/premium_1_oak.jpg" alt="Підставка для прапору" width="200" />
-              <div class="projects-item-description">
-                <p>Підставка PREMIUM 1</p>
-                <p>Підставка</p>
-              </div>
-            </a>
-          </li>
-        </ul>
+          </ul>
+        </div>
+
       </div>
     </section>
   </main>
@@ -197,6 +198,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="../../js/filterProducts.js"></script>
 </body>
 
 </html>

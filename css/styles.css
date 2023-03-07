@@ -1,5 +1,6 @@
 :root {
   --accent-color: #f37521;
+  --secondary-accent-color: #366b39;
   --primary-white-color: #ffffff;
   --primary-text-color: #212121;
   --secondary-text-color: #757575;
@@ -100,9 +101,9 @@ img {
 }
 
 .button.secondary {
+  /* border: solid white 3px; */
   color: var(--primary-text-color);
   background-color: var(--special-background-color);
-  /* background-color: transparent; */
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -113,6 +114,8 @@ img {
   letter-spacing: 0.03em;
   border-radius: 4px;
   min-width: 75px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .button.secondary:hover,
@@ -352,10 +355,8 @@ img {
   background-color: #fff;
   margin: 0;
   padding: 10px;
-  display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
   margin-left: 20px;
   margin-top: 20px;
   flex-basis: calc((100% - 120px) / 6);
@@ -450,10 +451,6 @@ img {
   flex-basis: calc((100% - 40px) / 4);
 
   /* align-content: space-between; */
-}
-
-.show {
-  display: block;
 }
 
 .projects-item-description {
@@ -608,3 +605,7 @@ h4 {
 }
 
 /* ============== END FOOTER ============== */
+
+.show {
+  display: block;
+}
