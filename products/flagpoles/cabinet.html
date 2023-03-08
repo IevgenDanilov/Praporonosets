@@ -19,7 +19,7 @@
   <header class="page-header">
     <div class="container flex">
       <nav class="nav flex">
-        <a href="../../index.html" class="top-logo logo">
+        <a href="../index.html" class="top-logo logo">
           <span class="accent">Прапори </span>& Символи
         </a>
 
@@ -39,12 +39,12 @@
   </header>
 
   <main class="">
-    <!-- <h1>Список проектов портфолио</h1> -->
+    <!-- <h1>Список продуктов портфолио</h1> -->
 
 
     <section class="section products">
       <div class="container">
-        <!-- Фильтр проектов -->
+        <!-- Фильтр продуктов -->
         <ul id="myBtnContainer" class="filter flex list">
           <li>
             <button type="button" class="button secondary active" onclick="filterSelection('all')">Усі</button>
@@ -59,75 +59,221 @@
             <button type="button" class="button secondary" onclick="filterSelection('poles')">Древка</button>
           </li>
           <li>
-            <button type="button" class="button secondary" onclick="filterSelection('pommel')">Навершя</button>
+            <button type="button" class="button secondary" onclick="filterSelection('pommels')">Навершя</button>
+          </li>
+          <li>
+            <button type="button" class="button secondary" onclick="filterSelection('favorites')"><svg width="28"
+                height="28" style="fill:#c0392b">
+                <use href="../../images/icons.svg#icon-heart"></use>
+              </svg></button>
           </li>
         </ul>
 
-        <!-- Список проектов -->
+        <!-- Список продуктов -->
         <div>
           <ul class="products-list list">
-            <li class="products-item stands">
-              <a href=""><img src="../../images/products/premium_1.jpg" alt="Підставка для прапору" width="150" />
+            <li class="products-item stands favorites">
+              <div style="display: flex; justify-content:space-between; font-size: 20px;">
+                <!-- <button>❤️</button><button>🛒</button> -->
+                <button id="heart1" class="heart" style="background: transparent; border: none;"
+                  onclick="addToFavorites('heart1')"><svg width="24" height="24">
+                    <use href="../../images/icons.svg#icon-heart"></use>
+                  </svg></button>
+                <button id="cart1" class="cart" style="background: transparent; border: none;" onclick=""><svg
+                    width="24" height="24">
+                    <use href="../../images/icons.svg#icon-cart"></use>
+                  </svg></button>
+                <!-- <button>🛒</button> -->
+              </div>
+              <a href=""><img src="../../images/products/stands/column.jpg" alt="Підставка для прапору" width="150" />
                 <div class="products-item-description">
-                  <h4>Підставка 1-місна, золото</h4>
-                  <p>горіх, редвуд, вільха</p>
-                  <p>ДхШхВ: 400х400х300</p>
-                  <!-- <p>Колір: горіх, редвуд, вільха</p> -->
+                  <h4>Тумба КОЛОНА універсальна</h4>
+                  <p>венге, махонь, бук</p>
+                  <p>ДхШхВ: 350х350х1000</p>
+                  <!-- <p>Колір: венге, махонь, бук</p> -->
                   <H5>3500 ₴</H5>
                 </div>
               </a>
             </li>
             <li class="products-item stands">
-              <a href=""><img src="../../images/products/premium_2.jpg" alt="Підставка для прапору" width="150" />
+              <a href=""><img src="../../images/products/stands/pyramida_1.jpg" alt="Підставка для прапору"
+                  width="150" />
                 <div class="products-item-description">
-                  <h4>Підставка 2-місна, золото</h4>
-                  <p>горіх, редвуд, вільха</p>
+                  <h4>Підставка ПІРАМІДА<br />одномісна</h4>
+                  <p>венге, махонь, бук</p>
+                  <p>ДхШхВ: 350х350х80</p>
+                  <!-- <p>Колір: венге, махонь, бук</p> -->
+                  <H5>1500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <a href=""><img src="../../images/products/stands/econom_1.jpg" alt="Підставка для прапору" width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка ЕКОНОМ <br />одномісна, хром</h4>
+                  <p>венге, махонь, бук</p>
                   <p>ДхШхВ: 400х400х300</p>
-                  <!-- <p>Колір: горіх, редвуд, вільха</p> -->
+                  <!-- <p>Колір: венге, махонь, бук</p> -->
                   <H5>3500 ₴</H5>
                 </div>
               </a>
             </li>
             <li class="products-item stands">
-              <a href=""><img src="../../images/products/premium_3.jpg" alt="Підставка для прапору" width="150" />
+              <a href=""><img src="../../images/products/stands/econom_2.jpg" alt="Підставка для прапору" width="150" />
                 <div class="products-item-description">
-                  <h4>Підставка 3-місна, золото</h4>
-                  <p>горіх, редвуд, вільха</p>
+                  <h4>Підставка ЕКОНОМ <br />двомісна, хром</h4>
+                  <p>венге, махонь, бук</p>
                   <p>ДхШхВ: 400х400х300</p>
-                  <!-- <p>Колір: горіх, редвуд, вільха</p> -->
                   <H5>3500 ₴</H5>
                 </div>
               </a>
             </li>
             <li class="products-item stands">
-              <a href=""><img src="../../images/products/classic_1.jpg" alt="Підставка для прапору" width="150" />
+              <a href=""><img src="../../images/products/stands/econom_3.jpg" alt="Підставка для прапору" width="150" />
                 <div class="products-item-description">
-                  <h4>Підставка 1-місна, хром]</h4>
+                  <h4>Підставка ЕКОНОМ <br />тримісна, хром</h4>
                   <p>горіх, редвуд, вільха</p>
                   <p>ДхШхВ: 400х400х300</p>
-                  <!-- <p>Колір: горіх, редвуд, вільха</p> -->
                   <H5>3500 ₴</H5>
                 </div>
               </a>
             </li>
             <li class="products-item stands">
-              <a href=""><img src="../../images/products/classic_2.jpg" alt="Підставка для прапору" width="150" />
+              <a href=""><img src="../../images/products/stands/wood_1.jpg" alt="Підставка для прапору" width="150" />
                 <div class="products-item-description">
-                  <h4>Підставка 2-місна, хром</h4>
+                  <h4>Підставка ПРЕСТИЖ <br />одномісна</h4>
+                  <p>венге, махонь, бук</p>
+                  <p>ДхШхВ: 400х400х150</p>
+                  <!-- <p>Колір: венге, махонь, бук</p> -->
+                  <H5>2000 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <a href=""><img src="../../images/products/stands/classic_1.jpg" alt="Підставка для прапору"
+                  width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка КЛАСИК <br />одномісна, хром</h4>
                   <p>горіх, редвуд, вільха</p>
                   <p>ДхШхВ: 400х400х300</p>
-                  <!-- <p>Колір: горіх, редвуд, вільха</p> -->
                   <H5>3500 ₴</H5>
                 </div>
               </a>
             </li>
             <li class="products-item stands">
-              <a href=""><img src="../../images/products/classic_3.jpg" alt="Підставка для прапору" width="150" />
+              <a href=""><img src="../../images/products/stands/classic_2.jpg" alt="Підставка для прапору"
+                  width="150" />
                 <div class="products-item-description">
-                  <h4>Підставка 3-місна, хром</h4>
+                  <h4>Підставка КЛАСИК <br />двомісна, хром</h4>
                   <p>горіх, редвуд, вільха</p>
                   <p>ДхШхВ: 400х400х300</p>
-                  <!-- <p>Колір: горіх, редвуд, вільха</p> -->
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <a href=""><img src="../../images/products/stands/classic_3.jpg" alt="Підставка для прапору"
+                  width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка КЛАСИК <br />тримісна, хром</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <a href=""><img src="../../images/products/stands/premium_1.jpg" alt="Підставка для прапору"
+                  width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка ПРЕМІУМ <br />одномісна, золото</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <a href=""><img src="../../images/products/stands/premium_2.jpg" alt="Підставка для прапору"
+                  width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка ПРЕМІУМ <br />двомісна, золото</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <a href=""><img src="../../images/products/stands/premium_3.jpg" alt="Підставка для прапору"
+                  width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка ПРЕМІУМ <br />тримісна, золото</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <a href=""><img src="../../images/products/stands/eternal_1.jpg" alt="Підставка для прапору"
+                  width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка ВІЧНІСТЬ <br />одномісна, нержавійка</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <a href=""><img src="../../images/products/stands/eternal_2.jpg" alt="Підставка для прапору"
+                  width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка ВІЧНІСТЬ <br />двомісна, нержавійка</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <a href=""><img src="../../images/products/stands/eternal_3.jpg" alt="Підставка для прапору"
+                  width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка ВІЧНІСТЬ <br />тримісна, нержавійка</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <a href=""><img src="../../images/products/stands/luxury_1.jpg" alt="Підставка для прапору" width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка ДОСКОНАЛІСТЬ <br />одномісна, золото</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <a href=""><img src="../../images/products/stands/luxury_2.jpg" alt="Підставка для прапору" width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка ДОСКОНАЛІСТЬ <br />двомісна, золото</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <a href=""><img src="../../images/products/stands/luxury_3.jpg" alt="Підставка для прапору" width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка ДОСКОНАЛІСТЬ <br />тримісна, золото</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
                   <H5>3500 ₴</H5>
                 </div>
               </a>
@@ -161,7 +307,7 @@
       </div>
 
       <div class="invite">
-        <p class="invite-text">Долучайтесь до наших <span class="accent">каналів</span></p>
+        <p class="invite-text">Долучайтесь до наших <button class="accent">каналів</button></p>
         <ul class="social-list list">
           <li class="social-list-item">
             <a href="" class="social-list-footer-link">
@@ -200,6 +346,7 @@
   </footer>
 
   <script src="../../js/filterProducts.js"></script>
+  <script src="../../js/favorites.js"></script>
 </body>
 
 </html>

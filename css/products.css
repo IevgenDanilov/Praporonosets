@@ -30,7 +30,7 @@
   display: none;
   background-color: #fff;
   margin: 0;
-  padding: 10px 15px;
+  padding: 10px;
   flex-direction: column;
   align-items: center;
   margin-left: 20px;
@@ -48,14 +48,14 @@
 .products-item h4 {
   color: var(--title-text-color);
   font-weight: 500;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 1.2;
   margin: 5px auto;
 }
 .products-item h5 {
   color: var(--title-text-color);
   font-weight: 500;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.2;
   margin: 5px auto;
 }
@@ -67,7 +67,7 @@
 .products-item p {
   text-align: center;
   color: var(--secondary-text-color);
-  font-size: 12px;
+  font-size: 11px;
   line-height: 1.6;
   /* margin: 0 6px; */
 }
@@ -76,4 +76,29 @@
 
 .show {
   display: block;
+}
+
+.heart {
+  stroke: var(--secondary-background-color);
+  fill: var(--primary-white-color);
+}
+
+.heart:hover {
+  stroke: #c0392b;
+  fill: #c0392b;
+}
+
+.cart {
+  stroke: var(--secondary-background-color);
+  fill: var(--primary-white-color);
+}
+
+.cart:hover {
+  stroke: var(--secondary-accent-color);
+  fill: var(--secondary-accent-color);
+}
+
+.chosen {
+  stroke: #c0392b;
+  fill: #c0392b;
 }
