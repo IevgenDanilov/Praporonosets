@@ -34,8 +34,33 @@ function addToFavorites(id) {
       } else {
         item.classList.remove('favorites');
       }
-      console.log('chosen', chosen);
-      console.log('item', item);
     }
   }
+
+  let favorites = document.getElementsByClassName('favorites');
+  let domElements = [];
+
+  for (const key in favorites) {
+    if (Object.hasOwnProperty.call(favorites, key)) {
+      const element = favorites[key];
+      domElements.push(element.innerHTML);
+    }
+  }
+
+  // let data = domElements.join('<!-- NEXT DOM ELEMENT -->');
+  // window.localStorage.setItem('favorites', data);
+
+  let prew = JSON.parse(window.localStorage.getItem('favorites')) || [];
+  let Arr = [...prew, ...domElements];
+  let uniqArr = Arr.filter((el, ind) => ind === Arr.indexOf(el));
+
+  window.localStorage.setItem('favorites', JSON.stringify(uniqArr));
+
+  // .trim(',')
+
+  // let localStorage1 = window.localStorage.getItem('favorites');
+  // console.log('localStorage1:', localStorage1);
+
+  // var cart = document.getElementById('cart');
+  // cart.innerHTML = JSON.parse(window.localStorage.getItem('favorites'));
 }

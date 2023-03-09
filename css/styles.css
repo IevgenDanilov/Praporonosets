@@ -172,7 +172,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
-  margin-right: 50px;
+  /* margin-right: 50px; */
 }
 
 .site-nav .link:hover,
@@ -188,7 +188,7 @@ img {
 .site-nav {
   display: flex;
   flex-grow: 1;
-  justify-content: center;
+  justify-content: space-around;
   /* margin: auto 0; */
 }
 
@@ -204,8 +204,9 @@ img {
   letter-spacing: 0.02em;
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
-  margin-left: auto;
+  align-items: baseline;
+  /* justify-content: space-around; */
+  /* margin-left: auto; */
 }
 
 .auth-nav .button {
