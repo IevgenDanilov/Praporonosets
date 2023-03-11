@@ -38,23 +38,25 @@ function addToFavorites(id) {
   }
 
   let favorites = document.getElementsByClassName('favorites');
-  let domElements = [];
+  let domElements = JSON.parse(window.localStorage.getItem('favorites')) || [];
 
   for (const key in favorites) {
     if (Object.hasOwnProperty.call(favorites, key)) {
       const element = favorites[key];
-      domElements.push(element.innerHTML);
+      // console.log('element', element);
+      domElements.push('class="products-item"' + element.innerHTML + '</li>');
     }
   }
 
   // let data = domElements.join('<!-- NEXT DOM ELEMENT -->');
   // window.localStorage.setItem('favorites', data);
 
-  let prew = JSON.parse(window.localStorage.getItem('favorites')) || [];
-  let Arr = [...prew, ...domElements];
-  let uniqArr = Arr.filter((el, ind) => ind === Arr.indexOf(el));
+  // let prew = JSON.parse(window.localStorage.getItem('favorites')) || [];
+  // let Arr = [...prew, ...domElements];
+  let uniqArr = domElements.filter((el, ind) => ind === domElements.indexOf(el));
 
   window.localStorage.setItem('favorites', JSON.stringify(uniqArr));
+  // window.localStorage.setItem('favorites', JSON.stringify(null));
 
   // .trim(',')
 
