@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Портфоліо</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css" />
+  <link rel="stylesheet" href="../../css/styles.css" />
+  <link rel="stylesheet" href="../../css/products.css" />
+</head>
+
+<body>
+
+  <!-- Шапка сайта -->
+  <header class="page-header">
+    <div class="container flex">
+      <nav class="nav flex">
+        <a href="../../index.html" class="top-logo logo">
+          <span class="accent">Прапори </span>& Символи
+        </a>
+
+        <ul class="site-nav list">
+          <li><a href="../../index.html" class="link">Про нас</a></li>
+          <li><a href="../../portfolio.html" class="link">Портфоліо</a></li>
+          <li><a href="../../shop.html" class="link">Магазин</a></li>
+          <li>
+            <a href="../../favorites.html" class="link"><svg width="24" height="24"
+                style="fill:#c0392b; margin: 0 10px">
+                <use href="../../images/icons.svg#icon-heart"></use>
+              </svg></a>
+            <span data-modal-open>
+              <svg width="24" height="24" style="fill: var(--secondary-accent-color); margin: 0 10px">
+                <use href="../../images/icons.svg#icon-cart"></use>
+              </svg></span>
+          </li>
+
+          <!-- <li><a href="" class="link">Контакты</a></li> -->
+        </ul>
+      </nav>
+
+      <ul class="auth-nav list">
+        <li><a href="mailto:pp_danilov@ukr.net" class="button">pp_danilov@ukr.net</a></li>
+        <li><a href="tel:+380667700520" class="button">+380 66 770 05 20</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="">
+    <!-- <h1>Список продуктов портфолио</h1> -->
+
+
+    <section class="section products">
+      <div class="container">
+        <!-- Фильтр продуктов -->
+        <ul id="myBtnContainer" class="filter flex list">
+          <li>
+            <button type="button" class="button secondary active" onclick="filterSelection('all')">Усі</button>
+          </li>
+          <li>
+            <button type="button" class="button secondary" onclick="filterSelection('sets')">Комплекти</button>
+          </li>
+          <li>
+            <button type="button" class="button secondary" onclick="filterSelection('stands')">Підставки</button>
+          </li>
+          <li>
+            <button type="button" class="button secondary" onclick="filterSelection('poles')">Древка</button>
+          </li>
+          <li>
+            <button type="button" class="button secondary" onclick="filterSelection('pommels')">Навершя</button>
+          </li>
+          <li>
+            <button type="button" class="button secondary" onclick="filterSelection('favorites')"><svg width="28"
+                height="28" style="fill:#c0392b">
+                <use href="../../images/icons.svg#icon-heart"></use>
+              </svg></button>
+          </li>
+        </ul>
+
+        <!-- Список продуктов -->
+        <div>
+          <ul class="products-list list">
+            <li class="products-item stands">
+              <div style="display: flex; justify-content:space-between; font-size: 20px;">
+                <button id="heart1" class="heart" style="background: transparent; border: none;"
+                  onclick="addToFavorites('heart1')"><svg width="24" height="24">
+                    <use href="../../images/icons.svg#icon-heart"></use>
+                  </svg></button>
+                <button id="cart1" class="cart" style="background: transparent; border: none;" onclick=""><svg
+                    width="24" height="24">
+                    <use href="../../images/icons.svg#icon-cart"></use>
+                  </svg></button>
+              </div>
+              <img src="../../images/products/stands/column.jpg" alt="Підставка для прапору" width="150" />
+              <div class="products-item-description">
+                <h4>Тумба КОЛОНА універсальна</h4>
+                <p>венге, махонь, бук</p>
+                <p>ДхШхВ: 350х350х1000</p>
+                <!-- <p>Колір: венге, махонь, бук</p> -->
+                <H5>3500 ₴</H5>
+              </div>
+
+            </li>
+            <li class="products-item stands">
+              <div style="display: flex; justify-content:space-between; font-size: 20px;">
+                <button id="heart2" class="heart" style="background: transparent; border: none;"
+                  onclick="addToFavorites('heart2')"><svg width="24" height="24">
+                    <use href="../../images/icons.svg#icon-heart"></use>
+                  </svg></button>
+                <button id="cart2" class="cart" style="background: transparent; border: none;" onclick=""><svg
+                    width="24" height="24">
+                    <use href="../../images/icons.svg#icon-cart"></use>
+                  </svg></button>
+              </div>
+              <a href=""><img src="../../images/products/stands/pyramida_1.jpg" alt="Підставка для прапору"
+                  width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка ПІРАМІДА<br />одномісна</h4>
+                  <p>венге, махонь, бук</p>
+                  <p>ДхШхВ: 350х350х80</p>
+                  <!-- <p>Колір: венге, махонь, бук</p> -->
+                  <H5>1500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <div style="display: flex; justify-content:space-between; font-size: 20px;">
+                <button id="heart3" class="heart" style="background: transparent; border: none;"
+                  onclick="addToFavorites('heart3')"><svg width="24" height="24">
+                    <use href="../../images/icons.svg#icon-heart"></use>
+                  </svg></button>
+                <button id="cart3" class="cart" style="background: transparent; border: none;" onclick=""><svg
+                    width="24" height="24">
+                    <use href="../../images/icons.svg#icon-cart"></use>
+                  </svg></button>
+              </div>
+              <a href=""><img src="../../images/products/stands/econom_1.jpg" alt="Підставка для прапору" width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка ЕКОНОМ <br />одномісна, хром</h4>
+                  <p>венге, махонь, бук</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <!-- <p>Колір: венге, махонь, бук</p> -->
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <div style="display: flex; justify-content:space-between; font-size: 20px;">
+                <button id="heart4" class="heart" style="background: transparent; border: none;"
+                  onclick="addToFavorites('heart4')"><svg width="24" height="24">
+                    <use href="../../images/icons.svg#icon-heart"></use>
+                  </svg></button>
+                <button id="cart4" class="cart" style="background: transparent; border: none;" onclick=""><svg
+                    width="24" height="24">
+                    <use href="../../images/icons.svg#icon-cart"></use>
+                  </svg></button>
+              </div>
+              <a href=""><img src="../../images/products/stands/econom_2.jpg" alt="Підставка для прапору" width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка ЕКОНОМ <br />двомісна, хром</h4>
+                  <p>венге, махонь, бук</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <div style="display: flex; justify-content:space-between; font-size: 20px;">
+                <button id="heart5" class="heart" style="background: transparent; border: none;"
+                  onclick="addToFavorites('heart5')"><svg width="24" height="24">
+                    <use href="../../images/icons.svg#icon-heart"></use>
+                  </svg></button>
+                <button id="cart5" class="cart" style="background: transparent; border: none;" onclick=""><svg
+                    width="24" height="24">
+                    <use href="../../images/icons.svg#icon-cart"></use>
+                  </svg></button>
+              </div>
+              <a href=""><img src="../../images/products/stands/econom_3.jpg" alt="Підставка для прапору" width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка ЕКОНОМ <br />тримісна, хром</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <div style="display: flex; justify-content:space-between; font-size: 20px;">
+                <button id="heart6" class="heart" style="background: transparent; border: none;"
+                  onclick="addToFavorites('heart6')"><svg width="24" height="24">
+                    <use href="../../images/icons.svg#icon-heart"></use>
+                  </svg></button>
+                <button id="cart6" class="cart" style="background: transparent; border: none;" onclick=""><svg
+                    width="24" height="24">
+                    <use href="../../images/icons.svg#icon-cart"></use>
+                  </svg></button>
+              </div>
+              <a href=""><img src="../../images/products/stands/wood_1.jpg" alt="Підставка для прапору" width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка ПРЕСТИЖ <br />одномісна</h4>
+                  <p>венге, махонь, бук</p>
+                  <p>ДхШхВ: 400х400х150</p>
+                  <!-- <p>Колір: венге, махонь, бук</p> -->
+                  <H5>2000 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <div style="display: flex; justify-content:space-between; font-size: 20px;">
+                <button id="heart7" class="heart" style="background: transparent; border: none;"
+                  onclick="addToFavorites('heart7')"><svg width="24" height="24">
+                    <use href="../../images/icons.svg#icon-heart"></use>
+                  </svg></button>
+                <button id="cart7" class="cart" style="background: transparent; border: none;" onclick=""><svg
+                    width="24" height="24">
+                    <use href="../../images/icons.svg#icon-cart"></use>
+                  </svg></button>
+              </div>
+              <a href=""><img src="../../images/products/stands/classic_1.jpg" alt="Підставка для прапору"
+                  width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка КЛАСИК <br />одномісна, хром</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <div style="display: flex; justify-content:space-between; font-size: 20px;">
+                <button id="heart8" class="heart" style="background: transparent; border: none;"
+                  onclick="addToFavorites('heart8')"><svg width="24" height="24">
+                    <use href="../../images/icons.svg#icon-heart"></use>
+                  </svg></button>
+                <button id="cart8" class="cart" style="background: transparent; border: none;" onclick=""><svg
+                    width="24" height="24">
+                    <use href="../../images/icons.svg#icon-cart"></use>
+                  </svg></button>
+              </div>
+              <a href=""><img src="../../images/products/stands/classic_2.jpg" alt="Підставка для прапору"
+                  width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка КЛАСИК <br />двомісна, хром</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <div style="display: flex; justify-content:space-between; font-size: 20px;">
+                <button id="heart9" class="heart" style="background: transparent; border: none;"
+                  onclick="addToFavorites('heart9')"><svg width="24" height="24">
+                    <use href="../../images/icons.svg#icon-heart"></use>
+                  </svg></button>
+                <button id="cart9" class="cart" style="background: transparent; border: none;" onclick=""><svg
+                    width="24" height="24">
+                    <use href="../../images/icons.svg#icon-cart"></use>
+                  </svg></button>
+              </div>
+              <a href=""><img src="../../images/products/stands/classic_3.jpg" alt="Підставка для прапору"
+                  width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка КЛАСИК <br />тримісна, хром</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <div style="display: flex; justify-content:space-between; font-size: 20px;">
+                <button id="heart10" class="heart" style="background: transparent; border: none;"
+                  onclick="addToFavorites('heart10')"><svg width="24" height="24">
+                    <use href="../../images/icons.svg#icon-heart"></use>
+                  </svg></button>
+                <button id="cart10" class="cart" style="background: transparent; border: none;" onclick=""><svg
+                    width="24" height="24">
+                    <use href="../../images/icons.svg#icon-cart"></use>
+                  </svg></button>
+              </div>
+              <a href=""><img src="../../images/products/stands/premium_1.jpg" alt="Підставка для прапору"
+                  width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка ПРЕМІУМ <br />одномісна, золото</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <div style="display: flex; justify-content:space-between; font-size: 20px;">
+                <button id="heart11" class="heart" style="background: transparent; border: none;"
+                  onclick="addToFavorites('heart11')"><svg width="24" height="24">
+                    <use href="../../images/icons.svg#icon-heart"></use>
+                  </svg></button>
+                <button id="cart11" class="cart" style="background: transparent; border: none;" onclick=""><svg
+                    width="24" height="24">
+                    <use href="../../images/icons.svg#icon-cart"></use>
+                  </svg></button>
+              </div>
+              <a href=""><img src="../../images/products/stands/premium_2.jpg" alt="Підставка для прапору"
+                  width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка ПРЕМІУМ <br />двомісна, золото</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <div style="display: flex; justify-content:space-between; font-size: 20px;">
+                <button id="heart12" class="heart" style="background: transparent; border: none;"
+                  onclick="addToFavorites('heart12')"><svg width="24" height="24">
+                    <use href="../../images/icons.svg#icon-heart"></use>
+                  </svg></button>
+                <button id="cart12" class="cart" style="background: transparent; border: none;" onclick=""><svg
+                    width="24" height="24">
+                    <use href="../../images/icons.svg#icon-cart"></use>
+                  </svg></button>
+              </div>
+              <a href=""><img src="../../images/products/stands/premium_3.jpg" alt="Підставка для прапору"
+                  width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка ПРЕМІУМ <br />тримісна, золото</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <div style="display: flex; justify-content:space-between; font-size: 20px;">
+                <button id="heart13" class="heart" style="background: transparent; border: none;"
+                  onclick="addToFavorites('heart13')"><svg width="24" height="24">
+                    <use href="../../images/icons.svg#icon-heart"></use>
+                  </svg></button>
+                <button id="cart13" class="cart" style="background: transparent; border: none;" onclick=""><svg
+                    width="24" height="24">
+                    <use href="../../images/icons.svg#icon-cart"></use>
+                  </svg></button>
+              </div>
+              <a href=""><img src="../../images/products/stands/eternal_1.jpg" alt="Підставка для прапору"
+                  width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка ВІЧНІСТЬ <br />одномісна, нержавійка</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <div style="display: flex; justify-content:space-between; font-size: 20px;">
+                <button id="heart14" class="heart" style="background: transparent; border: none;"
+                  onclick="addToFavorites('heart14')"><svg width="24" height="24">
+                    <use href="../../images/icons.svg#icon-heart"></use>
+                  </svg></button>
+                <button id="cart14" class="cart" style="background: transparent; border: none;" onclick=""><svg
+                    width="24" height="24">
+                    <use href="../../images/icons.svg#icon-cart"></use>
+                  </svg></button>
+              </div>
+              <a href=""><img src="../../images/products/stands/eternal_2.jpg" alt="Підставка для прапору"
+                  width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка ВІЧНІСТЬ <br />двомісна, нержавійка</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <div style="display: flex; justify-content:space-between; font-size: 20px;">
+                <button id="heart15" class="heart" style="background: transparent; border: none;"
+                  onclick="addToFavorites('heart15')"><svg width="24" height="24">
+                    <use href="../../images/icons.svg#icon-heart"></use>
+                  </svg></button>
+                <button id="cart15" class="cart" style="background: transparent; border: none;" onclick=""><svg
+                    width="24" height="24">
+                    <use href="../../images/icons.svg#icon-cart"></use>
+                  </svg></button>
+              </div>
+              <a href=""><img src="../../images/products/stands/eternal_3.jpg" alt="Підставка для прапору"
+                  width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка ВІЧНІСТЬ <br />тримісна, нержавійка</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <div style="display: flex; justify-content:space-between; font-size: 20px;">
+                <button id="heart16" class="heart" style="background: transparent; border: none;"
+                  onclick="addToFavorites('heart16')"><svg width="24" height="24">
+                    <use href="../../images/icons.svg#icon-heart"></use>
+                  </svg></button>
+                <button id="cart16" class="cart" style="background: transparent; border: none;" onclick=""><svg
+                    width="24" height="24">
+                    <use href="../../images/icons.svg#icon-cart"></use>
+                  </svg></button>
+              </div>
+              <a href=""><img src="../../images/products/stands/luxury_1.jpg" alt="Підставка для прапору" width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка ДОСКОНАЛІСТЬ <br />одномісна, золото</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <div style="display: flex; justify-content:space-between; font-size: 20px;">
+                <button id="heart17" class="heart" style="background: transparent; border: none;"
+                  onclick="addToFavorites('heart17')"><svg width="24" height="24">
+                    <use href="../../images/icons.svg#icon-heart"></use>
+                  </svg></button>
+                <button id="cart17" class="cart" style="background: transparent; border: none;" onclick=""><svg
+                    width="24" height="24">
+                    <use href="../../images/icons.svg#icon-cart"></use>
+                  </svg></button>
+              </div>
+              <a href=""><img src="../../images/products/stands/luxury_2.jpg" alt="Підставка для прапору" width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка ДОСКОНАЛІСТЬ <br />двомісна, золото</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+            <li class="products-item stands">
+              <div style="display: flex; justify-content:space-between; font-size: 20px;">
+                <button id="heart18" class="heart" style="background: transparent; border: none;"
+                  onclick="addToFavorites('heart18')"><svg width="24" height="24">
+                    <use href="../../images/icons.svg#icon-heart"></use>
+                  </svg></button>
+                <button id="cart18" class="cart" style="background: transparent; border: none;" onclick=""><svg
+                    width="24" height="24">
+                    <use href="../../images/icons.svg#icon-cart"></use>
+                  </svg></button>
+              </div>
+              <a href=""><img src="../../images/products/stands/luxury_3.jpg" alt="Підставка для прапору" width="150" />
+                <div class="products-item-description">
+                  <h4>Підставка ДОСКОНАЛІСТЬ <br />тримісна, золото</h4>
+                  <p>горіх, редвуд, вільха</p>
+                  <p>ДхШхВ: 400х400х300</p>
+                  <H5>3500 ₴</H5>
+                </div>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+        <!-- <div>
+          <ul id="cart" class="products-list list">
+          </ul>
+        </div> -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Футер -->
+
+  <footer class="footer">
+    <div class="container flex" style="justify-content: space-between; align-items: center;">
+      <div>
+        <a href="../../index.html" class="footer-logo logo">
+          <span class="accent">Прапори</span><span class="second-part"> & Символи</span>
+        </a>
+
+        <address class="address">
+          <p class="address-margin">м. Київ, вул. Галаганівська, 3</p>
+          <ul class="list">
+            <li class="address-margin">
+              <a href="mailto:pp_danilov@ukr.net" class="button">pp_danilov@ukr.net</a>
+            </li>
+            <li><a href="tel:+380667700520" class="button">+380 66 770 05 20</a></li>
+          </ul>
+        </address>
+      </div>
+
+      <div class="invite">
+        <p class="invite-text">Долучайтесь до наших <span class="accent">каналів</span></p>
+        <ul class="social-list list">
+          <li class="social-list-item">
+            <a href="" class="social-list-footer-link">
+              <svg class="social-list-footer-icon" width="20" height="20">
+                <use href="../../images/icons.svg#icon-send"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list-item">
+            <a href="" class="social-list-footer-link">
+              <svg class="social-list-footer-icon" width="20" height="20">
+                <use href="../../images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list-item">
+            <a href="" class="social-list-footer-link">
+              <svg class="social-list-footer-icon" width="20" height="20">
+                <use href="../../images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list-item">
+            <a href="" class="social-list-footer-link">
+              <svg class="social-list-footer-icon" width="20" height="20">
+                <use href="../../images/icons.svg#icon-pinterest"></use>
+              </svg>
+            </a>
+          </li>
+
+
+        </ul>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Модальное окно -->
+
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button type="button" class="close-btn" data-modal-close>
+        <svg width="11" height="11">
+          <use href="../../images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <form action="#" class="modal-form">
+        <b class="modal-form-head">Оставьте свои данные, мы вам перезвоним</b>
+        <label class="modal-form-field">
+          Имя
+          <span class="modal-form-input-wrapper">
+            <input type="text" name="user-name" class="modal-form-input" required minlength="2"
+              pattern="[a-zA-Zа-яёА-ЯЁ]+" placeholder=" ">
+            <span class="modal-form-icon">
+              <svg width="12" height="12">
+                <use href="../../images/icons.svg#icon-person"></use>
+              </svg>
+            </span>
+          </span>
+        </label>
+        <label class="modal-form-field">
+          Телефон
+          <span class="modal-form-input-wrapper">
+            <input type="tel" name="user-phone" class="modal-form-input" required
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" title="096-111-11-11" placeholder=" ">
+            <span class="modal-form-icon">
+              <svg width="13" height="13">
+                <use href="../../images/icons.svg#icon-phone"></use>
+              </svg>
+            </span>
+          </span>
+        </label>
+        <label class="modal-form-field">
+          Почта
+          <span class="modal-form-input-wrapper">
+            <input type="email" name="user-mail" class="modal-form-input" required placeholder=" ">
+            <span class="modal-form-icon"><svg width="15" height="12">
+                <use href="../../images/icons.svg#icon-email"></use>
+              </svg></span>
+          </span>
+        </label>
+        <label class="modal-form-field">
+          Комментарий
+          <textarea name="user-message" class="modal-form-message" placeholder="Введите текст"></textarea>
+        </label>
+        <div class="modal-form-checkbox-wrapper">
+
+          <label for="user-policy" class="modal-form-policy-label">
+            <input type="checkbox" name="user-policy" id="user-policy"
+              class="modal-form-checkbox visually-hidden is-hidden" required>
+            <span class="modal-form-checkbox-icon"></span>
+            Соглашаюсь с рассылкой и принимаю&nbsp;<a class="modal-form-policy-link" href="">Условия
+              договора</a></label>
+        </div>
+        <button type="submit" class="modal-form-btn">Отправить</button>
+      </form>
+    </div>
+  </div>
+
+
+
+  <script src="../../js/modal.js"></script>
+  <script src="../../js/filterProducts.js"></script>
+  <script src="../../js/favorites.js"></script>
+</body>
+
+</html>
