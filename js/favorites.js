@@ -11,7 +11,7 @@ function markFavorites() {
 
   favoritesHeartsArr.map(item => {
     let heartBtn = document.getElementById(item.id);
-    heartBtn.classList.add('chosen');
+    heartBtn.classList.add('chosen-heart');
     heartBtn.parentElement.parentElement.classList.add('favorites');
   });
 }
@@ -19,25 +19,19 @@ function markFavorites() {
 function toggleFavorites(id) {
   const heart = document.getElementById(id);
   const product = heart.parentElement.parentElement;
+  const productHTML = product.outerHTML;
+
+  heart.classList.toggle('chosen-heart');
+  product.classList.toggle('favorites');
 
   let wishList = JSON.parse(window.localStorage.getItem('wishList')) || [];
   wishList = Array.from(wishList);
 
-  wishList = wishList.filter(item => {
-    item !== product.outerHTML;
-  });
-
-  heart.classList.toggle('chosen');
-  product.classList.toggle('favorites');
-
-  let favorites = document.getElementsByClassName('favorites');
-  favorites = Array.from(favorites);
-
-  favorites.map(item => {
-    if (wishList.indexOf(item.outerHTML) === -1) {
-      wishList.push(item.outerHTML);
-    }
-  });
+  if (product.classList.contains('favorites')) {
+    wishList.push(product.outerHTML);
+  } else {
+    wishList = wishList.filter(item => item !== productHTML);
+  }
 
   window.localStorage.setItem('wishList', JSON.stringify(wishList));
 }

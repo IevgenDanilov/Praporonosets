@@ -98,7 +98,12 @@
   fill: var(--secondary-accent-color);
 }
 
-.chosen {
+.chosen-heart {
   stroke: #c0392b;
   fill: #c0392b;
+}
+
+.chosen-cart {
+  stroke: var(--secondary-accent-color);
+  fill: var(--secondary-accent-color);
 }

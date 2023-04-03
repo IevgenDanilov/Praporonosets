@@ -733,11 +733,11 @@ h4 {
   margin-bottom: 10px;
 }
 
-.modal-form-input-wrapper {
+/* .modal-form-input-wrapper {
   position: relative;
   display: block;
   margin-top: 4px;
-}
+} */
 
 .modal-form-input {
   font-size: 16px;
@@ -831,4 +831,12 @@ button.slick-prev:before,
 button.slick-next:before {
   color: var(--secondary-accent-color);
   opacity: 0.6;
+}
+
+.cart-box {
+  /* background-image: url('../images/other/cart-with-products.png'); */
+  background-image: url('../images/other/shopping-cart.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }

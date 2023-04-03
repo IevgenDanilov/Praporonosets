@@ -1,9 +1,9 @@
 getFavorites();
 
 function getFavorites() {
-  const cart = document.getElementById('cart');
+  const wishList = document.getElementById('wishList');
 
   const markup = window.localStorage.getItem('wishList');
-  cart.innerHTML = JSON.parse(markup);
-  cart.innerHTML = cart.innerHTML.split('</li>,').join('</li> ');
+  wishList.innerHTML = JSON.parse(markup);
+  wishList.innerHTML = wishList.innerHTML.split('</li>,').join('</li> ');
 }
