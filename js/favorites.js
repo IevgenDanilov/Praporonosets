@@ -11,8 +11,9 @@ function markFavorites() {
 
   favoritesHeartsArr.map(item => {
     let heartBtn = document.getElementById(item.id);
-    heartBtn.classList.add('chosen-heart');
-    heartBtn.parentElement.parentElement.classList.add('favorites');
+    heartBtn &&
+      heartBtn.classList.add('chosen-heart') &&
+      heartBtn.parentElement.parentElement.classList.add('favorites');
   });
 }
 
