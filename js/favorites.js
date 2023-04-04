@@ -6,14 +6,15 @@ function markFavorites() {
   const wishListDom = document.createElement('ul');
   wishListDom.innerHTML = wishList;
 
-  let favoritesHeartsArr = wishListDom.getElementsByClassName('heart');
+  let favoritesHeartsArr = wishListDom.querySelectorAll('.heart');
   favoritesHeartsArr = Array.from(favoritesHeartsArr);
 
   favoritesHeartsArr.map(item => {
     let heartBtn = document.getElementById(item.id);
-    heartBtn &&
-      heartBtn.classList.add('chosen-heart') &&
+    if (heartBtn) {
+      heartBtn.classList.add('chosen-heart');
       heartBtn.parentElement.parentElement.classList.add('favorites');
+    }
   });
 }
 

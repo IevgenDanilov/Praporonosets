@@ -6,7 +6,7 @@ function markOrdered() {
   const cartListDom = document.createElement('ul');
   cartListDom.innerHTML = cartList;
 
-  let orderedCartsArr = cartListDom.getElementsByClassName('cart');
+  let orderedCartsArr = cartListDom.querySelectorAll('.cart');
   orderedCartsArr = Array.from(orderedCartsArr);
 
   orderedCartsArr.map(item => {
