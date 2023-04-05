@@ -1,4 +1,5 @@
 getOrdered();
+// getPrices();
 getPrewOrders();
 
 function getOrdered() {
@@ -7,17 +8,29 @@ function getOrdered() {
   cart.innerHTML = JSON.parse(window.localStorage.getItem('cartList'));
   cart.innerHTML = cart.innerHTML.split('</li>,').join('</li> ');
 
-  let cartArr = Array.from(cart.querySelectorAll('.products-item'));
-  cartArr.length &&
-    cartArr.map(item => {
-      item.innerHTML =
-        item.innerHTML +
-        '<input type="number" min="1" max="100" name="num" value="1" style="width: 80px; text-align: center; border: none">' +
-        'шт' +
-        '<input type="number" name="sum" value="0.00" style="width: 80px; text-align: center; border: none">' +
-        'грн';
-      // sum.value=num.value*Number(price.value)
-    });
+  // let cartArr = Array.from(cart.querySelectorAll('.products-item'));
+  // cartArr.length &&
+  //   cartArr.map(item => {
+  //     item.innerHTML =
+  //       item.innerHTML +
+  //       '<input onChange="getPrices(this.parentNode)" type="number" min="1" max="100" class="num" value="1" style="width: 80px; text-align: center; border: none">' +
+  //       'шт' +
+  //       '<input readonly type="number" class="sum" style="width: 80px; text-align: center; border: none">' +
+  //       'грн';
+  //   });
+}
+
+function getPrices(object = document) {
+  const priceArr = object.querySelectorAll('.price');
+  const numArr = object.querySelectorAll('.num');
+  const sumArr = object.querySelectorAll('.sum');
+
+  for (let i = 0; i < priceArr.length; i++) {
+    sumArr[i].value = numArr[i].value * priceArr[i].innerHTML.replace(/[^\d\.]*/g, '');
+    // console.log('sumArr[i].value', sumArr[i].value);
+    // console.log('numArr[i].value', numArr[i].value);
+    // console.log('priceArr[i].value', priceArr[i].innerHTML.replace(/[^\d\.]*/g, ''));
+  }
 }
 
 function getPrewOrders() {
@@ -25,19 +38,15 @@ function getPrewOrders() {
 
   const prewOrdersList = window.localStorage.getItem('ordersList');
   orders.innerHTML = JSON.parse(prewOrdersList);
-  // console.log('orders.innerHTML', orders.innerHTML);
   orders.innerHTML = orders.innerHTML.split('</ul>,').join('</ul> ');
 }
 
 function setOrders() {
-  // const order = window.localStorage.getItem('cartList');
-  // order = Array.from(order);
-
   const order = document.querySelector('#cart');
 
   let ordersList = JSON.parse(window.localStorage.getItem('ordersList')) || [];
 
-  order.innerHTML.length &&
+  if (order.innerHTML.length) {
     ordersList.unshift(
       '</br>' +
         '<h4>' +
@@ -46,6 +55,7 @@ function setOrders() {
         '</br>' +
         order.outerHTML,
     );
+  }
 
   window.localStorage.setItem('ordersList', JSON.stringify(ordersList));
   window.localStorage.setItem('cartList', JSON.stringify([]));
