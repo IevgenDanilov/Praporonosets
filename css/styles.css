@@ -210,6 +210,15 @@ img {
   color: var(--accent-color);
 }
 
+.accent-rev {
+  color: var(--secondary-text-color);
+}
+.accent-rev:hover,
+.accent-rev:focus,
+.accent-rev:active {
+  color: var(--accent-color);
+}
+
 /* ============== NAVIGATION ============== */
 
 .site-nav .link {

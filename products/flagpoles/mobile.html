@@ -77,6 +77,14 @@
           </li>
         </ul>
 
+        <select onchange="filterSelection(this.value)" name="filter" class="products-groupes-switcher">
+          <option value="all" selected="selected">Усі</option>
+          <option value="sets">Комплекти</option>
+          <option value="stands">Підставки</option>
+          <option value="poles">Древка</option>
+          <option value="pommels">Навершя</option>
+        </select>
+
         <!-- Список продуктов -->
 
         <ul class="products-list list">
@@ -103,7 +111,7 @@
               <h4>ВІНДЕР Парус 2500</h4>
               <p>алюміній, пластик</p>
               <p>ДхШхВ: 25х650х2500</p>
-              <H5 class="price">2500 ₴</H5>
+              <p class="price">2500 ₴</p>
             </div>
 
           </li>
@@ -129,7 +137,7 @@
               <h4>ВІНДЕР Парус 3500</h4>
               <p>алюміній, пластик</p>
               <p>ДхШхВ: 25х650х3500</p>
-              <H5 class="price">2500 ₴</H5>
+              <p class="price">2500 ₴</p>
             </div>
 
           </li>
@@ -155,7 +163,7 @@
               <h4>ВІНДЕР Парус</h4>
               <p>алюміній, пластик</p>
               <p>ДхШхВ: 25х650х3500</p>
-              <H5 class="price">2500 ₴</H5>
+              <p class="price">2500 ₴</p>
             </div>
 
           </li>
@@ -181,7 +189,7 @@
               <h4>ВІНДЕР Парус</h4>
               <p>алюміній, пластик</p>
               <p>ДхШхВ: 25х650х3500</p>
-              <H5 class="price">2500 ₴</H5>
+              <p class="price">2500 ₴</p>
             </div>
 
           </li>
@@ -289,9 +297,7 @@
 
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <script src="../../js/filterProducts.js"></script>
   <script src="../../js/favorites.js"></script>
   <script src="../../js/ordered.js"></script>

@@ -49,9 +49,9 @@ function setOrders() {
   if (order.innerHTML.length) {
     ordersList.unshift(
       '</br>' +
-        '<h4>' +
+        '<h4><time>' +
         new Date(Date.now()).toLocaleString() +
-        '</h4>' +
+        '</time></h4>' +
         '</br>' +
         order.outerHTML,
     );

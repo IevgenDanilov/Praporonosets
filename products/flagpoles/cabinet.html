@@ -56,6 +56,14 @@
 
 
     <section class="section products">
+      <!-- <marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid">
+        <marquee behavior="alternate">
+          <a href="#econom">АКЦІЯ</a>
+        </marquee>
+      </marquee>
+      <br />
+      <br />
+      <br /> -->
       <h2 class="section-main-title">Флагштоки кабінетні</h2>
       <div class="container">
         <!-- Фильтр продуктов -->
@@ -78,6 +86,14 @@
 
         </ul>
 
+        <select onchange="filterSelection(this.value)" name="filter" class="products-groupes-switcher">
+          <option value="all" selected="selected">Усі</option>
+          <option value="sets">Комплекти</option>
+          <option value="stands">Підставки</option>
+          <option value="poles">Древка</option>
+          <option value="pommels">Навершя</option>
+        </select>
+
         <!-- Список продуктов -->
 
         <ul class="products-list list">
@@ -96,15 +112,22 @@
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
-            <img src="../../images/products/flagpoles/cabinet/stands/icons/column.jpg" alt="Підставка для прапору"
-              style="width: 150px; cursor: zoom-in;"
-              ondblclick="this.src='../../images/products/flagpoles/cabinet/stands/column.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='../../images/products/flagpoles/cabinet/stands/icons/column.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/stands/icons/column.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/stands/column.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/stands/icons/column.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
               <h4>Тумба КОЛОНА універсальна</h4>
               <p>венге, махонь, бук</p>
               <p>ДхШхВ: 350х350х1000</p>
-              <H5 class="price">3500 ₴</H5>
+              <p class="price">3500 ₴</p>
+              <p hidden="until-found">
+                <button onclick="this.parentElement.hidden='until-found'" class="button accent-rev"
+                  style="margin-left: auto; display: block; border: none; background: none;">⛌</button>
+                Флагшток на основі тумби для прапору є дуже стійким і надійним, крім того сама тумба може бути
+                оформлена в стилі меблів інтер'єру та оздоблена відповідною символікою, наприклад гербом України для
+                державних установ у комплекті з прапором України.
+              </p>
             </div>
 
           </li>
@@ -119,15 +142,15 @@
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
-            <img src="../../images/products/flagpoles/cabinet/stands/icons/pyramida_1.jpg" alt="Підставка для прапору"
-              style="width: 150px; cursor: zoom-in;"
-              ondblclick="this.src='../../images/products/flagpoles/cabinet/stands/pyramida_1.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='../../images/products/flagpoles/cabinet/stands/icons/pyramida_1.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/stands/icons/pyramida_1.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/stands/pyramida_1.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/stands/icons/pyramida_1.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
               <h4>Підставка ПІРАМІДА<br />одномісна</h4>
               <p>венге, махонь, бук</p>
               <p>ДхШхВ: 350х350х80</p>
-              <H5 class="price">1500 ₴</H5>
+              <p class="price">1500 ₴</p>
             </div>
           </li>
           <li class="products-item stands">
@@ -141,15 +164,15 @@
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
-            <img src="../../images/products/flagpoles/cabinet/stands/icons/econom_1.jpg" alt="Підставка для прапору"
-              style="width: 150px; cursor: zoom-in;"
-              ondblclick="this.src='../../images/products/flagpoles/cabinet/stands/econom_1.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='../../images/products/flagpoles/cabinet/stands/icons/econom_1.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/stands/icons/econom_1.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/stands/econom_1.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/stands/icons/econom_1.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
               <h4>Підставка ЕКОНОМ <br />одномісна, хром</h4>
               <p>венге, махонь, бук</p>
               <p>ДхШхВ: 400х400х300</p>
-              <H5 class="price">3500 ₴</H5>
+              <p class="price">3500 ₴</p>
             </div>
           </li>
           <li class="products-item stands">
@@ -163,15 +186,15 @@
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
-            <img src="../../images/products/flagpoles/cabinet/stands/icons/econom_2.jpg" alt="Підставка для прапору"
-              style="width: 150px; cursor: zoom-in;"
-              ondblclick="this.src='../../images/products/flagpoles/cabinet/stands/econom_2.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='../../images/products/flagpoles/cabinet/stands/icons/econom_2.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/stands/icons/econom_2.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/stands/econom_2.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/stands/icons/econom_2.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
               <h4>Підставка ЕКОНОМ <br />двомісна, хром</h4>
               <p>венге, махонь, бук</p>
               <p>ДхШхВ: 400х400х300</p>
-              <H5 class="price">3500 ₴</H5>
+              <p class="price">3500 ₴</p>
             </div>
           </li>
           <li class="products-item stands">
@@ -185,15 +208,15 @@
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
-            <img src="../../images/products/flagpoles/cabinet/stands/icons/econom_3.jpg" alt="Підставка для прапору"
-              style="width: 150px; cursor: zoom-in;"
-              ondblclick="this.src='../../images/products/flagpoles/cabinet/stands/econom_3.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='../../images/products/flagpoles/cabinet/stands/icons/econom_3.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/stands/icons/econom_3.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/stands/econom_3.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/stands/icons/econom_3.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
               <h4>Підставка ЕКОНОМ <br />тримісна, хром</h4>
               <p>горіх, редвуд, вільха</p>
               <p>ДхШхВ: 400х400х300</p>
-              <H5 class="price">3500 ₴</H5>
+              <p class="price">3500 ₴</p>
             </div>
           </li>
           <li class="products-item stands">
@@ -207,15 +230,15 @@
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
-            <img src="../../images/products/flagpoles/cabinet/stands/icons/wood_1.jpg" alt="Підставка для прапору"
-              style="width: 150px; cursor: zoom-in;"
-              ondblclick="this.src='../../images/products/flagpoles/cabinet/stands/wood_1.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='../../images/products/flagpoles/cabinet/stands/icons/wood_1.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/stands/icons/wood_1.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/stands/wood_1.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/stands/icons/wood_1.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
               <h4>Підставка ПРЕСТИЖ <br />одномісна</h4>
               <p>венге, махонь, бук</p>
               <p>ДхШхВ: 400х400х150</p>
-              <H5 class="price">2000 ₴</H5>
+              <p class="price">2000 ₴</p>
             </div>
           </li>
           <li class="products-item stands">
@@ -229,15 +252,15 @@
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
-            <img src="../../images/products/flagpoles/cabinet/stands/icons/classic_1.jpg" alt="Підставка для прапору"
-              style="width: 150px; cursor: zoom-in;"
-              ondblclick="this.src='../../images/products/flagpoles/cabinet/stands/classic_1.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='../../images/products/flagpoles/cabinet/stands/icons/classic_1.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/stands/icons/classic_1.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/stands/classic_1.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/stands/icons/classic_1.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
               <h4>Підставка КЛАСИК <br />одномісна, хром</h4>
               <p>горіх, редвуд, вільха</p>
               <p>ДхШхВ: 400х400х300</p>
-              <H5 class="price">3500 ₴</H5>
+              <p class="price">3500 ₴</p>
             </div>
           </li>
           <li class="products-item stands">
@@ -251,15 +274,15 @@
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
-            <img src="../../images/products/flagpoles/cabinet/stands/icons/classic_2.jpg" alt="Підставка для прапору"
-              style="width: 150px; cursor: zoom-in;"
-              ondblclick="this.src='../../images/products/flagpoles/cabinet/stands/classic_2.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='../../images/products/flagpoles/cabinet/stands/icons/classic_2.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/stands/icons/classic_2.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/stands/classic_2.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/stands/icons/classic_2.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
               <h4>Підставка КЛАСИК <br />двомісна, хром</h4>
               <p>горіх, редвуд, вільха</p>
               <p>ДхШхВ: 400х400х300</p>
-              <H5 class="price">3500 ₴</H5>
+              <p class="price">3500 ₴</p>
             </div>
           </li>
           <li class="products-item stands">
@@ -273,15 +296,15 @@
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
-            <img src="../../images/products/flagpoles/cabinet/stands/icons/classic_3.jpg" alt="Підставка для прапору"
-              style="width: 150px; cursor: zoom-in;"
-              ondblclick="this.src='../../images/products/flagpoles/cabinet/stands/classic_3.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='../../images/products/flagpoles/cabinet/stands/icons/classic_3.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/stands/icons/classic_3.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/stands/classic_3.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/stands/icons/classic_3.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
               <h4>Підставка КЛАСИК <br />тримісна, хром</h4>
               <p>горіх, редвуд, вільха</p>
               <p>ДхШхВ: 400х400х300</p>
-              <H5 class="price">3500 ₴</H5>
+              <p class="price">3500 ₴</p>
             </div>
           </li>
           <li class="products-item stands">
@@ -295,15 +318,15 @@
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
-            <img src="../../images/products/flagpoles/cabinet/stands/icons/premium_1.jpg" alt="Підставка для прапору"
-              style="width: 150px; cursor: zoom-in;"
-              ondblclick="this.src='../../images/products/flagpoles/cabinet/stands/premium_1.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='../../images/products/flagpoles/cabinet/stands/icons/premium_1.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/stands/icons/premium_1.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/stands/premium_1.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/stands/icons/premium_1.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
               <h4>Підставка ПРЕМІУМ <br />одномісна, золото</h4>
               <p>горіх, редвуд, вільха</p>
               <p>ДхШхВ: 400х400х300</p>
-              <H5 class="price">3500 ₴</H5>
+              <p class="price">3500 ₴</p>
             </div>
           </li>
           <li class="products-item stands">
@@ -317,15 +340,15 @@
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
-            <img src="../../images/products/flagpoles/cabinet/stands/icons/premium_2.jpg" alt="Підставка для прапору"
-              style="width: 150px; cursor: zoom-in;"
-              ondblclick="this.src='../../images/products/flagpoles/cabinet/stands/premium_2.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='../../images/products/flagpoles/cabinet/stands/icons/premium_2.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/stands/icons/premium_2.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/stands/premium_2.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/stands/icons/premium_2.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
               <h4>Підставка ПРЕМІУМ <br />двомісна, золото</h4>
               <p>горіх, редвуд, вільха</p>
               <p>ДхШхВ: 400х400х300</p>
-              <H5 class="price">3500 ₴</H5>
+              <p class="price">3500 ₴</p>
             </div>
           </li>
           <li class="products-item stands">
@@ -339,15 +362,15 @@
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
-            <img src="../../images/products/flagpoles/cabinet/stands/icons/premium_3.jpg" alt="Підставка для прапору"
-              style="width: 150px; cursor: zoom-in;"
-              ondblclick="this.src='../../images/products/flagpoles/cabinet/stands/premium_3.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='../../images/products/flagpoles/cabinet/stands/icons/premium_3.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/stands/icons/premium_3.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/stands/premium_3.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/stands/icons/premium_3.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
               <h4>Підставка ПРЕМІУМ <br />тримісна, золото</h4>
               <p>горіх, редвуд, вільха</p>
               <p>ДхШхВ: 400х400х300</p>
-              <H5 class="price">3500 ₴</H5>
+              <p class="price">3500 ₴</p>
             </div>
           </li>
           <li class="products-item stands">
@@ -361,15 +384,15 @@
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
-            <img src="../../images/products/flagpoles/cabinet/stands/icons/eternal_1.jpg" alt="Підставка для прапору"
-              style="width: 150px; cursor: zoom-in;"
-              ondblclick="this.src='../../images/products/flagpoles/cabinet/stands/eternal_1.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='../../images/products/flagpoles/cabinet/stands/icons/eternal_1.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/stands/icons/eternal_1.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/stands/eternal_1.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/stands/icons/eternal_1.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
               <h4>Підставка ВІЧНІСТЬ <br />одномісна, нержавійка</h4>
               <p>горіх, редвуд, вільха</p>
               <p>ДхШхВ: 400х400х300</p>
-              <H5 class="price">3500 ₴</H5>
+              <p class="price">3500 ₴</p>
             </div>
           </li>
           <li class="products-item stands">
@@ -383,15 +406,15 @@
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
-            <img src="../../images/products/flagpoles/cabinet/stands/icons/eternal_2.jpg" alt="Підставка для прапору"
-              style="width: 150px; cursor: zoom-in;"
-              ondblclick="this.src='../../images/products/flagpoles/cabinet/stands/eternal_2.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='../../images/products/flagpoles/cabinet/stands/icons/eternal_2.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/stands/icons/eternal_2.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/stands/eternal_2.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/stands/icons/eternal_2.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
               <h4>Підставка ВІЧНІСТЬ <br />двомісна, нержавійка</h4>
               <p>горіх, редвуд, вільха</p>
               <p>ДхШхВ: 400х400х300</p>
-              <H5 class="price">3500 ₴</H5>
+              <p class="price">3500 ₴</p>
             </div>
           </li>
           <li class="products-item stands">
@@ -405,15 +428,15 @@
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
-            <img src="../../images/products/flagpoles/cabinet/stands/icons/eternal_3.jpg" alt="Підставка для прапору"
-              style="width: 150px; cursor: zoom-in;"
-              ondblclick="this.src='../../images/products/flagpoles/cabinet/stands/eternal_3.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='../../images/products/flagpoles/cabinet/stands/icons/eternal_3.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/stands/icons/eternal_3.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/stands/eternal_3.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/stands/icons/eternal_3.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
               <h4>Підставка ВІЧНІСТЬ <br />тримісна, нержавійка</h4>
               <p>горіх, редвуд, вільха</p>
               <p>ДхШхВ: 400х400х300</p>
-              <H5 class="price">3500 ₴</H5>
+              <p class="price">3500 ₴</p>
             </div>
           </li>
           <li class="products-item stands">
@@ -427,15 +450,15 @@
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
-            <img src="../../images/products/flagpoles/cabinet/stands/icons/luxury_1.jpg" alt="Підставка для прапору"
-              style="width: 150px; cursor: zoom-in;"
-              ondblclick="this.src='../../images/products/flagpoles/cabinet/stands/luxury_1.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='../../images/products/flagpoles/cabinet/stands/icons/luxury_1.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/stands/icons/luxury_1.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/stands/luxury_1.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/stands/icons/luxury_1.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
               <h4>Підставка ДОСКОНАЛІСТЬ <br />одномісна, золото</h4>
               <p>горіх, редвуд, вільха</p>
               <p>ДхШхВ: 400х400х300</p>
-              <H5 class="price">3500 ₴</H5>
+              <p class="price">3500 ₴</p>
             </div>
           </li>
           <li class="products-item stands">
@@ -449,15 +472,15 @@
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
-            <img src="../../images/products/flagpoles/cabinet/stands/icons/luxury_2.jpg" alt="Підставка для прапору"
-              style="width: 150px; cursor: zoom-in;"
-              ondblclick="this.src='../../images/products/flagpoles/cabinet/stands/luxury_2.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='../../images/products/flagpoles/cabinet/stands/icons/luxury_2.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/stands/icons/luxury_2.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/stands/luxury_2.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/stands/icons/luxury_2.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
               <h4>Підставка ДОСКОНАЛІСТЬ <br />двомісна, золото</h4>
               <p>горіх, редвуд, вільха</p>
               <p>ДхШхВ: 400х400х300</p>
-              <H5 class="price">3500 ₴</H5>
+              <p class="price">3500 ₴</p>
             </div>
           </li>
           <li class="products-item stands">
@@ -471,15 +494,15 @@
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
-            <img src="../../images/products/flagpoles/cabinet/stands/icons/luxury_3.jpg" alt="Підставка для прапору"
-              style="width: 150px; cursor: zoom-in;"
-              ondblclick="this.src='../../images/products/flagpoles/cabinet/stands/luxury_3.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='../../images/products/flagpoles/cabinet/stands/icons/luxury_3.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/stands/icons/luxury_3.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/stands/luxury_3.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/stands/icons/luxury_3.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
               <h4>Підставка ДОСКОНАЛІСТЬ <br />тримісна, золото</h4>
               <p>горіх, редвуд, вільха</p>
               <p>ДхШхВ: 400х400х300</p>
-              <H5 class="price">3500 ₴</H5>
+              <p class="price">3500 ₴</p>
             </div>
           </li>
           <li class="products-item poles">
@@ -493,15 +516,15 @@
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
-            <img src="../../images/products/flagpoles/cabinet/poles/icons/pole_wood.jpg" alt="Древко для прапору"
-              style="width: 150px; cursor: zoom-in;"
-              ondblclick="this.src='../../images/products/flagpoles/cabinet/poles/pole_wood.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_wood.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/poles/icons/pole_wood.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_wood.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_wood.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
               <h4>Древко дерев'яне 2400</h4>
               <p>горіх, редвуд, вільха</p>
               <p>ДхШхВ: 28х28х2400</p>
-              <H5 class="price">800 ₴</H5>
+              <p class="price">800 ₴</p>
             </div>
 
           </li>
@@ -516,15 +539,15 @@
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
-            <img src="../../images/products/flagpoles/cabinet/poles/icons/pole_ni.jpg" alt="Древко для прапору"
-              style="width: 150px; cursor: zoom-in;"
-              ondblclick="this.src='../../images/products/flagpoles/cabinet/poles/pole_ni.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_ni.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/poles/icons/pole_ni.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_ni.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_ni.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
               <h4>Древко металеве 2400</h4>
               <p>нікель</p>
               <p>ДхШхВ: 28х28х2400</p>
-              <H5 class="price">1000 ₴</H5>
+              <p class="price">1000 ₴</p>
             </div>
           </li>
           <li class="products-item poles">
@@ -538,15 +561,15 @@
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
-            <img src="../../images/products/flagpoles/cabinet/poles/icons/pole_au.jpg" alt="Древко для прапору"
-              style="width: 150px; cursor: zoom-in;"
-              ondblclick="this.src='../../images/products/flagpoles/cabinet/poles/pole_au.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_au.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/poles/icons/pole_au.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_au.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_au.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
               <h4>Древко металеве 2400</h4>
               <p>золото</p>
               <p>ДхШхВ: 28х28х2400</p>
-              <H5 class="price">1200 ₴</H5>
+              <p class="price">1200 ₴</p>
             </div>
           </li>
 
@@ -572,9 +595,10 @@
         <br />
         <h3 id="econom" class="title">Серія ЕКОНОМ</h3>
         <div class="flex" style="align-items: center;">
-          <img src="../../images/products/flagpoles/cabinet/sets/premium_set.jpg" alt="флагшток класу преміум"
-            width="150" height="150">
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus nulla iusto eaque consectetur,
+          <img title='click+click' src="../../images/products/flagpoles/cabinet/sets/premium_set.jpg"
+            alt="флагшток класу преміум" width="150" height="150">
+          <p>Lorem ipsum dolor, <mark>sit amet consectetur</mark> adipisicing elit.
+            Laborum temporibus nulla iusto eaque consectetur,
             beatae eligendi nam dolore adipisci ipsum voluptates illum voluptate! Iusto molestias magni pariatur minus
             qui
             ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sapiente similique esse placeat illum
@@ -583,7 +607,8 @@
             laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero optio omnis magni ut earum incidunt
             libero
             similique magnam sit voluptas, accusamus officia. Et optio dolores neque, nobis illo quae sed?
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus nulla iusto eaque consectetur,
+            Lorem ipsum dolor, sit amet consectetur <mark>adipisicing elit.</mark> Laborum temporibus nulla iusto eaque
+            consectetur,
             beatae eligendi nam dolore adipisci ipsum voluptates illum voluptate! Iusto molestias magni pariatur minus
             qui
             ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sapiente similique esse placeat illum
@@ -594,8 +619,8 @@
         <br />
         <h3 id="classic" class="title">Серія КЛАСИК</h3>
         <div class="flex" style="align-items: center;">
-          <img src="../../images/products/flagpoles/cabinet/sets/premium_set.jpg" alt="флагшток класу преміум"
-            width="150" height="150">
+          <img title='click+click' src="../../images/products/flagpoles/cabinet/sets/premium_set.jpg"
+            alt="флагшток класу преміум" width="150" height="150">
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus nulla iusto eaque consectetur,
             beatae eligendi nam dolore adipisci ipsum voluptates illum voluptate! Iusto molestias magni pariatur minus
             qui
@@ -616,8 +641,52 @@
         <br />
         <h3 id="premium" class="title">Серія ПРЕМІУМ</h3>
         <div class="flex" style="align-items: center;">
-          <img src="../../images/products/flagpoles/cabinet/sets/premium_set.jpg" alt="флагшток класу преміум"
-            width="150" height="150">
+          <img title='click+click' src="../../images/products/flagpoles/cabinet/sets/premium_set.jpg"
+            alt="флагшток класу преміум" width="150" height="150">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus nulla iusto eaque consectetur,
+            beatae eligendi nam dolore adipisci ipsum voluptates illum voluptate! Iusto molestias magni pariatur minus
+            qui
+            ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sapiente similique esse placeat illum
+            voluptatem provident. Consectetur id ad eligendi repellendus placeat ullam corporis animi vero at. Vel,
+            harum
+            laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero optio omnis magni ut earum incidunt
+            libero
+            similique magnam sit voluptas, accusamus officia. Et optio dolores neque, nobis illo quae sed?
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus nulla iusto eaque consectetur,
+            beatae eligendi nam dolore adipisci ipsum voluptates illum voluptate! Iusto molestias magni pariatur minus
+            qui
+            ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sapiente similique esse placeat illum
+            voluptatem provident. Consectetur id ad eligendi repellendus placeat ullam corporis animi vero at. Vel,
+            harum
+            laborum? ue magnam sit voluptas, accusamus officia. Et optio dolores neque, nobis illo quae sed?</p>
+        </div>
+        <br />
+        <h3 id="premium" class="title">Серія АНТИВАНДАЛ</h3>
+        <div class="flex" style="align-items: center;">
+          <img title='click+click' src="../../images/products/flagpoles/cabinet/sets/premium_set.jpg"
+            alt="флагшток класу преміум" width="150" height="150">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus nulla iusto eaque consectetur,
+            beatae eligendi nam dolore adipisci ipsum voluptates illum voluptate! Iusto molestias magni pariatur minus
+            qui
+            ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sapiente similique esse placeat illum
+            voluptatem provident. Consectetur id ad eligendi repellendus placeat ullam corporis animi vero at. Vel,
+            harum
+            laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero optio omnis magni ut earum incidunt
+            libero
+            similique magnam sit voluptas, accusamus officia. Et optio dolores neque, nobis illo quae sed?
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus nulla iusto eaque consectetur,
+            beatae eligendi nam dolore adipisci ipsum voluptates illum voluptate! Iusto molestias magni pariatur minus
+            qui
+            ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sapiente similique esse placeat illum
+            voluptatem provident. Consectetur id ad eligendi repellendus placeat ullam corporis animi vero at. Vel,
+            harum
+            laborum? ue magnam sit voluptas, accusamus officia. Et optio dolores neque, nobis illo quae sed?</p>
+        </div>
+        <br />
+        <h3 id="premium" class="title">Серія ЛАКШЕРІ</h3>
+        <div class="flex" style="align-items: center;">
+          <img title='click+click' src="../../images/products/flagpoles/cabinet/sets/premium_set.jpg"
+            alt="флагшток класу преміум" width="150" height="150">
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus nulla iusto eaque consectetur,
             beatae eligendi nam dolore adipisci ipsum voluptates illum voluptate! Iusto molestias magni pariatur minus
             qui
@@ -702,9 +771,7 @@
 
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <script src="../../js/filterProducts.js"></script>
   <script src="../../js/favorites.js"></script>
   <script src="../../js/ordered.js"></script>

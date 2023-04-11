@@ -52,7 +52,8 @@
   line-height: 1.2;
   margin: 5px auto;
 }
-.products-item h5 {
+
+.products-item .price {
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 18px;
