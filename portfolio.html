@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="uk">
 
 <head>
   <meta charset="UTF-8" />
@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <!-- Шапка сайта -->
+  <!-- Шапка сайту -->
   <header class="page-header">
     <div class="container flex">
       <nav class="nav flex">
@@ -27,15 +27,11 @@
           <li><a href="./portfolio.html" class="link current">Портфоліо</a></li>
           <li><a href="./shop.html" class="link">Магазин</a></li>
           <li>
-            <a href="./wishList.html" class="link"><svg width="24" height="24"
-                style="fill:#c0392b; opacity: 0.9; margin: 0 10px; "
-                onmouseover="this.style.fill='var(--accent-color)';" onmouseout="this.style.fill='#c0392b';">
+            <a href="./wishList.html" class="link"><svg width="24" height="24" class="wishlist-icon">
                 <use href="./images/icons.svg#icon-heart"></use>
               </svg></a>
             <a href="./cart.html" class="link">
-              <svg width="24" height="24" style="fill: var(--secondary-accent-color); opacity: 0.9; margin: 0 10px"
-                onmouseover="this.style.fill='var(--accent-color)';"
-                onmouseout="this.style.fill='var(--secondary-accent-color)';">
+              <svg width="24" height="24" class="cart-icon">
                 <use href="./images/icons.svg#icon-cart"></use>
               </svg></a>
           </li>
@@ -50,12 +46,12 @@
   </header>
 
   <main class="section">
-    <!-- <h1>Список проектов портфолио</h1> -->
+    <h2 class="section-main-title">Наші проекти</h2>
 
     <section>
       <div class="container">
 
-        <!-- Control buttons -->
+        <!-- Кнопки фільтру -->
 
         <ul id="myBtnContainer" class="filter flex list">
           <li>
@@ -93,112 +89,94 @@
           <option value="exclusive">Ексклюзив</option>
         </select>
 
-        <!-- Список проектов -->
+        <!-- Список проектів -->
 
         <ul class="projects list">
           <li class="projects-item fences accessories">
-            <div style="width: 370px; height: 278px;">
-              <img src="./images/projects/icons/ukr_bez.jpg" alt="Проект нашої компанії"
-                style="width: 370px; height: 278px; cursor: zoom-in;"
-                ondblclick="this.src='./images/projects/ukr_bez.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-                onclick="this.src='./images/projects/icons/ukr_bez.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
-            </div>
+            <img src="./images/projects/icons/ukr_bez.jpg" alt="Проект нашої компанії"
+              style="width: 370px; height: 278px; cursor: zoom-in;"
+              ondblclick="this.src='./images/projects/ukr_bez.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.src='./images/projects/icons/ukr_bez.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
             <div class="projects-item-description">
               <h4>Україна без сміття</h4>
               <p>мобільні огорожі, червона доріжка</p>
             </div>
           </li>
           <li class="projects-item infostands">
-            <div style="width: 370px; height: 278px;">
-              <img src="./images/projects/icons/energoatom.jpg" alt="Проект нашої компанії"
-                style="width: 370px; height: 278px; cursor: zoom-in;"
-                ondblclick="this.src='./images/projects/energoatom.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-                onclick="this.src='./images/projects/icons/energoatom.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
-            </div>
+            <img src="./images/projects/icons/energoatom.jpg" alt="Проект нашої компанії"
+              style="width: 370px; height: 278px; cursor: zoom-in;"
+              ondblclick="this.src='./images/projects/energoatom.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.src='./images/projects/icons/energoatom.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
             <div class="projects-item-description">
               <h4>Енергоатом</h4>
               <p>інформаційні стенди</p>
             </div>
           </li>
           <li class="projects-item flagpoles">
-            <div style="width: 370px; height: 278px;">
-              <img src="./images/projects/icons/ministry_of_defence_of_ukraine_1.jpg" alt="Проект нашої компанії"
-                style="width: 370px; height: 278px; cursor: zoom-in;"
-                ondblclick="this.src='./images/projects/ministry_of_defence_of_ukraine_1.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-                onclick="this.src='./images/projects/icons/ministry_of_defence_of_ukraine_1.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
-            </div>
+            <img src="./images/projects/icons/ministry_of_defence_of_ukraine_1.jpg" alt="Проект нашої компанії"
+              style="width: 370px; height: 278px; cursor: zoom-in;"
+              ondblclick="this.src='./images/projects/ministry_of_defence_of_ukraine_1.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.src='./images/projects/icons/ministry_of_defence_of_ukraine_1.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
             <div class="projects-item-description">
               <h4>Військовий полк АЗОВ</h4>
               <p>прапор з флагштоком</p>
             </div>
           </li>
           <li class="projects-item flagpoles symbols">
-            <div style="width: 370px; height: 278px;">
-              <img src="./images/projects/icons/ministry_of_defence_of_ukraine_2.jpg" alt="Проект нашої компанії"
-                style="width: 370px; height: 278px; cursor: zoom-in;"
-                ondblclick="this.src='./images/projects/ministry_of_defence_of_ukraine_2.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-                onclick="this.src='./images/projects/icons/ministry_of_defence_of_ukraine_2.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
-            </div>
+            <img src="./images/projects/icons/ministry_of_defence_of_ukraine_2.jpg" alt="Проект нашої компанії"
+              style="width: 370px; height: 278px; cursor: zoom-in;"
+              ondblclick="this.src='./images/projects/ministry_of_defence_of_ukraine_2.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.src='./images/projects/icons/ministry_of_defence_of_ukraine_2.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
             <div class="projects-item-description">
               <h4>Міністерство оборони України</h4>
               <p>прапори, флагштоки, герби</p>
             </div>
           </li>
           <li class="projects-item flagpoles accessories">
-            <div style="width: 370px; height: 278px;">
-              <img src="./images/projects/icons/police_1.jpg" alt="Проект нашої компанії"
-                style="width: 370px; height: 278px; cursor: zoom-in;"
-                ondblclick="this.src='./images/projects/police_1.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-                onclick="this.src='./images/projects/icons/police_1.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
-            </div>
+            <img src="./images/projects/icons/police_1.jpg" alt="Проект нашої компанії"
+              style="width: 370px; height: 278px; cursor: zoom-in;"
+              ondblclick="this.src='./images/projects/police_1.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.src='./images/projects/icons/police_1.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
             <div class="projects-item-description">
               <h4>Національна поліція України</h4>
               <p>прапори, флагштоки, панталери</p>
             </div>
           </li>
           <li class="projects-item flagpoles">
-            <div style="width: 370px; height: 278px;">
-              <img src="./images/projects/icons/balkansky.jpg" alt="Проект нашої компанії"
-                style="width: 370px; height: 278px; cursor: zoom-in;"
-                ondblclick="this.src='./images/projects/balkansky.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-                onclick="this.src='./images/projects/icons/balkansky.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
-            </div>
+            <img src="./images/projects/icons/balkansky.jpg" alt="Проект нашої компанії"
+              style="width: 370px; height: 278px; cursor: zoom-in;"
+              ondblclick="this.src='./images/projects/balkansky.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.src='./images/projects/icons/balkansky.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
             <div class="projects-item-description">
               <h4>Ресторан BalkanSky</h4>
               <p>прапори з флагштоками мобільні</p>
             </div>
           </li>
           <li class="projects-item fences">
-            <div style="width: 370px; height: 278px;">
-              <img src="./images/projects/icons/bsm.jpg" alt="Проект нашої компанії"
-                style="width: 370px; height: 278px; cursor: zoom-in;"
-                ondblclick="this.src='./images/projects/bsm.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-                onclick="this.src='./images/projects/icons/bsm.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
-            </div>
+            <img src="./images/projects/icons/bsm.jpg" alt="Проект нашої компанії"
+              style="width: 370px; height: 278px; cursor: zoom-in;"
+              ondblclick="this.src='./images/projects/bsm.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.src='./images/projects/icons/bsm.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
             <div class="projects-item-description">
               <h4>BSM</h4>
               <p>мобільні огорожі</p>
             </div>
           </li>
           <li class="projects-item accessories">
-            <div style="width: 370px; height: 278px;">
-              <img src="./images/projects/icons/theater_of_shevchenko.jpg" alt="Проект нашої компанії"
-                style="width: 370px; height: 278px; cursor: zoom-in;"
-                ondblclick="this.src='./images/projects/theater_of_shevchenko.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-                onclick="this.src='./images/projects/icons/theater_of_shevchenko.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
-            </div>
+            <img src="./images/projects/icons/theater_of_shevchenko.jpg" alt="Проект нашої компанії"
+              style="width: 370px; height: 278px; cursor: zoom-in;"
+              ondblclick="this.src='./images/projects/theater_of_shevchenko.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.src='./images/projects/icons/theater_of_shevchenko.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
             <div class="projects-item-description">
               <h4>Театр опери та балету</h4>
               <p>червона доріжка</p>
             </div>
           </li>
           <li class="projects-item exclusive">
-            <div style="width: 370px; height: 278px;">
-              <img src="./images/projects/icons/kahl.jpg" alt="Проект нашої компанії"
-                style="width: 370px; height: 278px; cursor: zoom-in;"
-                ondblclick="this.src='./images/projects/kahl.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-                onclick="this.src='./images/projects/icons/kahl.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
-            </div>
+            <img src="./images/projects/icons/kahl.jpg" alt="Проект нашої компанії"
+              style="width: 370px; height: 278px; cursor: zoom-in;"
+              ondblclick="this.src='./images/projects/kahl.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.src='./images/projects/icons/kahl.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
             <div class="projects-item-description">
               <h4>Київська аматорська хокейна ліга</h4>
               <p>кубок чемпіонів КАХЛ</p>
@@ -212,7 +190,7 @@
   <!-- Футер -->
 
   <footer class="footer">
-    <div class="container flex" style="justify-content: space-between; align-items: center;">
+    <div class="container flex footer-container">
       <div>
         <a href="./index.html" class="footer-logo logo">
           <span class="accent">Прапори</span><span class="second-part"> & Символи</span>
@@ -260,8 +238,6 @@
               </svg>
             </a>
           </li>
-
-
         </ul>
 
       </div>

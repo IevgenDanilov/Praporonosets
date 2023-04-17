@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="uk">
 
 <head>
   <meta charset="UTF-8" />
@@ -16,7 +16,7 @@
 
 <body>
 
-  <!-- Шапка сайта -->
+  <!-- Шапка сайту -->
   <header class="page-header">
     <div class="container flex">
       <nav class="nav flex">
@@ -29,15 +29,11 @@
           <li><a href="../../portfolio.html" class="link">Портфоліо</a></li>
           <li><a href="../../shop.html" class="link">Магазин</a></li>
           <li>
-            <a href="../../wishList.html" class="link"><svg width="24" height="24"
-                style="fill:#c0392b; opacity: 0.9; margin: 0 10px; "
-                onmouseover="this.style.fill='var(--accent-color)';" onmouseout="this.style.fill='#c0392b';">
+            <a href="../../wishList.html" class="link"><svg width="24" height="24" class="wishlist-icon">
                 <use href="../../images/icons.svg#icon-heart"></use>
               </svg></a>
             <a href="../../cart.html" class="link">
-              <svg width="24" height="24" style="fill: var(--secondary-accent-color); opacity: 0.9; margin: 0 10px"
-                onmouseover="this.style.fill='var(--accent-color)';"
-                onmouseout="this.style.fill='var(--secondary-accent-color)';">
+              <svg width="24" height="24" class="cart-icon">
                 <use href="../../images/icons.svg#icon-cart"></use>
               </svg></a>
           </li>
@@ -85,7 +81,7 @@
           <option value="pommels">Навершя</option>
         </select>
 
-        <!-- Список продуктов -->
+        <!-- Список продуктів -->
 
         <ul class="products-list list">
 
@@ -202,7 +198,7 @@
     </section>
     <section class="section">
       <div class="container">
-        <h2 class="section-main-title">Описання</h2>
+        <h2 class="section-main-title">Опис</h2>
         <strong>Мобільний флагшток з прапором може використовуватись як в інтер'єрі так і в екстер'єрі примішення, крім
           того його легко транспортувати та розміщувати на відкритих площах та вулицях. Мобільні флагштоки бувають
           кількох типів.</strong>
@@ -238,7 +234,7 @@
   <!-- Футер -->
 
   <footer class="footer">
-    <div class="container flex" style="justify-content: space-between; align-items: center;">
+    <div class="container flex footer-container">
       <div>
         <a href="../../index.html" class="footer-logo logo">
           <span class="accent">Прапори</span><span class="second-part"> & Символи</span>
@@ -300,7 +296,7 @@
 
   <script src="../../js/filterProducts.js"></script>
   <script src="../../js/favorites.js"></script>
-  <script src="../../js/ordered.js"></script>
+  <!-- <script src="../../js/ordered.js"></script> -->
 </body>
 
 </html>

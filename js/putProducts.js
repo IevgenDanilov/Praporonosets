@@ -4,7 +4,9 @@ const data = {
   flagpolesForAutomobile: [
     {
       id: 'fpa01',
-      categotiesClassList: '',
+      isFavorite: true,
+      isOrdered: false,
+      categoriesClassList: '',
       imgSrc: '../../images/products/flagpoles/automobile/flagpole-diplomat-premium.jpg',
       imgIconSrc: '../../images/products/flagpoles/automobile/icons/flagpole-diplomat-premium.jpg',
       imgAlt: 'флагшток автомобільний',
@@ -15,7 +17,9 @@ const data = {
     },
     {
       id: 'fpa02',
-      categotiesClassList: '',
+      isFavorite: false,
+      isOrdered: false,
+      categoriesClassList: '',
       imgSrc: '../../images/products/flagpoles/automobile/flagpole-diplomat-premium.jpg',
       imgIconSrc: '../../images/products/flagpoles/automobile/icons/flagpole-diplomat-premium.jpg',
       imgAlt: 'флагшток автомобільний',
@@ -26,7 +30,9 @@ const data = {
     },
     {
       id: 'fpa03',
-      categotiesClassList: '',
+      isFavorite: false,
+      isOrdered: false,
+      categoriesClassList: '',
       imgSrc: '../../images/products/flagpoles/automobile/flagpole-diplomat-premium.jpg',
       imgIconSrc: '../../images/products/flagpoles/automobile/icons/flagpole-diplomat-premium.jpg',
       imgAlt: 'флагшток автомобільний',
@@ -39,7 +45,9 @@ const data = {
   flagpolesForStreet: [
     {
       id: 'fps01',
-      categotiesClassList: '',
+      isFavorite: false,
+      isOrdered: false,
+      categoriesClassList: '',
       imgSrc: '../../images/products/flagpoles/street/flagpole-street-alum.jpg',
       imgIconSrc: '../../images/products/flagpoles/street/icons/flagpole-street-alum.jpg',
       imgAlt: 'флагшток вуличний',
@@ -50,7 +58,9 @@ const data = {
     },
     {
       id: 'fps02',
-      categotiesClassList: '',
+      isFavorite: false,
+      isOrdered: false,
+      categoriesClassList: '',
       imgSrc: '../../images/products/flagpoles/street/flagpole-street-alum.jpg',
       imgIconSrc: '../../images/products/flagpoles/street/icons/flagpole-street-alum.jpg',
       imgAlt: 'флагшток вуличний',
@@ -61,7 +71,9 @@ const data = {
     },
     {
       id: 'fps03',
-      categotiesClassList: '',
+      isFavorite: false,
+      isOrdered: false,
+      categoriesClassList: '',
       imgSrc: '../../images/products/flagpoles/street/flagpole-street-alum.jpg',
       imgIconSrc: '../../images/products/flagpoles/street/icons/flagpole-street-alum.jpg',
       imgAlt: 'флагшток вуличний',
@@ -78,19 +90,22 @@ let category = list.id;
 
 let listMarkup = '';
 
-data[category].map(({ id, imgSrc, imgIconSrc, imgAlt, name, material, size, price }) => {
-  listMarkup =
-    listMarkup +
-    `<li key="` +
-    id +
-    `" id="` +
-    id +
-    `" class="products-item">
+data[category].map(
+  ({ id, isFavorite, isOrdered, imgSrc, imgIconSrc, imgAlt, name, material, size, price }) => {
+    listMarkup =
+      listMarkup +
+      `<li key="` +
+      id +
+      `" id="` +
+      id +
+      `" class="products-item` +
+      (isFavorite ? ` favorite` : ``) +
+      `">
     <div style="display: flex; justify-content:space-between; font-size: 20px;">
       <button
         id="heart` +
-    id +
-    `"
+      id +
+      `"
         class="heart"
         style="background: transparent; border: none;"
         onclick="toggleFavorites(this.id)"
@@ -109,8 +124,8 @@ data[category].map(({ id, imgSrc, imgIconSrc, imgAlt, name, material, size, pric
       </a>
       <button
         id="cart` +
-    id +
-    `"
+      id +
+      `"
         class="cart"
         style="background: transparent; border: none;"
         onclick="toggleOrdered(this.id)"
@@ -122,36 +137,37 @@ data[category].map(({ id, imgSrc, imgIconSrc, imgAlt, name, material, size, pric
     </div>
     <img
       src="` +
-    imgIconSrc +
-    `"
+      imgIconSrc +
+      `"
       alt="` +
-    imgAlt +
-    `"
+      imgAlt +
+      `"
       title = 'click+click'
       style="width: 150px; cursor: zoom-in;"
       ondblclick="this.src='` +
-    imgSrc +
-    `'; this.title = 'click'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+      imgSrc +
+      `'; this.title = 'click'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
       onclick="this.src='` +
-    imgIconSrc +
-    `'; this.title = 'click+click'; this.style='width: 150px; cursor: zoom-in;'"
+      imgIconSrc +
+      `'; this.title = 'click+click'; this.style='width: 150px; cursor: zoom-in;'"
     />
     <div class="products-item-description">
       <h4>` +
-    name +
-    `</h4>
+      name +
+      `</h4>
       <p>` +
-    material +
-    `</p>
+      material +
+      `</p>
       <p>` +
-    size +
-    `</p>
+      size +
+      `</p>
       <p class="price">` +
-    price +
-    ` ₴</p>
+      price +
+      ` ₴</p>
     </div>
   </li>`;
-});
+  },
+);
 
 list.innerHTML = listMarkup;
 

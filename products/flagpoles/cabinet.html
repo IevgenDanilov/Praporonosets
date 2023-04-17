@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="uk">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, " />
-  <title>Портфоліо</title>
+  <title>Флагштоки кабінетні</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
@@ -16,7 +16,7 @@
 
 <body>
 
-  <!-- Шапка сайта -->
+  <!-- Шапка сайту -->
   <header class="page-header">
     <div class="container flex">
       <nav class="nav flex">
@@ -29,15 +29,11 @@
           <li><a href="../../portfolio.html" class="link">Портфоліо</a></li>
           <li><a href="../../shop.html" class="link">Магазин</a></li>
           <li>
-            <a href="../../wishList.html" class="link"><svg width="24" height="24"
-                style="fill:#c0392b; opacity: 0.9; margin: 0 10px; "
-                onmouseover="this.style.fill='var(--accent-color)';" onmouseout="this.style.fill='#c0392b';">
+            <a href="../../wishList.html" class="link"><svg width="24" height="24" class="wishlist-icon">
                 <use href="../../images/icons.svg#icon-heart"></use>
               </svg></a>
             <a href="../../cart.html" class="link">
-              <svg width="24" height="24" style="fill: var(--secondary-accent-color); opacity: 0.9; margin: 0 10px"
-                onmouseover="this.style.fill='var(--accent-color)';"
-                onmouseout="this.style.fill='var(--secondary-accent-color)';">
+              <svg width="24" height="24" class="cart-icon">
                 <use href="../../images/icons.svg#icon-cart"></use>
               </svg></a>
           </li>
@@ -56,14 +52,6 @@
 
 
     <section class="section products">
-      <!-- <marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid">
-        <marquee behavior="alternate">
-          <a href="#econom">АКЦІЯ</a>
-        </marquee>
-      </marquee>
-      <br />
-      <br />
-      <br /> -->
       <h2 class="section-main-title">Флагштоки кабінетні</h2>
       <div class="container">
         <!-- Фильтр продуктов -->
@@ -94,21 +82,17 @@
           <option value="pommels">Навершя</option>
         </select>
 
-        <!-- Список продуктов -->
+        <!-- Список продуктів -->
 
         <ul class="products-list list">
 
           <li class="products-item stands">
-            <div style="display: flex; justify-content:space-between; font-size: 20px;">
-              <button id="heart1" class="heart" style="background: transparent; border: none;"
-                onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+            <div class="products-item-btnContainer">
+              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#econom" style="color:grey"><b
-                  onmouseover="this.style=' font-size: larger; font-weight: 900; color: var(--accent-color)'"
-                  onmouseleave="this.style='color: inherit'">i</b></a>
-              <button id="cart1" class="cart" style="background: transparent; border: none;"
-                onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <a href="#econom" class="info-link">i</a>
+              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -129,16 +113,14 @@
                 державних установ у комплекті з прапором України.
               </p>
             </div>
-
           </li>
           <li class="products-item stands">
-            <div style="display: flex; justify-content:space-between; font-size: 20px;">
-              <button id="heart2" class="heart" style="background: transparent; border: none;"
-                onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+            <div class="products-item-btnContainer">
+              <button id="heart2" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <button id="cart2" class="cart" style="background: transparent; border: none;"
-                onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <a href="#econom" class="info-link">i</a>
+              <button id="cart2" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -154,13 +136,12 @@
             </div>
           </li>
           <li class="products-item stands">
-            <div style="display: flex; justify-content:space-between; font-size: 20px;">
-              <button id="heart3" class="heart" style="background: transparent; border: none;"
-                onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+            <div class="products-item-btnContainer">
+              <button id="heart3" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <button id="cart3" class="cart" style="background: transparent; border: none;"
-                onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <a href="#econom" class="info-link">i</a>
+              <button id="cart3" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -176,13 +157,12 @@
             </div>
           </li>
           <li class="products-item stands">
-            <div style="display: flex; justify-content:space-between; font-size: 20px;">
-              <button id="heart4" class="heart" style="background: transparent; border: none;"
-                onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+            <div class="products-item-btnContainer">
+              <button id="heart4" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <button id="cart4" class="cart" style="background: transparent; border: none;"
-                onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <a href="#econom" class="info-link">i</a>
+              <button id="cart4" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -198,13 +178,12 @@
             </div>
           </li>
           <li class="products-item stands">
-            <div style="display: flex; justify-content:space-between; font-size: 20px;">
-              <button id="heart5" class="heart" style="background: transparent; border: none;"
-                onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+            <div class="products-item-btnContainer">
+              <button id="heart5" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <button id="cart5" class="cart" style="background: transparent; border: none;"
-                onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <a href="#econom" class="info-link">i</a>
+              <button id="cart5" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -220,13 +199,12 @@
             </div>
           </li>
           <li class="products-item stands">
-            <div style="display: flex; justify-content:space-between; font-size: 20px;">
-              <button id="heart6" class="heart" style="background: transparent; border: none;"
-                onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+            <div class="products-item-btnContainer">
+              <button id="heart6" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <button id="cart6" class="cart" style="background: transparent; border: none;"
-                onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <a href="#classic" class="info-link">i</a>
+              <button id="cart6" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -242,13 +220,12 @@
             </div>
           </li>
           <li class="products-item stands">
-            <div style="display: flex; justify-content:space-between; font-size: 20px;">
-              <button id="heart7" class="heart" style="background: transparent; border: none;"
-                onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+            <div class="products-item-btnContainer">
+              <button id="heart7" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <button id="cart7" class="cart" style="background: transparent; border: none;"
-                onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <a href="#classic" class="info-link">i</a>
+              <button id="cart7" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -264,13 +241,12 @@
             </div>
           </li>
           <li class="products-item stands">
-            <div style="display: flex; justify-content:space-between; font-size: 20px;">
-              <button id="heart8" class="heart" style="background: transparent; border: none;"
-                onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+            <div class="products-item-btnContainer">
+              <button id="heart8" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <button id="cart8" class="cart" style="background: transparent; border: none;"
-                onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <a href="#classic" class="info-link">i</a>
+              <button id="cart8" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -286,13 +262,12 @@
             </div>
           </li>
           <li class="products-item stands">
-            <div style="display: flex; justify-content:space-between; font-size: 20px;">
-              <button id="heart9" class="heart" style="background: transparent; border: none;"
-                onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+            <div class="products-item-btnContainer">
+              <button id="heart9" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <button id="cart9" class="cart" style="background: transparent; border: none;"
-                onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <a href="#classic" class="info-link">i</a>
+              <button id="cart9" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -308,13 +283,12 @@
             </div>
           </li>
           <li class="products-item stands">
-            <div style="display: flex; justify-content:space-between; font-size: 20px;">
-              <button id="heart10" class="heart" style="background: transparent; border: none;"
-                onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+            <div class="products-item-btnContainer">
+              <button id="heart10" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <button id="cart10" class="cart" style="background: transparent; border: none;"
-                onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <a href="#premium" class="info-link">i</a>
+              <button id="cart10" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -330,13 +304,12 @@
             </div>
           </li>
           <li class="products-item stands">
-            <div style="display: flex; justify-content:space-between; font-size: 20px;">
-              <button id="heart11" class="heart" style="background: transparent; border: none;"
-                onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+            <div class="products-item-btnContainer">
+              <button id="heart11" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <button id="cart11" class="cart" style="background: transparent; border: none;"
-                onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <a href="#premium" class="info-link">i</a>
+              <button id="cart11" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -352,13 +325,12 @@
             </div>
           </li>
           <li class="products-item stands">
-            <div style="display: flex; justify-content:space-between; font-size: 20px;">
-              <button id="heart12" class="heart" style="background: transparent; border: none;"
-                onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+            <div class="products-item-btnContainer">
+              <button id="heart12" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <button id="cart12" class="cart" style="background: transparent; border: none;"
-                onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <a href="#premium" class="info-link">i</a>
+              <button id="cart12" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -374,13 +346,12 @@
             </div>
           </li>
           <li class="products-item stands">
-            <div style="display: flex; justify-content:space-between; font-size: 20px;">
-              <button id="heart13" class="heart" style="background: transparent; border: none;"
-                onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+            <div class="products-item-btnContainer">
+              <button id="heart13" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <button id="cart13" class="cart" style="background: transparent; border: none;"
-                onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <a href="#ethernal" class="info-link">i</a>
+              <button id="cart13" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -396,13 +367,12 @@
             </div>
           </li>
           <li class="products-item stands">
-            <div style="display: flex; justify-content:space-between; font-size: 20px;">
-              <button id="heart14" class="heart" style="background: transparent; border: none;"
-                onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+            <div class="products-item-btnContainer">
+              <button id="heart14" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <button id="cart14" class="cart" style="background: transparent; border: none;"
-                onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <a href="#ethernal" class="info-link">i</a>
+              <button id="cart14" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -418,13 +388,12 @@
             </div>
           </li>
           <li class="products-item stands">
-            <div style="display: flex; justify-content:space-between; font-size: 20px;">
-              <button id="heart15" class="heart" style="background: transparent; border: none;"
-                onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+            <div class="products-item-btnContainer">
+              <button id="heart15" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <button id="cart15" class="cart" style="background: transparent; border: none;"
-                onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <a href="#ethernal" class="info-link">i</a>
+              <button id="cart15" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -440,13 +409,12 @@
             </div>
           </li>
           <li class="products-item stands">
-            <div style="display: flex; justify-content:space-between; font-size: 20px;">
-              <button id="heart16" class="heart" style="background: transparent; border: none;"
-                onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+            <div class="products-item-btnContainer">
+              <button id="heart16" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <button id="cart16" class="cart" style="background: transparent; border: none;"
-                onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart16" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -462,13 +430,12 @@
             </div>
           </li>
           <li class="products-item stands">
-            <div style="display: flex; justify-content:space-between; font-size: 20px;">
-              <button id="heart17" class="heart" style="background: transparent; border: none;"
-                onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+            <div class="products-item-btnContainer">
+              <button id="heart17" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <button id="cart17" class="cart" style="background: transparent; border: none;"
-                onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart17" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -484,13 +451,12 @@
             </div>
           </li>
           <li class="products-item stands">
-            <div style="display: flex; justify-content:space-between; font-size: 20px;">
-              <button id="heart18" class="heart" style="background: transparent; border: none;"
-                onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+            <div class="products-item-btnContainer">
+              <button id="heart18" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <button id="cart18" class="cart" style="background: transparent; border: none;"
-                onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart18" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -506,13 +472,12 @@
             </div>
           </li>
           <li class="products-item poles">
-            <div style="display: flex; justify-content:space-between; font-size: 20px;">
-              <button id="heart19" class="heart" style="background: transparent; border: none;"
-                onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+            <div class="products-item-btnContainer">
+              <button id="heart19" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <button id="cart19" class="cart" style="background: transparent; border: none;"
-                onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <a href="#classic" class="info-link">i</a>
+              <button id="cart19" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -521,21 +486,149 @@
               ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_wood.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
               onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_wood.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
-              <h4>Древко дерев'яне 2400</h4>
+              <h4>Древко ПРЕСТИЖ 200</h4>
+              <p>горіх, редвуд, вільха</p>
+              <p>ДхШхВ: 28х28х2000</p>
+              <p class="price">800 ₴</p>
+            </div>
+          </li>
+          <li class="products-item poles">
+            <div class="products-item-btnContainer">
+              <button id="heart19" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#classic" class="info-link">i</a>
+              <button id="cart19" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/poles/icons/pole_wood.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_wood.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_wood.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Древко ПРЕСТИЖ 240</h4>
               <p>горіх, редвуд, вільха</p>
               <p>ДхШхВ: 28х28х2400</p>
               <p class="price">800 ₴</p>
             </div>
-
           </li>
           <li class="products-item poles">
-            <div style="display: flex; justify-content:space-between; font-size: 20px;">
-              <button id="heart21" class="heart" style="background: transparent; border: none;"
-                onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+            <div class="products-item-btnContainer">
+              <button id="heart19" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <button id="cart21" class="cart" style="background: transparent; border: none;"
-                onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <a href="#classic" class="info-link">i</a>
+              <button id="cart19" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/poles/icons/pole_wood.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_wood.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_wood.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Древко ПРЕСТИЖ 280</h4>
+              <p>горіх, редвуд, вільха</p>
+              <p>ДхШхВ: 28х28х2800</p>
+              <p class="price">800 ₴</p>
+            </div>
+          </li>
+          <li class="products-item poles">
+            <div class="products-item-btnContainer">
+              <button id="heart19" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#classic" class="info-link">i</a>
+              <button id="cart19" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click'
+              src="../../images/products/flagpoles/cabinet/poles/icons/pole_wood_ni_composite.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_wood_ni_composite.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_wood_ni_composite.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Древко КЛАСИК 240</h4>
+              <p>горіх, редвуд, вільха</p>
+              <p>ДхШхВ: 28х28х2400</p>
+              <p class="price">800 ₴</p>
+            </div>
+          </li>
+          <li class="products-item poles">
+            <div class="products-item-btnContainer">
+              <button id="heart19" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#classic" class="info-link">i</a>
+              <button id="cart19" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click'
+              src="../../images/products/flagpoles/cabinet/poles/icons/pole_wood_ni_composite.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_wood_ni_composite.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_wood_ni_composite.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Древко КЛАСИК 280</h4>
+              <p>горіх, редвуд, вільха</p>
+              <p>ДхШхВ: 28х28х2800</p>
+              <p class="price">800 ₴</p>
+            </div>
+          </li>
+          <li class="products-item poles">
+            <div class="products-item-btnContainer">
+              <button id="heart19" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#classic" class="info-link">i</a>
+              <button id="cart19" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click'
+              src="../../images/products/flagpoles/cabinet/poles/icons/pole_wood_au_composite.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_wood_au_composite.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_wood_au_composite.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Древко ПРЕМІУМ 240</h4>
+              <p>горіх, редвуд, вільха</p>
+              <p>ДхШхВ: 28х28х2400</p>
+              <p class="price">800 ₴</p>
+            </div>
+          </li>
+          <li class="products-item poles">
+            <div class="products-item-btnContainer">
+              <button id="heart19" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#classic" class="info-link">i</a>
+              <button id="cart19" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click'
+              src="../../images/products/flagpoles/cabinet/poles/icons/pole_wood_au_composite.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_wood_au_composite.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_wood_au_composite.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Древко ПРЕМІУМ 280</h4>
+              <p>горіх, редвуд, вільха</p>
+              <p>ДхШхВ: 28х28х2800</p>
+              <p class="price">800 ₴</p>
+            </div>
+          </li>
+          <li class="products-item poles">
+            <div class="products-item-btnContainer">
+              <button id="heart21" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#ethernal" class="info-link">i</a>
+              <button id="cart21" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -544,20 +637,82 @@
               ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_ni.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
               onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_ni.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
-              <h4>Древко металеве 2400</h4>
+              <h4>Древко ВІЧНІСТЬ 160</h4>
+              <p>нікель</p>
+              <p>ДхШхВ: 28х28х1600</p>
+              <p class="price">1000 ₴</p>
+            </div>
+          </li>
+          <li class="products-item poles">
+            <div class="products-item-btnContainer">
+              <button id="heart21" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#ethernal" class="info-link">i</a>
+              <button id="cart21" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/poles/icons/pole_ni.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_ni.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_ni.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Древко ВІЧНІСТЬ 200</h4>
+              <p>нікель</p>
+              <p>ДхШхВ: 28х28х2000</p>
+              <p class="price">1000 ₴</p>
+            </div>
+          </li>
+          <li class="products-item poles">
+            <div class="products-item-btnContainer">
+              <button id="heart21" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#ethernal" class="info-link">i</a>
+              <button id="cart21" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/poles/icons/pole_ni.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_ni.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_ni.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Древко ВІЧНІСТЬ 240</h4>
               <p>нікель</p>
               <p>ДхШхВ: 28х28х2400</p>
               <p class="price">1000 ₴</p>
             </div>
           </li>
           <li class="products-item poles">
-            <div style="display: flex; justify-content:space-between; font-size: 20px;">
-              <button id="heart20" class="heart" style="background: transparent; border: none;"
-                onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+            <div class="products-item-btnContainer">
+              <button id="heart21" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <button id="cart20" class="cart" style="background: transparent; border: none;"
-                onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <a href="#ethernal" class="info-link">i</a>
+              <button id="cart21" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/poles/icons/pole_ni.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_ni.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_ni.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Древко ВІЧНІСТЬ 300</h4>
+              <p>нікель</p>
+              <p>ДхШхВ: 28х28х3000</p>
+              <p class="price">1000 ₴</p>
+            </div>
+          </li>
+          <li class="products-item poles">
+            <div class="products-item-btnContainer">
+              <button id="heart20" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart20" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -566,9 +721,72 @@
               ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_au.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
               onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_au.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
-              <h4>Древко металеве 2400</h4>
+              <h4>Древко ДОСКОНАЛІСТЬ 160</h4>
+              <p>золото</p>
+              <p>ДхШхВ: 28х28х1600</p>
+              <p class="price">1200 ₴</p>
+            </div>
+          </li>
+          <li class="products-item poles">
+            <div class="products-item-btnContainer">
+              <button id="heart20" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart20" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/poles/icons/pole_au.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_au.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_au.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Древко ДОСКОНАЛІСТЬ 200</h4>
+              <p>золото</p>
+              <p>ДхШхВ: 28х28х2000</p>
+              <p class="price">1200 ₴</p>
+            </div>
+          </li>
+          <li class="products-item poles">
+            <div class="products-item-btnContainer">
+              <button id="heart20" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart20" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/poles/icons/pole_au.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_au.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_au.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Древко ДОСКОНАЛІСТЬ 240</h4>
               <p>золото</p>
               <p>ДхШхВ: 28х28х2400</p>
+              <p class="price">1200 ₴</p>
+            </div>
+          </li>
+          <li class="products-item poles">
+            <div class="products-item-btnContainer">
+              <button id="heart20" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart20" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/poles/icons/pole_au.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_au.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_au.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Древко ДОСКОНАЛІСТЬ 300</h4>
+              <p>золото</p>
+              <p>ДхШхВ: 28х28х300</p>
               <p class="price">1200 ₴</p>
             </div>
           </li>
@@ -576,11 +794,10 @@
         </ul>
         <div>
         </div>
-        <!-- </div> -->
     </section>
     <section class="section">
       <div class="container">
-        <h2 class="section-main-title">Описання</h2>
+        <h2 class="section-main-title">Опис</h2>
         <strong>Прапор з флагштоком підлоговим є елементом інтер'єру, який підкреслює виразність державного або
           корпоративного
           стилю. Комплект флагштоку складається з таких елементів як підставка, древко і навершя. В асортименті нашої
@@ -593,11 +810,12 @@
           замовлення здійснюється швидко та надійно.</strong>
         <br />
         <br />
+
         <h3 id="econom" class="title">Серія ЕКОНОМ</h3>
         <div class="flex" style="align-items: center;">
           <img title='click+click' src="../../images/products/flagpoles/cabinet/sets/premium_set.jpg"
             alt="флагшток класу преміум" width="150" height="150">
-          <p>Lorem ipsum dolor, <mark>sit amet consectetur</mark> adipisicing elit.
+          <p class="info-description">Lorem ipsum dolor, <mark>sit amet consectetur</mark> adipisicing elit.
             Laborum temporibus nulla iusto eaque consectetur,
             beatae eligendi nam dolore adipisci ipsum voluptates illum voluptate! Iusto molestias magni pariatur minus
             qui
@@ -621,7 +839,8 @@
         <div class="flex" style="align-items: center;">
           <img title='click+click' src="../../images/products/flagpoles/cabinet/sets/premium_set.jpg"
             alt="флагшток класу преміум" width="150" height="150">
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus nulla iusto eaque consectetur,
+          <p class="info-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus
+            nulla iusto eaque consectetur,
             beatae eligendi nam dolore adipisci ipsum voluptates illum voluptate! Iusto molestias magni pariatur minus
             qui
             ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sapiente similique esse placeat illum
@@ -643,7 +862,8 @@
         <div class="flex" style="align-items: center;">
           <img title='click+click' src="../../images/products/flagpoles/cabinet/sets/premium_set.jpg"
             alt="флагшток класу преміум" width="150" height="150">
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus nulla iusto eaque consectetur,
+          <p class="info-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus
+            nulla iusto eaque consectetur,
             beatae eligendi nam dolore adipisci ipsum voluptates illum voluptate! Iusto molestias magni pariatur minus
             qui
             ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sapiente similique esse placeat illum
@@ -661,11 +881,12 @@
             laborum? ue magnam sit voluptas, accusamus officia. Et optio dolores neque, nobis illo quae sed?</p>
         </div>
         <br />
-        <h3 id="premium" class="title">Серія АНТИВАНДАЛ</h3>
+        <h3 id="ethernal" class="title">Серія ВІЧНІСТЬ</h3>
         <div class="flex" style="align-items: center;">
           <img title='click+click' src="../../images/products/flagpoles/cabinet/sets/premium_set.jpg"
             alt="флагшток класу преміум" width="150" height="150">
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus nulla iusto eaque consectetur,
+          <p class="info-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus
+            nulla iusto eaque consectetur,
             beatae eligendi nam dolore adipisci ipsum voluptates illum voluptate! Iusto molestias magni pariatur minus
             qui
             ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sapiente similique esse placeat illum
@@ -683,11 +904,12 @@
             laborum? ue magnam sit voluptas, accusamus officia. Et optio dolores neque, nobis illo quae sed?</p>
         </div>
         <br />
-        <h3 id="premium" class="title">Серія ЛАКШЕРІ</h3>
+        <h3 id="luxury" class="title">Серія ДОСКОНАЛІСТЬ</h3>
         <div class="flex" style="align-items: center;">
           <img title='click+click' src="../../images/products/flagpoles/cabinet/sets/premium_set.jpg"
             alt="флагшток класу преміум" width="150" height="150">
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus nulla iusto eaque consectetur,
+          <p class="info-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus
+            nulla iusto eaque consectetur,
             beatae eligendi nam dolore adipisci ipsum voluptates illum voluptate! Iusto molestias magni pariatur minus
             qui
             ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sapiente similique esse placeat illum
@@ -712,7 +934,7 @@
   <!-- Футер -->
 
   <footer class="footer">
-    <div class="container flex" style="justify-content: space-between; align-items: center;">
+    <div class="container flex footer-container">
       <div>
         <a href="../../index.html" class="footer-logo logo">
           <span class="accent">Прапори</span><span class="second-part"> & Символи</span>
@@ -774,7 +996,7 @@
 
   <script src="../../js/filterProducts.js"></script>
   <script src="../../js/favorites.js"></script>
-  <script src="../../js/ordered.js"></script>
+  <!-- <script src="../../js/ordered.js"></script> -->
 </body>
 
 </html>

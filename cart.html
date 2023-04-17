@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="uk">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Портфоліо</title>
+  <title>Корзина</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <!-- Шапка сайта -->
+  <!-- Шапка сайту -->
   <header class="page-header">
     <div class="container flex">
       <nav class="nav flex">
@@ -28,15 +28,11 @@
           <li><a href="./portfolio.html" class="link">Портфоліо</a></li>
           <li><a href="./shop.html" class="link">Магазин</a></li>
           <li>
-            <a href="./wishList.html" class="link"><svg width="24" height="24"
-                style="fill:#c0392b; opacity: 0.9; margin: 0 10px; "
-                onmouseover="this.style.fill='var(--accent-color)';" onmouseout="this.style.fill='#c0392b';">
+            <a href="./wishList.html" class="link"><svg width="24" height="24" class="wishlist-icon">
                 <use href="./images/icons.svg#icon-heart"></use>
               </svg></a>
             <a href="./cart.html" class="link">
-              <svg width="24" height="24" style="fill: var(--secondary-accent-color); opacity: 0.9; margin: 0 10px"
-                onmouseover="this.style.fill='var(--accent-color)';"
-                onmouseout="this.style.fill='var(--secondary-accent-color)';">
+              <svg width="24" height="24" class="cart-icon">
                 <use href="./images/icons.svg#icon-cart"></use>
               </svg></a>
           </li>
@@ -56,20 +52,25 @@
 
     <section class="section products">
       <div class="container">
-        <!-- <form action="mailto:pp_danilov@ukr.net" method="post" enctype="text/plain">
-          FirstName: <input type="text" name="FirstName">
-          Email: <input type="text" name="Email">
-          <input type="submit" name="submit" value="Submit">
-        </form> -->
-        <button class="button secondary" onclick="setOrders()">Оформити замовлення</button>
+        <p class="section-main-title">Сторінка на стадії розробки</p>
+        <a href="tel:+380667700520" style="text-decoration: none;">
+          <h4 class="title">Просто зателефонуй <svg class="social-list-footer-icon" width="20" height="20"
+              style="fill: var(--accent-color)">
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg></h2>
+        </a>
+        <a href="https://t.me/+380667700520" style="text-decoration: none;">
+
+          <h4 class="title">Або напиши <svg class="social-list-footer-icon" width="20" height="20"
+              style="fill: var(--accent-color)">
+              <use href="./images/icons.svg#icon-send"></use>
+            </svg></h2>
+        </a>
+        <div style="min-height:40px"></div>
+
+        <!-- <button class="button secondary" onclick="setOrders()">Оформити замовлення</button> -->
         <div class="section cart-box">
           <ul id="cart" class="products-list list"></ul>
-        </div>
-        <div class="section">
-
-          <h4>Попередні замовлення</h4>
-          <div id="orders" style="pointer-events: none; opacity: 0.6;">
-          </div>
         </div>
       </div>
     </section>
@@ -79,7 +80,7 @@
   <!-- Футер -->
 
   <footer class="footer">
-    <div class="container flex" style="justify-content: space-between; align-items: center;">
+    <div class="container flex footer-container">
       <div>
         <a href="./index.html" class="footer-logo logo">
           <span class="accent">Прапори</span><span class="second-part"> & Символи</span>
@@ -135,8 +136,8 @@
     </div>
   </footer>
 
-  <script src="./js/getOrdered.js"></script>
-  <script src="./js/ordered.js"></script>
+  <!-- <script src="./js/getOrdered.js"></script> -->
+  <!-- <script src="./js/ordered.js"></script> -->
   <script src="./js/favorites.js"></script>
 </body>
 

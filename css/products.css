@@ -73,6 +73,12 @@
   /* margin: 0 6px; */
 }
 
+.products-item-btnContainer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
 /* ============== END products ============== */
 
 .show {
@@ -82,6 +88,8 @@
 .heart {
   stroke: var(--secondary-background-color);
   fill: var(--primary-white-color);
+  background: transparent;
+  border: none;
 }
 
 .heart:hover {
@@ -92,6 +100,8 @@
 .cart {
   stroke: var(--secondary-background-color);
   fill: var(--primary-white-color);
+  background: transparent;
+  border: none;
 }
 
 .cart:hover {
@@ -107,4 +117,19 @@
 .chosen-cart {
   stroke: var(--secondary-accent-color);
   fill: var(--secondary-accent-color);
+}
+
+.info-link {
+  color: grey;
+  font-weight: 700;
+}
+
+.info-link:hover {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--accent-color);
+}
+
+.info-description {
+  margin-left: 20px;
 }

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="uk">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Портфоліо</title>
+  <title>Обрані товари</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <!-- Шапка сайта -->
+  <!-- Шапка сайту -->
   <header class="page-header">
     <div class="container flex">
       <nav class="nav flex">
@@ -28,15 +28,11 @@
           <li><a href="./portfolio.html" class="link">Портфоліо</a></li>
           <li><a href="./shop.html" class="link">Магазин</a></li>
           <li>
-            <a href="./wishList.html" class="link"><svg width="24" height="24"
-                style="fill:#c0392b; opacity: 0.9; margin: 0 10px; "
-                onmouseover="this.style.fill='var(--accent-color)';" onmouseout="this.style.fill='#c0392b';">
+            <a href="./wishList.html" class="link"><svg width="24" height="24" class="wishlist-icon">
                 <use href="./images/icons.svg#icon-heart"></use>
               </svg></a>
             <a href="./cart.html" class="link">
-              <svg width="24" height="24" style="fill: var(--secondary-accent-color); opacity: 0.9; margin: 0 10px"
-                onmouseover="this.style.fill='var(--accent-color)';"
-                onmouseout="this.style.fill='var(--secondary-accent-color)';">
+              <svg width="24" height="24" class="cart-icon">
                 <use href="./images/icons.svg#icon-cart"></use>
               </svg></a>
           </li>
@@ -50,11 +46,12 @@
     </div>
   </header>
 
-  <main class="">
-    <!-- <h1>Список продуктов портфолио</h1> -->
+  <main>
+
 
 
     <section class="section products">
+      <h2 class="section-main-title">Обрані товари</h2>
       <div class="container">
 
         <div>
@@ -69,7 +66,7 @@
   <!-- Футер -->
 
   <footer class="footer">
-    <div class="container flex" style="justify-content: space-between; align-items: center;">
+    <div class="container flex footer-container">
       <div>
         <a href="./index.html" class="footer-logo logo">
           <span class="accent">Прапори</span><span class="second-part"> & Символи</span>

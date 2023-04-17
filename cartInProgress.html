@@ -4,13 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Магазин</title>
+  <title>Корзина</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css" />
   <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/products.css" />
 </head>
 
 <body>
@@ -25,7 +26,7 @@
         <ul class="site-nav list">
           <li><a href="./index.html" class="link">Про нас</a></li>
           <li><a href="./portfolio.html" class="link">Портфоліо</a></li>
-          <li><a href="./shop.html" class="link current">Магазин</a></li>
+          <li><a href="./shop.html" class="link">Магазин</a></li>
           <li>
             <a href="./wishList.html" class="link"><svg width="24" height="24" class="wishlist-icon">
                 <use href="./images/icons.svg#icon-heart"></use>
@@ -45,84 +46,30 @@
     </div>
   </header>
 
-  <main class="section clients">
-    <!-- <h1>Список проектов портфолио</h1> -->
+  <main class="">
+    <!-- <h1>Список продуктов портфолио</h1> -->
 
-    <section>
-      <h2 class="section-main-title">Перелік товарів</h2>
+
+    <section class="section products">
       <div class="container">
+        <!-- <form action="mailto:pp_danilov@ukr.net" method="post" enctype="text/plain">
+          FirstName: <input type="text" name="FirstName">
+          Email: <input type="text" name="Email">
+          <input type="submit" name="submit" value="Submit">
+        </form> -->
+        <button class="button secondary" onclick="setOrders()">Оформити замовлення</button>
+        <div class="section cart-box">
+          <ul id="cart" class="products-list list"></ul>
+        </div>
+        <div class="section">
 
-
-        <!-- Список розділів -->
-
-        <ul class="categories list">
-          <li class="categories-item x4">
-            <a href="./products/flags.html">
-              <div class="categories-item-description flex">
-                <img src="./images/projects/ukr_bez.jpg" alt="Проект нашої компанії" width="50" height="50" />
-                <p>Прапори</p>
-              </div>
-            </a>
-          </li>
-          <li class="categories-item x4">
-            <a href="./products/flagpoles.html">
-              <div class="categories-item-description flex">
-                <img src="./images/products/flagpoles/icons/cabinet.jpg" alt="Проект нашої компанії" width="50"
-                  height="50" />
-                <p>Флагштоки</p>
-              </div>
-            </a>
-          </li>
-          <li class="categories-item x4">
-            <a href="./products/symbolics.html">
-              <div class="categories-item-description flex">
-                <img src="./images/projects/ukr_bez.jpg" alt="Проект нашої компанії" width="50" height="50" />
-                <p>Символіка</p>
-              </div>
-            </a>
-          </li>
-          <li class="categories-item x4">
-            <a href="./products/infostands.html">
-              <div class="categories-item-description flex">
-                <img src="./images/projects/ukr_bez.jpg" alt="Проект нашої компанії" width="50" height="50" />
-                <p>Інфостенди</p>
-              </div>
-            </a>
-          </li>
-          <li class="categories-item x4">
-            <a href="./products/fences.html">
-              <div class="categories-item-description flex">
-                <img src="./images/projects/ukr_bez.jpg" alt="Проект нашої компанії" width="50" height="50" />
-                <p>Мобільні огорожі</p>
-              </div>
-            </a>
-          </li>
-          <li class="categories-item x4">
-            <a href="./products/accessories.html">
-              <div class="categories-item-description flex">
-                <img src="./images/projects/ukr_bez.jpg" alt="Проект нашої компанії" width="50" height="50" />
-                <p>Аксесуари</p>
-              </div>
-            </a>
-          </li>
-          <li class="categories-item x4">
-            <a href="./products/exclusive.html">
-              <div class="categories-item-description flex">
-                <img src="./images/projects/ukr_bez.jpg" alt="Проект нашої компанії" width="50" height="50" />
-                <p>Ексклюзив</p>
-              </div>
-            </a>
-          </li>
-
-        </ul>
+          <h4>Попередні замовлення</h4>
+          <div id="orders" style="pointer-events: none; opacity: 0.6;">
+          </div>
+        </div>
       </div>
     </section>
-    <section>
-      <div class="container collage">
 
-        <img src="./images/products-groupes-collage.png" alt="колаж з товарами" width="1200" height="600" />
-      </div>
-    </section>
   </main>
 
   <!-- Футер -->
@@ -183,6 +130,10 @@
       </div>
     </div>
   </footer>
+
+  <script src="./js/getOrdered.js"></script>
+  <script src="./js/ordered.js"></script>
+  <script src="./js/favorites.js"></script>
 </body>
 
 </html>
