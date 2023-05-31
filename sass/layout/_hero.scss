@@ -1,0 +1,52 @@
+.hero {
+  background-color: var(--secondary-background-color);
+  padding-bottom: 118px;
+  padding-top: 118px;
+  text-align: center;
+}
+
+.hero__content {
+  margin: 0 auto;
+  max-width: 360px;
+}
+
+.overlay {
+  width: 480px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/bg-flags.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+// 768px+
+@media screen and (min-width: 768px) {
+  .overlay {
+    width: 768px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/bg-flags.jpg');
+  }
+}
+
+// 1200px+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-bottom: 200px;
+    padding-top: 200px;
+  }
+
+  .hero__content {
+    max-width: 700px;
+  }
+
+  .overlay {
+    // min-width: 1200px;
+    width: 1600px;
+    height: 500px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/bg-flags.jpg');
+  }
+}

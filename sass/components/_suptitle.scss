@@ -1,0 +1,48 @@
+// .invite,
+// .subscribe {
+//   margin: 60px 0 0 0;
+// }
+
+.invite__text,
+.subscribe__text {
+  color: var(--primary-white-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  text-align: right;
+  // margin-bottom: 20px;
+}
+
+// .services__title {
+//   color: var(--primary-white-color);
+//   font-weight: 700;
+//   font-size: 14px;
+//   line-height: 1.14;
+//   text-transform: uppercase;
+// }
+
+// .employees__item h3
+
+// .employees__suptitle {
+//   color: var(--title-text-color);
+//   font-weight: 500;
+//   font-size: 16px;
+//   line-height: 1.2;
+//   margin: 0 auto 10px auto;
+// }
+
+// 000000000000000000000
+
+@media screen and (min-width: 768px) {
+  .invite {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .invite,
+  .subscribe {
+    margin: 0;
+  }
+}

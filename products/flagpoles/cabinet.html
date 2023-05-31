@@ -10,8 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css" />
-  <link rel="stylesheet" href="../../css/styles.css" />
-  <link rel="stylesheet" href="../../css/products.css" />
+  <link rel="stylesheet" href="../../css1/styles.css" />
+  <link rel="stylesheet" href="../../css1/products.css" />
+  <link rel="stylesheet" href="../../css/main.min.css" />
 </head>
 
 <body>
@@ -20,7 +21,7 @@
   <header class="page-header">
     <div class="container flex">
       <nav class="nav flex">
-        <a href="../../index.html" class="top-logo logo">
+        <a href="../../index.html" class="logo__header logo">
           <span class="accent">Прапори </span>& Символи
         </a>
 
@@ -52,9 +53,40 @@
 
 
     <section class="section products">
-      <h2 class="section-main-title">Флагштоки кабінетні</h2>
+      <h2 class="section__main-title">Флагштоки кабінетні</h2>
       <div class="container">
         <!-- Фильтр продуктов -->
+
+
+        <!-- <div>
+          Серія
+          <hr />
+          <ul id="myBtnContainer" class="filter flex list">
+            <li>
+              <button type="button" class="button secondary active" onclick="filterSelection('all')">Усі</button>
+            </li>
+            <li>
+              <button type="button" class="button secondary" onclick="filterSelection('econom')">Економ</button>
+            </li>
+            <li>
+              <button type="button" class="button secondary" onclick="filterSelection('classic')">Класик</button>
+            </li>
+            <li>
+              <button type="button" class="button secondary" onclick="filterSelection('premium')">Преміум</button>
+            </li>
+            <li>
+              <button type="button" class="button secondary" onclick="filterSelection('profi')">Профі</button>
+            </li>
+            <li>
+              <button type="button" class="button secondary" onclick="filterSelection('elite')">Еліт</button>
+            </li>
+
+          </ul>
+        </div> -->
+
+        <!-- <div>
+          Тип
+          <hr /> -->
         <ul id="myBtnContainer" class="filter flex list">
           <li>
             <button type="button" class="button secondary active" onclick="filterSelection('all')">Усі</button>
@@ -73,6 +105,7 @@
           </li>
 
         </ul>
+        <!-- </div> -->
 
         <select onchange="filterSelection(this.value)" name="filter" class="products-groupes-switcher">
           <option value="all" selected="selected">Усі</option>
@@ -177,7 +210,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products-item stands">
+          <li class="products-item stands econom">
             <div class="products-item-btnContainer">
               <button id="heart5" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -198,7 +231,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products-item stands">
+          <li class="products-item stands classic">
             <div class="products-item-btnContainer">
               <button id="heart6" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -219,7 +252,7 @@
               <p class="price">2000 ₴</p>
             </div>
           </li>
-          <li class="products-item stands">
+          <li class="products-item stands classic">
             <div class="products-item-btnContainer">
               <button id="heart7" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -240,7 +273,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products-item stands">
+          <li class="products-item stands classic">
             <div class="products-item-btnContainer">
               <button id="heart8" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -261,7 +294,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products-item stands">
+          <li class="products-item stands classic">
             <div class="products-item-btnContainer">
               <button id="heart9" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -282,7 +315,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products-item stands">
+          <li class="products-item stands premium">
             <div class="products-item-btnContainer">
               <button id="heart10" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -303,7 +336,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products-item stands">
+          <li class="products-item stands premium">
             <div class="products-item-btnContainer">
               <button id="heart11" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -324,7 +357,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products-item stands">
+          <li class="products-item stands premium">
             <div class="products-item-btnContainer">
               <button id="heart12" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -471,6 +504,28 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
+
+          <li class="products-item poles">
+            <div class="products-item-btnContainer">
+              <button id="heart19" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#classic" class="info-link">i</a>
+              <button id="cart19" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/poles/icons/pole_mp.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_mp.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_mp.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Древко ЕКОНОМ 240</h4>
+              <p>венге, махонь, бук</p>
+              <p>ДхШхВ: 28х28х2400</p>
+              <p class="price">600 ₴</p>
+            </div>
+          </li>
           <li class="products-item poles">
             <div class="products-item-btnContainer">
               <button id="heart19" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
@@ -544,6 +599,27 @@
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/poles/icons/segment_pole_wood.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/segment_pole_wood.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/segment_pole_wood.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Древко КЛАСИК 40</h4>
+              <p>горіх, редвуд, вільха</p>
+              <p>ДхШхВ: 28х28х400</p>
+              <p class="price">800 ₴</p>
+            </div>
+          </li>
+          <li class="products-item poles">
+            <div class="products-item-btnContainer">
+              <button id="heart19" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#classic" class="info-link">i</a>
+              <button id="cart19" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
             <img title='click+click'
               src="../../images/products/flagpoles/cabinet/poles/icons/pole_wood_ni_composite.jpg"
               alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
@@ -575,6 +651,27 @@
               <h4>Древко КЛАСИК 280</h4>
               <p>горіх, редвуд, вільха</p>
               <p>ДхШхВ: 28х28х2800</p>
+              <p class="price">800 ₴</p>
+            </div>
+          </li>
+          <li class="products-item poles">
+            <div class="products-item-btnContainer">
+              <button id="heart19" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#classic" class="info-link">i</a>
+              <button id="cart19" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/poles/icons/segment_pole_wood.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/segment_pole_wood.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/segment_pole_wood.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Древко ПРЕМІУМ 40</h4>
+              <p>горіх, редвуд, вільха</p>
+              <p>ДхШхВ: 28х28х400</p>
               <p class="price">800 ₴</p>
             </div>
           </li>
@@ -797,7 +894,7 @@
     </section>
     <section class="section">
       <div class="container">
-        <h2 class="section-main-title">Опис</h2>
+        <h2 class="section__main-title">Опис</h2>
         <strong>Прапор з флагштоком підлоговим є елементом інтер'єру, який підкреслює виразність державного або
           корпоративного
           стилю. Комплект флагштоку складається з таких елементів як підставка, древко і навершя. В асортименті нашої
@@ -815,116 +912,67 @@
         <div class="flex" style="align-items: center;">
           <img title='click+click' src="../../images/products/flagpoles/cabinet/sets/premium_set.jpg"
             alt="флагшток класу преміум" width="150" height="150">
-          <p class="info-description">Lorem ipsum dolor, <mark>sit amet consectetur</mark> adipisicing elit.
-            Laborum temporibus nulla iusto eaque consectetur,
-            beatae eligendi nam dolore adipisci ipsum voluptates illum voluptate! Iusto molestias magni pariatur minus
-            qui
-            ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sapiente similique esse placeat illum
-            voluptatem provident. Consectetur id ad eligendi repellendus placeat ullam corporis animi vero at. Vel,
-            harum
-            laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero optio omnis magni ut earum incidunt
-            libero
-            similique magnam sit voluptas, accusamus officia. Et optio dolores neque, nobis illo quae sed?
-            Lorem ipsum dolor, sit amet consectetur <mark>adipisicing elit.</mark> Laborum temporibus nulla iusto eaque
-            consectetur,
-            beatae eligendi nam dolore adipisci ipsum voluptates illum voluptate! Iusto molestias magni pariatur minus
-            qui
-            ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sapiente similique esse placeat illum
-            voluptatem provident. Consectetur id ad eligendi repellendus placeat ullam corporis animi vero at. Vel,
-            harum
-            laborum? ue magnam sit voluptas, accusamus officia. Et optio dolores neque, nobis illo quae sed?</p>
+          <p class="info-description">Ці флагштоки
+            відрізняються доступністю і виконані з
+            використанням різних матеріалів. Підставки і тумби виготовлені з ДСП, навершя зроблені з міцного пластику,
+            древка з
+            металопластику, а деякі частини підставок і древок - зі сталі, покритої хромом. Ці комплектуючі забезпечують
+            вам
+            надійність та витривалість, при цьому залишаючись доступними з економічної точки зору. Оберіть категорію
+            "ЕКОНОМ" і
+            отримайте надійний кабінетний флагшток за приємною ціною.</p>
         </div>
         <br />
         <h3 id="classic" class="title">Серія КЛАСИК</h3>
         <div class="flex" style="align-items: center;">
           <img title='click+click' src="../../images/products/flagpoles/cabinet/sets/premium_set.jpg"
             alt="флагшток класу преміум" width="150" height="150">
-          <p class="info-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus
-            nulla iusto eaque consectetur,
-            beatae eligendi nam dolore adipisci ipsum voluptates illum voluptate! Iusto molestias magni pariatur minus
-            qui
-            ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sapiente similique esse placeat illum
-            voluptatem provident. Consectetur id ad eligendi repellendus placeat ullam corporis animi vero at. Vel,
-            harum
-            laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero optio omnis magni ut earum incidunt
-            libero
-            similique magnam sit voluptas, accusamus officia. Et optio dolores neque, nobis illo quae sed?
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus nulla iusto eaque consectetur,
-            beatae eligendi nam dolore adipisci ipsum voluptates illum voluptate! Iusto molestias magni pariatur minus
-            qui
-            ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sapiente similique esse placeat illum
-            voluptatem provident. Consectetur id ad eligendi repellendus placeat ullam corporis animi vero at. Vel,
-            harum
-            laborum? ue magnam sit voluptas, accusamus officia. Et optio dolores neque, nobis illo quae sed?</p>
+          <p class="info-description">Ці флагштоки відзначаються гарною якістю за розумні гроші. Вони виготовлені з
+            натурального дерева, що надає їм елегантний вигляд. Підставки, древка і деякі частини виготовлені з
+            нержавіючої сталі, а
+            наверші з нержавіючої сталі додають кабінетному флагштоку особливого шарму. Вибираючи категорію "КЛАСИК", ви
+            отримуєте
+            флагшток, який відмінно поєднує класичний стиль з високою якістю за розумною ціною.</p>
         </div>
         <br />
         <h3 id="premium" class="title">Серія ПРЕМІУМ</h3>
         <div class="flex" style="align-items: center;">
           <img title='click+click' src="../../images/products/flagpoles/cabinet/sets/premium_set.jpg"
             alt="флагшток класу преміум" width="150" height="150">
-          <p class="info-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus
-            nulla iusto eaque consectetur,
-            beatae eligendi nam dolore adipisci ipsum voluptates illum voluptate! Iusto molestias magni pariatur minus
-            qui
-            ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sapiente similique esse placeat illum
-            voluptatem provident. Consectetur id ad eligendi repellendus placeat ullam corporis animi vero at. Vel,
-            harum
-            laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero optio omnis magni ut earum incidunt
-            libero
-            similique magnam sit voluptas, accusamus officia. Et optio dolores neque, nobis illo quae sed?
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus nulla iusto eaque consectetur,
-            beatae eligendi nam dolore adipisci ipsum voluptates illum voluptate! Iusto molestias magni pariatur minus
-            qui
-            ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sapiente similique esse placeat illum
-            voluptatem provident. Consectetur id ad eligendi repellendus placeat ullam corporis animi vero at. Vel,
-            harum
-            laborum? ue magnam sit voluptas, accusamus officia. Et optio dolores neque, nobis illo quae sed?</p>
+          <p class="info-description">Ці флагштоки вражають своєю красою та елегантністю. Вони виготовлені з дерева
+            високої якості, яке додає їм природну
+            привабливість. Наверші та деякі частини підставок виготовлені зі сталі, покритої золотом, що надає
+            флагштокам розкішний
+            вигляд. Категорія "ПРЕМІУМ" втілює в собі поєднання естетики і високої якості, створюючи вражаючий
+            візуальний ефект.
+            Оберіть категорію "ПРЕМІУМ" і насолоджуйтеся неперевершеним стилем і привабливістю кабінетних флагштоків.
+          </p>
         </div>
         <br />
-        <h3 id="ethernal" class="title">Серія ВІЧНІСТЬ</h3>
+        <h3 id="ethernal" class="title">Серія ПРОФІ</h3>
         <div class="flex" style="align-items: center;">
           <img title='click+click' src="../../images/products/flagpoles/cabinet/sets/premium_set.jpg"
             alt="флагшток класу преміум" width="150" height="150">
-          <p class="info-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus
-            nulla iusto eaque consectetur,
-            beatae eligendi nam dolore adipisci ipsum voluptates illum voluptate! Iusto molestias magni pariatur minus
-            qui
-            ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sapiente similique esse placeat illum
-            voluptatem provident. Consectetur id ad eligendi repellendus placeat ullam corporis animi vero at. Vel,
-            harum
-            laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero optio omnis magni ut earum incidunt
-            libero
-            similique magnam sit voluptas, accusamus officia. Et optio dolores neque, nobis illo quae sed?
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus nulla iusto eaque consectetur,
-            beatae eligendi nam dolore adipisci ipsum voluptates illum voluptate! Iusto molestias magni pariatur minus
-            qui
-            ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sapiente similique esse placeat illum
-            voluptatem provident. Consectetur id ad eligendi repellendus placeat ullam corporis animi vero at. Vel,
-            harum
-            laborum? ue magnam sit voluptas, accusamus officia. Et optio dolores neque, nobis illo quae sed?</p>
+          <p class="info-description">Ці флагштоки виготовлені з високоякісної нержавіючої сталі, яка забезпечує їм
+            міцність і стійкість до корозії. Категорія
+            "ПРОФІ" пропонує надійні комплектуючі для вашого флагштоку, які витримають випробування часу і забезпечать
+            його
+            стабільну роботу. Оберіть категорію "ПРОФІ" і переконайтесь в її надійності та довговічності.</p>
         </div>
         <br />
-        <h3 id="luxury" class="title">Серія ДОСКОНАЛІСТЬ</h3>
+        <h3 id="luxury" class="title">Серія ЕЛІТ</h3>
         <div class="flex" style="align-items: center;">
           <img title='click+click' src="../../images/products/flagpoles/cabinet/sets/premium_set.jpg"
             alt="флагшток класу преміум" width="150" height="150">
-          <p class="info-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus
-            nulla iusto eaque consectetur,
-            beatae eligendi nam dolore adipisci ipsum voluptates illum voluptate! Iusto molestias magni pariatur minus
-            qui
-            ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sapiente similique esse placeat illum
-            voluptatem provident. Consectetur id ad eligendi repellendus placeat ullam corporis animi vero at. Vel,
-            harum
-            laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero optio omnis magni ut earum incidunt
-            libero
-            similique magnam sit voluptas, accusamus officia. Et optio dolores neque, nobis illo quae sed?
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum temporibus nulla iusto eaque consectetur,
-            beatae eligendi nam dolore adipisci ipsum voluptates illum voluptate! Iusto molestias magni pariatur minus
-            qui
-            ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sapiente similique esse placeat illum
-            voluptatem provident. Consectetur id ad eligendi repellendus placeat ullam corporis animi vero at. Vel,
-            harum
-            laborum? ue magnam sit voluptas, accusamus officia. Et optio dolores neque, nobis illo quae sed?</p>
+          <p class="info-description">Ця серія пропонує вам найвищу якість і неперевершений стиль. Виготовлені з
+            високоякісної сталі, покритої золотом,
+            підставки, древка та наверші забезпечують флагштоку розкішний вигляд і елегантність. Матеріали високої
+            якості та
+            майстерне виконання гарантують довговічність і надійність цих флагштоків. Серія "ЕЛІТ" створена для тих, хто
+            цінує
+            вишуканість, престиж та високу якість. Оберіть категорію "ЕЛІТ" і додайте нотку розкіші та визначеності до
+            свого
+            кабінетного флагштоку.</p>
         </div>
       </div>
     </section>
@@ -936,7 +984,7 @@
   <footer class="footer">
     <div class="container flex footer-container">
       <div>
-        <a href="../../index.html" class="footer-logo logo">
+        <a href="../../index.html" class="logo__footer logo">
           <span class="accent">Прапори</span><span class="second-part"> & Символи</span>
         </a>
 
@@ -952,32 +1000,32 @@
       </div>
 
       <div class="invite">
-        <p class="invite-text">Долучайтесь до наших <span class="accent">каналів</span></p>
-        <ul class="social-list list">
-          <li class="social-list-item">
-            <a href="" class="social-list-footer-link">
-              <svg class="social-list-footer-icon" width="20" height="20">
+        <p class="invite__text">Долучайтесь до наших <span class="accent">каналів</span></p>
+        <ul class="social__list list">
+          <li class="social__item">
+            <a href="" class="social__footer-link">
+              <svg class="social__footer-icon" width="20" height="20">
                 <use href="../../images/icons.svg#icon-send"></use>
               </svg>
             </a>
           </li>
-          <li class="social-list-item">
-            <a href="" class="social-list-footer-link">
-              <svg class="social-list-footer-icon" width="20" height="20">
+          <li class="social__item">
+            <a href="" class="social__footer-link">
+              <svg class="social__footer-icon" width="20" height="20">
                 <use href="../../images/icons.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
-          <li class="social-list-item">
-            <a href="" class="social-list-footer-link">
-              <svg class="social-list-footer-icon" width="20" height="20">
+          <li class="social__item">
+            <a href="" class="social__footer-link">
+              <svg class="social__footer-icon" width="20" height="20">
                 <use href="../../images/icons.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
-          <li class="social-list-item">
-            <a href="" class="social-list-footer-link">
-              <svg class="social-list-footer-icon" width="20" height="20">
+          <li class="social__item">
+            <a href="" class="social__footer-link">
+              <svg class="social__footer-icon" width="20" height="20">
                 <use href="../../images/icons.svg#icon-pinterest"></use>
               </svg>
             </a>
