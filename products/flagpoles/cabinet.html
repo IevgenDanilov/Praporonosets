@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, " />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Флагштоки кабінетні</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -84,30 +84,10 @@
           </ul>
         </div> -->
 
-        <!-- <div>
-          Тип
-          <hr /> -->
-        <ul id="myBtnContainer" class="filter flex list">
-          <li>
-            <button type="button" class="button secondary active" onclick="filterSelection('all')">Усі</button>
-          </li>
-          <li>
-            <button type="button" class="button secondary" onclick="filterSelection('sets')">Комплекти</button>
-          </li>
-          <li>
-            <button type="button" class="button secondary" onclick="filterSelection('stands')">Підставки</button>
-          </li>
-          <li>
-            <button type="button" class="button secondary" onclick="filterSelection('poles')">Древка</button>
-          </li>
-          <li>
-            <button type="button" class="button secondary" onclick="filterSelection('pommels')">Навершя</button>
-          </li>
 
-        </ul>
-        <!-- </div> -->
 
-        <select onchange="filterSelection(this.value)" name="filter" class="products-groupes-switcher">
+
+        <select id="mobFilter" onchange="filterSelection(this.value)" class="products-groupes-switcher">
           <option value="all" selected="selected">Усі</option>
           <option value="sets">Комплекти</option>
           <option value="stands">Підставки</option>
@@ -115,9 +95,287 @@
           <option value="pommels">Навершя</option>
         </select>
 
+        <div id="tabletFilter">
+          <ul id="myBtnContainer" class="filter flex list">
+            <li>
+              <button type="button" class="button secondary active round" onclick="filterSelection('all')">
+                <svg viewBox="0 0 100 100" width="30" height="30">
+                  <defs>
+                    <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
+                  </defs>
+                  <text font-size="20">
+                    <textPath xlink:href="#circle">
+                      Усі--------------
+                    </textPath>
+                  </text>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="button secondary round" onclick="filterSelection('sets')"><svg
+                  viewBox="0 0 100 100" width="30" height="30">
+                  <defs>
+                    <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
+                  </defs>
+                  <text font-size="20">
+                    <textPath xlink:href="#circle">
+                      Комплекти--------------
+                    </textPath>
+                  </text>
+                </svg></button>
+            </li>
+            <li>
+              <button type="button" class="button secondary round" onclick="filterSelection('stands')"><svg
+                  viewBox="0 0 100 100" width="30" height="30">
+                  <defs>
+                    <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
+                  </defs>
+                  <text font-size="20">
+                    <textPath xlink:href="#circle">
+                      Підставки--------------
+                    </textPath>
+                  </text>
+                </svg></button>
+            </li>
+            <li>
+              <button type="button" class="button secondary round" onclick="filterSelection('poles')"><svg
+                  viewBox="0 0 100 100" width="30" height="30">
+                  <defs>
+                    <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
+                  </defs>
+                  <text font-size="20">
+                    <textPath xlink:href="#circle">
+                      Древка--------------
+                    </textPath>
+                  </text>
+                </svg></button>
+            </li>
+            <li>
+              <button type="button" class="button secondary round" onclick="filterSelection('pommels')"><svg
+                  viewBox="0 0 100 100" width="30" height="30">
+                  <defs>
+                    <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
+                  </defs>
+                  <text font-size="20">
+                    <textPath xlink:href="#circle">
+                      Навершя--------------
+                    </textPath>
+                  </text>
+                </svg></button>
+            </li>
+          </ul>
+        </div>
+
+        <div id="desctopFilter">
+          <ul id="myBtnContainer" class="filter flex list">
+            <li>
+              <button type="button" class="button secondary active" onclick="filterSelection('all')">Усі</button>
+            </li>
+            <li>
+              <button type="button" class="button secondary" onclick="filterSelection('sets')">Комплекти</button>
+            </li>
+            <li>
+              <button type="button" class="button secondary" onclick="filterSelection('stands')">Підставки</button>
+            </li>
+            <li>
+              <button type="button" class="button secondary" onclick="filterSelection('poles')">Древка</button>
+            </li>
+            <li>
+              <button type="button" class="button secondary" onclick="filterSelection('pommels')">Навершя</button>
+            </li>
+          </ul>
+        </div>
+
         <!-- Список продуктів -->
 
         <ul class="products-list list">
+          <li class="products-item sets" style="position: relative;">
+            <div class="products-item-btnContainer">
+              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#h01" class="info-link">i</a>
+              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/sets/icons/minimal_set.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/sets/minimal_set.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/sets/icons/minimal_set.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Флагшток МІНІМАЛ</h4>
+              <p>венге, махонь, бук</p>
+              <p>ДхШхВ: 350х350х2500</p>
+              <p class="price">3000 ₴</p>
+              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+                style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
+                <p style="font-size: 14px; margin: 10px;">Флагшток кабінетний серії Економ є простим і
+                  надійним, крім того його ціна дуже приємна. Виготовляється з таких матеріалів як ДСП, металопластик та
+                  нержавіюча сталь. Прапор під такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
+                  або атласу.</p>
+                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                  width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
+              </div>
+            </div>
+          </li>
+          <li class="products-item sets" style="position: relative;">
+            <div class="products-item-btnContainer">
+              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#h01" class="info-link">i</a>
+              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/sets/icons/econom_set.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/sets/econom_set.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/sets/icons/econom_set.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Флагшток ЕКОНОМ</h4>
+              <p>венге, махонь, бук</p>
+              <p>ДхШхВ: 350х350х2500</p>
+              <p class="price">5000 ₴</p>
+              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+                style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
+                <!-- <button onclick="this.parentElement.hidden='until-found'" class="button accent-rev"
+                  style="background: #ffffff; margin: 10px; margin-left: auto; display: block; border:solid 1px; border-radius: 50%; font-size: 8px; padding: 2px; width: 16px; height: 16px; ">⛌</button> -->
+                <p style="font-size: 14px; margin: 10px;">Флагшток кабінетний серії Економ є простим і
+                  надійним, крім того його ціна дуже приємна. Виготовляється з таких матеріалів як ДСП, металопластик та
+                  нержавіюча сталь. Прапор під такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
+                  або атласу.</p>
+                <img src="../../images/products/flagpoles/cabinet/sets/econom_set.jpg" alt="Підставка для прапору"
+                  width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
+              </div>
+            </div>
+          </li>
+          <li class="products-item sets" style="position: relative;">
+            <div class="products-item-btnContainer">
+              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#h01" class="info-link">i</a>
+              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/sets/icons/prestige_set.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/sets/prestige_set.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/sets/icons/prestige_set.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Флагшток ПРЕСТИЖ</h4>
+              <p>венге, махонь, бук</p>
+              <p>ДхШхВ: 400х400х2600</p>
+              <p class="price">6000 ₴</p>
+              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+                style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
+                <p style="font-size: 14px; margin: 10px;">Флагшток кабінетний серії Класик є надійним і
+                  естетичним, крім того його ціна доступна для більшості замовників. Виготовляється з таких матеріалів
+                  як натуральне дерево та
+                  нержавіюча сталь. Прапор під такий флагшток зазвичай виготовляється з габардину
+                  або атласу.</p>
+                <img src="../../images/products/flagpoles/cabinet/sets/prestige_set.jpg" alt="Підставка для прапору"
+                  width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
+              </div>
+            </div>
+          </li>
+          <li class="products-item sets" style="position: relative;">
+            <div class="products-item-btnContainer">
+              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#h01" class="info-link">i</a>
+              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/sets/icons/prestige_set.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/sets/prestige_set.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/sets/icons/prestige_set.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Флагшток КЛАСИК</h4>
+              <p>горіх, редвуд, вільха</p>
+              <p>ДхШхВ: 400х400х2600</p>
+              <p class="price">7000 ₴</p>
+              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+                style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
+                <p style="font-size: 14px; margin: 10px;">Флагшток кабінетний серії Класик є надійним і
+                  естетичним, крім того його ціна доступна для більшості замовників. Виготовляється з таких матеріалів
+                  як натуральне дерево та
+                  нержавіюча сталь. Прапор під такий флагшток зазвичай виготовляється з габардину
+                  або атласу.</p>
+                <img src="../../images/products/flagpoles/cabinet/sets/prestige_set.jpg" alt="Підставка для прапору"
+                  width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
+              </div>
+            </div>
+          </li>
+          <li class="products-item sets" style="position: relative;">
+            <div class="products-item-btnContainer">
+              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#h01" class="info-link">i</a>
+              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/sets/icons/premium_set.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/sets/premium_set.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/sets/icons/premium_set.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Флагшток ПРЕМІУМ</h4>
+              <p>горіх, редвуд, вільха</p>
+              <p>ДхШхВ: 400х400х2600</p>
+              <p class="price">10000 ₴</p>
+              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+                style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
+                <p style="font-size: 14px; margin: 10px;">Флагшток кабінетний серії Преміум є естетичним і
+                  вишуканим, оздоблений золотом він підкреслює високий статус державної установи або приватної компанії.
+                  Виготовляється з таких матеріалів
+                  як натуральне дерево та нержавіюча сталь з покриттям гальванічним золотом. Прапор під такий флагшток
+                  зазвичай виготовляється з атласу або vip-атласу.</p>
+                <img src="../../images/products/flagpoles/cabinet/sets/premium_set.jpg" alt="Підставка для прапору"
+                  width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
+              </div>
+            </div>
+          </li>
+          <li class="products-item sets" style="position: relative;">
+            <div class="products-item-btnContainer">
+              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#h01" class="info-link">i</a>
+              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/sets/icons/luxury_set.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/sets/luxury_set.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/sets/icons/luxury_set.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Флагшток ЕЛІТ</h4>
+              <p>золото</p>
+              <p>ДхШхВ: 400х400х2600</p>
+              <p class="price">15000 ₴</p>
+              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+                style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
+                <p style="font-size: 14px; margin: 10px;">Флагшток кабінетний серії Еліт є вишуканим і
+                  ексклюзивним, він справить неповторне враження і підкреслить VIP статус організації чи компанії в якій
+                  його розміщено. Виготовляється з найбільш дорогих та антикорозійних матеріалів
+                  як високоякісна нержавіюча сталь та позолота. Прапор під такий флагшток зазвичай виготовляється з
+                  vip-атласу.</p>
+                <img src="../../images/products/flagpoles/cabinet/sets/luxury_set.jpg" alt="Підставка для прапору"
+                  width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
+              </div>
+            </div>
+          </li>
+
 
           <li class="products-item stands">
             <div class="products-item-btnContainer">
@@ -393,7 +651,7 @@
               ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/stands/eternal_1.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
               onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/stands/icons/eternal_1.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
-              <h4>Підставка ВІЧНІСТЬ <br />одномісна, нержавійка</h4>
+              <h4>Підставка ПРОФІ <br />одномісна, нержавійка</h4>
               <p>горіх, редвуд, вільха</p>
               <p>ДхШхВ: 400х400х300</p>
               <p class="price">3500 ₴</p>
@@ -414,7 +672,7 @@
               ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/stands/eternal_2.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
               onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/stands/icons/eternal_2.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
-              <h4>Підставка ВІЧНІСТЬ <br />двомісна, нержавійка</h4>
+              <h4>Підставка ПРОФІ <br />двомісна, нержавійка</h4>
               <p>горіх, редвуд, вільха</p>
               <p>ДхШхВ: 400х400х300</p>
               <p class="price">3500 ₴</p>
@@ -435,7 +693,7 @@
               ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/stands/eternal_3.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
               onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/stands/icons/eternal_3.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
-              <h4>Підставка ВІЧНІСТЬ <br />тримісна, нержавійка</h4>
+              <h4>Підставка ПРОФІ <br />тримісна, нержавійка</h4>
               <p>горіх, редвуд, вільха</p>
               <p>ДхШхВ: 400х400х300</p>
               <p class="price">3500 ₴</p>
@@ -456,7 +714,7 @@
               ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/stands/luxury_1.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
               onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/stands/icons/luxury_1.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
-              <h4>Підставка ДОСКОНАЛІСТЬ <br />одномісна, золото</h4>
+              <h4>Підставка ЕЛІТ <br />одномісна, золото</h4>
               <p>горіх, редвуд, вільха</p>
               <p>ДхШхВ: 400х400х300</p>
               <p class="price">3500 ₴</p>
@@ -477,7 +735,7 @@
               ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/stands/luxury_2.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
               onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/stands/icons/luxury_2.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
-              <h4>Підставка ДОСКОНАЛІСТЬ <br />двомісна, золото</h4>
+              <h4>Підставка ЕЛІТ <br />двомісна, золото</h4>
               <p>горіх, редвуд, вільха</p>
               <p>ДхШхВ: 400х400х300</p>
               <p class="price">3500 ₴</p>
@@ -498,7 +756,7 @@
               ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/stands/luxury_3.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
               onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/stands/icons/luxury_3.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
-              <h4>Підставка ДОСКОНАЛІСТЬ <br />тримісна, золото</h4>
+              <h4>Підставка ЕЛІТ <br />тримісна, золото</h4>
               <p>горіх, редвуд, вільха</p>
               <p>ДхШхВ: 400х400х300</p>
               <p class="price">3500 ₴</p>
@@ -734,7 +992,7 @@
               ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_ni.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
               onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_ni.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
-              <h4>Древко ВІЧНІСТЬ 160</h4>
+              <h4>Древко ПРОФІ 160</h4>
               <p>нікель</p>
               <p>ДхШхВ: 28х28х1600</p>
               <p class="price">1000 ₴</p>
@@ -755,7 +1013,7 @@
               ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_ni.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
               onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_ni.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
-              <h4>Древко ВІЧНІСТЬ 200</h4>
+              <h4>Древко ПРОФІ 200</h4>
               <p>нікель</p>
               <p>ДхШхВ: 28х28х2000</p>
               <p class="price">1000 ₴</p>
@@ -776,7 +1034,7 @@
               ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_ni.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
               onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_ni.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
-              <h4>Древко ВІЧНІСТЬ 240</h4>
+              <h4>Древко ПРОФІ 240</h4>
               <p>нікель</p>
               <p>ДхШхВ: 28х28х2400</p>
               <p class="price">1000 ₴</p>
@@ -797,7 +1055,7 @@
               ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_ni.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
               onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_ni.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
-              <h4>Древко ВІЧНІСТЬ 300</h4>
+              <h4>Древко ПРОФІ 300</h4>
               <p>нікель</p>
               <p>ДхШхВ: 28х28х3000</p>
               <p class="price">1000 ₴</p>
@@ -818,7 +1076,7 @@
               ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_au.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
               onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_au.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
-              <h4>Древко ДОСКОНАЛІСТЬ 160</h4>
+              <h4>Древко ЕЛІТ 160</h4>
               <p>золото</p>
               <p>ДхШхВ: 28х28х1600</p>
               <p class="price">1200 ₴</p>
@@ -839,7 +1097,7 @@
               ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_au.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
               onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_au.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
-              <h4>Древко ДОСКОНАЛІСТЬ 200</h4>
+              <h4>Древко ЕЛІТ 200</h4>
               <p>золото</p>
               <p>ДхШхВ: 28х28х2000</p>
               <p class="price">1200 ₴</p>
@@ -860,7 +1118,7 @@
               ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_au.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
               onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_au.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
-              <h4>Древко ДОСКОНАЛІСТЬ 240</h4>
+              <h4>Древко ЕЛІТ 240</h4>
               <p>золото</p>
               <p>ДхШхВ: 28х28х2400</p>
               <p class="price">1200 ₴</p>
@@ -881,12 +1139,544 @@
               ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/poles/pole_au.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
               onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/poles/icons/pole_au.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products-item-description">
-              <h4>Древко ДОСКОНАЛІСТЬ 300</h4>
+              <h4>Древко ЕЛІТ 300</h4>
               <p>золото</p>
-              <p>ДхШхВ: 28х28х300</p>
+              <p>ДхШхВ: 28х28х3000</p>
               <p class="price">1200 ₴</p>
             </div>
           </li>
+          <li class="products-item pommels">
+            <div class="products-item-btnContainer">
+              <button id="heart300" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart300" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/pommels/icons/cone_prestige.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/pommels/cone_prestige.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/pommels/icons/cone_prestige.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Навершя Конус ПРЕСТИЖ</h4>
+              <p>дерево</p>
+              <p>ДхШхВ: 35х35х100</p>
+              <p class="price">450 ₴</p>
+            </div>
+          </li>
+          <li class="products-item pommels">
+            <div class="products-item-btnContainer">
+              <button id="heart301" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart301" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/pommels/icons/cone_classic.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/pommels/cone_classic.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/pommels/icons/cone_classic.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Навершя Конус КЛАСИК</h4>
+              <p>сталь, хром</p>
+              <p>ДхШхВ: 35х35х100</p>
+              <p class="price">2500 ₴</p>
+            </div>
+          </li>
+          <li class="products-item pommels">
+            <div class="products-item-btnContainer">
+              <button id="heart302" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart302" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/pommels/icons/cone_premium.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/pommels/cone_premium.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/pommels/icons/cone_premium.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Навершя Конус ПРЕМІУМ</h4>
+              <p>сталь, золото</p>
+              <p>ДхШхВ: 35х35х100</p>
+              <p class="price">3500 ₴</p>
+            </div>
+          </li>
+          <li class="products-item pommels">
+            <div class="products-item-btnContainer">
+              <button id="heart301" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart301" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/pommels/icons/flame_classic.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/pommels/flame_classic.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/pommels/icons/flame_classic.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Навершя Вогник КЛАСИК</h4>
+              <p>сталь, хром</p>
+              <p>ДхШхВ: 35х35х80</p>
+              <p class="price">1500 ₴</p>
+            </div>
+          </li>
+          <li class="products-item pommels">
+            <div class="products-item-btnContainer">
+              <button id="heart302" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart302" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/pommels/icons/flame_premium.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/pommels/flame_premium.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/pommels/icons/flame_premium.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Навершя Вогник ПРЕМІУМ</h4>
+              <p>сталь, золото</p>
+              <p>ДхШхВ: 35х35х80</p>
+              <p class="price">1500 ₴</p>
+            </div>
+          </li>
+          <li class="products-item pommels">
+            <div class="products-item-btnContainer">
+              <button id="heart301" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart301" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/pommels/icons/sphere_classic.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/pommels/sphere_classic.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/pommels/icons/sphere_classic.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Навершя Сфера КЛАСИК</h4>
+              <p>сталь, хром</p>
+              <p>ДхШхВ: 60х60х100</p>
+              <p class="price">1500 ₴</p>
+            </div>
+          </li>
+          <li class="products-item pommels">
+            <div class="products-item-btnContainer">
+              <button id="heart302" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart302" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/pommels/icons/sphere_premium.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/pommels/sphere_premium.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/pommels/icons/sphere_premium.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Навершя Сфера ПРЕМІУМ</h4>
+              <p>сталь, золото</p>
+              <p>ДхШхВ: 60х60х100</p>
+              <p class="price">1500 ₴</p>
+            </div>
+          </li>
+          <li class="products-item pommels">
+            <div class="products-item-btnContainer">
+              <button id="heart303" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart303" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/pommels/icons/drop_classic.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/pommels/drop_classic.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/pommels/icons/drop_classic.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Навершя Крапля КЛАСИК</h4>
+              <p>сталь, хром</p>
+              <p>ДхШхВ: 35х35х100</p>
+              <p class="price">2500 ₴</p>
+            </div>
+          </li>
+          <li class="products-item pommels">
+            <div class="products-item-btnContainer">
+              <button id="heart304" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart304" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/pommels/icons/drop_premium.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/pommels/drop_premium.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/pommels/icons/drop_premium.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Навершя Крапля ПРЕМІУМ</h4>
+              <p>сталь, золото</p>
+              <p>ДхШхВ: 35х35х100</p>
+              <p class="price">3500 ₴</p>
+            </div>
+          </li>
+          <li class="products-item pommels">
+            <div class="products-item-btnContainer">
+              <button id="heart303" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart303" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/pommels/icons/drop_flame_classic.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/pommels/drop_flame_classic.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/pommels/icons/drop_flame_classic.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Навершя Крапля КЛАСИК</h4>
+              <p>сталь, хром</p>
+              <p>ДхШхВ: 35х35х100</p>
+              <p class="price">2500 ₴</p>
+            </div>
+          </li>
+          <li class="products-item pommels">
+            <div class="products-item-btnContainer">
+              <button id="heart304" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart304" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/pommels/icons/drop_flame_premium.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/pommels/drop_flame_premium.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/pommels/icons/drop_flame_premium.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Навершя Крапля ПРЕМІУМ</h4>
+              <p>сталь, золото</p>
+              <p>ДхШхВ: 35х35х100</p>
+              <p class="price">3500 ₴</p>
+            </div>
+          </li>
+          <li class="products-item pommels">
+            <div class="products-item-btnContainer">
+              <button id="heart305" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart305" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/pommels/icons/trident_classic.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/pommels/trident_classic.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/pommels/icons/trident_classic.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Навершя Тризуб КЛАСИК</h4>
+              <p>сталь, хром</p>
+              <p>ДхШхВ: 35х100х150</p>
+              <p class="price">2500 ₴</p>
+            </div>
+          </li>
+          <li class="products-item pommels">
+            <div class="products-item-btnContainer">
+              <button id="heart306" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart306" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/pommels/icons/trident_premium.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/pommels/trident_premium.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/pommels/icons/trident_premium.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Навершя Тризуб ПРЕМІУМ</h4>
+              <p>сталь, золото</p>
+              <p>ДхШхВ: 35х100х150</p>
+              <p class="price">3500 ₴</p>
+            </div>
+          </li>
+          <li class="products-item pommels">
+            <div class="products-item-btnContainer">
+              <button id="heart305" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart305" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click'
+              src="../../images/products/flagpoles/cabinet/pommels/icons/drop_trident_classic.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/pommels/drop_trident_classic.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/pommels/icons/drop_trident_classic.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Навершя Крапля з тризубом КЛАСИК</h4>
+              <p>сталь, хром</p>
+              <p>ДхШхВ: 35х35х100</p>
+              <p class="price">2500 ₴</p>
+            </div>
+          </li>
+          <li class="products-item pommels">
+            <div class="products-item-btnContainer">
+              <button id="heart306" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart306" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click'
+              src="../../images/products/flagpoles/cabinet/pommels/icons/drop_trident_premium.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/pommels/drop_trident_premium.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/pommels/icons/drop_trident_premium.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Навершя Крапля з тризубом ПРЕМІУМ</h4>
+              <p>сталь, золото</p>
+              <p>ДхШхВ: 35х35х100</p>
+              <p class="price">3500 ₴</p>
+            </div>
+          </li>
+          <li class="products-item pommels">
+            <div class="products-item-btnContainer">
+              <button id="heart307" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart307" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/pommels/icons/drop_ua_classic.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/pommels/drop_ua_classic.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/pommels/icons/drop_ua_classic.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Навершя Крапля Україна КЛАСИК</h4>
+              <p>сталь, хром</p>
+              <p>ДхШхВ: 35х35х100</p>
+              <p class="price">2500 ₴</p>
+            </div>
+          </li>
+          <li class="products-item pommels">
+            <div class="products-item-btnContainer">
+              <button id="heart308" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart308" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/pommels/icons/drop_ua_premium.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/pommels/drop_ua_premium.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/pommels/icons/drop_ua_premium.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Навершя Крапля Україна ПРЕМІУМ</h4>
+              <p>сталь, золото</p>
+              <p>ДхШхВ: 35х35х100</p>
+              <p class="price">3500 ₴</p>
+            </div>
+          </li>
+          <li class="products-item pommels">
+            <div class="products-item-btnContainer">
+              <button id="heart309" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart309" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/pommels/icons/drop_eu_classic.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/pommels/drop_eu_classic.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/pommels/icons/drop_eu_classic.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Навершя Крапля ЄС КЛАСИК</h4>
+              <p>сталь, хром</p>
+              <p>ДхШхВ: 35х35х100</p>
+              <p class="price">2500 ₴</p>
+            </div>
+          </li>
+          <li class="products-item pommels">
+            <div class="products-item-btnContainer">
+              <button id="heart310" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart310" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/pommels/icons/drop_eu_premium.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/pommels/drop_eu_premium.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/pommels/icons/drop_eu_premium.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Навершя Крапля ЄС ПРЕМІУМ</h4>
+              <p>сталь, золото</p>
+              <p>ДхШхВ: 35х35х100</p>
+              <p class="price">3500 ₴</p>
+            </div>
+          </li>
+          <li class="products-item pommels">
+            <div class="products-item-btnContainer">
+              <button id="heart309" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart309" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/pommels/icons/drop_plastic_silver.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/pommels/drop_plastic_silver.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/pommels/icons/drop_plastic_silver.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Навершя Крапля ЕКОНОМ</h4>
+              <p>пластик, хром</p>
+              <p>ДхШхВ: 45х100х150</p>
+              <p class="price">600 ₴</p>
+            </div>
+          </li>
+          <li class="products-item pommels">
+            <div class="products-item-btnContainer">
+              <button id="heart310" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart310" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/cabinet/pommels/icons/drop_plastic_gold.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/pommels/drop_plastic_gold.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/pommels/icons/drop_plastic_gold.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Навершя Крапля ЕКОНОМ</h4>
+              <p>пластик, золото</p>
+              <p>ДхШхВ: 45х100х150</p>
+              <p class="price">600 ₴</p>
+            </div>
+          </li>
+          <li class="products-item pommels">
+            <div class="products-item-btnContainer">
+              <button id="heart309" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart309" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click'
+              src="../../images/products/flagpoles/cabinet/pommels/icons/drop_trident_plastic_silver.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/pommels/drop_trident_plastic_silver.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/pommels/icons/drop_trident_plastic_silver.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Навершя Крапля з тризубом ЕКОНОМ</h4>
+              <p>пластик, хром</p>
+              <p>ДхШхВ: 45х100х150</p>
+              <p class="price">600 ₴</p>
+            </div>
+          </li>
+          <li class="products-item pommels">
+            <div class="products-item-btnContainer">
+              <button id="heart310" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart310" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click'
+              src="../../images/products/flagpoles/cabinet/pommels/icons/drop_trident_plastic_gold.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/pommels/drop_trident_plastic_gold.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/pommels/icons/drop_trident_plastic_gold.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Навершя Крапля з тризубом ЕКОНОМ</h4>
+              <p>пластик, золото</p>
+              <p>ДхШхВ: 45х100х150</p>
+              <p class="price">600 ₴</p>
+            </div>
+          </li>
+          <li class="products-item pommels">
+            <div class="products-item-btnContainer">
+              <button id="heart309" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart309" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click'
+              src="../../images/products/flagpoles/cabinet/pommels/icons/drop_ua_plastic_silver.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/pommels/drop_ua_plastic_silver.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/pommels/icons/drop_ua_plastic_silver.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Навершя Крапля Україна ЕКОНОМ</h4>
+              <p>пластик, хром</p>
+              <p>ДхШхВ: 45х100х150</p>
+              <p class="price">600 ₴</p>
+            </div>
+          </li>
+          <li class="products-item pommels">
+            <div class="products-item-btnContainer">
+              <button id="heart310" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#luxury" class="info-link">i</a>
+              <button id="cart310" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click'
+              src="../../images/products/flagpoles/cabinet/pommels/icons/drop_ua_plastic_gold.jpg"
+              alt="Древко для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/cabinet/pommels/drop_ua_plastic_gold.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/pommels/icons/drop_ua_plastic_gold.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products-item-description">
+              <h4>Навершя Крапля Україна ЕКОНОМ</h4>
+              <p>пластик, золото</p>
+              <p>ДхШхВ: 45х100х150</p>
+              <p class="price">600 ₴</p>
+            </div>
+          </li>
+
 
         </ul>
         <div>
@@ -894,7 +1684,7 @@
     </section>
     <section class="section">
       <div class="container">
-        <h2 class="section__main-title">Опис</h2>
+        <h2 class="section__main-title">Категорії якості</h2>
         <strong>Прапор з флагштоком підлоговим є елементом інтер'єру, який підкреслює виразність державного або
           корпоративного
           стилю. Комплект флагштоку складається з таких елементів як підставка, древко і навершя. В асортименті нашої
@@ -957,7 +1747,7 @@
             міцність і стійкість до корозії. Категорія
             "ПРОФІ" пропонує надійні комплектуючі для вашого флагштоку, які витримають випробування часу і забезпечать
             його
-            стабільну роботу. Оберіть категорію "ПРОФІ" і переконайтесь в її надійності та довговічності.</p>
+            стабільну роботу. Оберіть серію "ПРОФІ" і переконайтесь в її надійності та довговічності.</p>
         </div>
         <br />
         <h3 id="luxury" class="title">Серія ЕЛІТ</h3>
@@ -968,7 +1758,7 @@
             високоякісної сталі, покритої золотом,
             підставки, древка та наверші забезпечують флагштоку розкішний вигляд і елегантність. Матеріали високої
             якості та
-            майстерне виконання гарантують довговічність і надійність цих флагштоків. Серія "ЕЛІТ" створена для тих, хто
+            майстерне виконання гарантують довгоПРОФІ і надійність цих флагштоків. Серія "ЕЛІТ" створена для тих, хто
             цінує
             вишуканість, престиж та високу якість. Оберіть категорію "ЕЛІТ" і додайте нотку розкіші та визначеності до
             свого
@@ -1042,6 +1832,7 @@
 
 
 
+  <script src="../../js/stylesChange.js"></script>
   <script src="../../js/filterProducts.js"></script>
   <script src="../../js/favorites.js"></script>
   <!-- <script src="../../js/ordered.js"></script> -->

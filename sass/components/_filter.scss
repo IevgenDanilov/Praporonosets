@@ -8,9 +8,8 @@
 }
 
 .filter {
-  .button {
-    margin-right: 8px;
-    // margin-bottom: 15px;
+  & .button {
+    margin-right: 30px;
   }
 }
 
@@ -25,5 +24,9 @@
   .filter {
     margin: 0 auto 50px 0;
     justify-content: center;
+
+    & .button {
+      margin-right: 8px;
+    }
   }
 }

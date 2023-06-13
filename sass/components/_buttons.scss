@@ -4,7 +4,15 @@
   font-family: inherit;
   display: inline-block;
   text-align: center;
+  // align-items: center;
+  justify-content: center;
   border: 1px solid transparent;
+
+  &.secondary.round {
+    padding: 6px;
+    min-width: 30px;
+    border-radius: 50%;
+  }
 }
 
 .button.primary {

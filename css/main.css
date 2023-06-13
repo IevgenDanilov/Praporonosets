@@ -199,7 +199,14 @@ img {
   font-family: inherit;
   display: inline-block;
   text-align: center;
+  justify-content: center;
   border: 1px solid transparent;
+}
+
+.button.secondary.round {
+  padding: 6px;
+  min-width: 30px;
+  border-radius: 50%;
 }
 
 .button.primary {
@@ -307,7 +314,7 @@ img {
 }
 
 .filter .button {
-  margin-right: 8px;
+  margin-right: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -321,6 +328,9 @@ img {
   .filter {
     margin: 0 auto 50px 0;
     justify-content: center;
+  }
+  .filter .button {
+    margin-right: 8px;
   }
 }
 
