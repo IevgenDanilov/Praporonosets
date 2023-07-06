@@ -24,8 +24,7 @@
   margin: 0 auto;
 } */
 
-.button.secondary {
-  /* border: solid white 3px; */
+/* .button.secondary {
   color: var(--primary-text-color);
   background-color: var(--special-background-color);
   font-family: inherit;
@@ -40,9 +39,9 @@
   min-width: 75px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-}
+} */
 
-.button.secondary:hover,
+/* .button.secondary:hover,
 .button.secondary:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
@@ -51,14 +50,14 @@
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
 /* .button.secondary.active{
   color: var(--primary-white-color);
   background-color: var(--accent-color);
 } */
 
-.button.primary:hover,
+/* .button.primary:hover,
 .button.primary:focus {
   color: var(--accent-color);
   background-color: var(--primary-white-color);
@@ -66,7 +65,7 @@
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 /* 
 .modal-form-btn,
 .subscribe-btn {
@@ -127,7 +126,7 @@
   padding: 25px 0 25px 0;
 } */
 
-.accent {
+/* .accent {
   color: var(--accent-color);
 }
 
@@ -138,7 +137,7 @@
 .accent-rev:focus,
 .accent-rev:active {
   color: var(--accent-color);
-}
+} */
 
 /* ============== NAVIGATION ============== */
 
@@ -342,74 +341,74 @@
 /* ============== END FILTER ============== */
 
 /* ============== PORTFOLIO PROJECTS ============== */
-.projects a,
+/* .projects a,
 .categories a {
   text-decoration: none;
   color: var(--title-text-color);
-}
+} */
 
-.projects h2 {
+/* .projects h2 {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-}
+} */
 
-.projects p,
+/* .projects p,
 .categories p {
   color: var(--secondary-text-color);
   font-size: 16px;
   line-height: 1.87;
-}
+} */
 
-.projects {
+/* .projects {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
-}
+} */
 
-.projects-item {
+/* .projects__item {
   display: none;
   margin-left: 30px;
   margin-top: 30px;
   flex-basis: calc((100% - 90px) / 3);
   box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-}
+} */
 
-.projects-item-description {
+/* .projects__description {
   border: 1px solid #eeeeee;
   border-top: none;
   padding: 20px 25px;
-}
+} */
 
-.projects-item-description p,
+/* .projects__description p,
 h4 {
   margin: 0;
-}
+} */
 
 /* ============== END PORTFOLIO PROJECTS ============== */
 
-.categories {
+/* .categories {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
+} */
 
-.categories-item {
+/* .categories__item {
   margin: 10px 10px 0 0;
-}
+} */
 
-.categories-item.x3 {
+/* .categories__item.x3 {
   width: 32%;
 }
 
-.categories-item.x4 {
+.categories__item.x4 {
   width: 24%;
 }
 
-.categories-item-description {
+.categories__description {
   background: white;
   border-radius: 4px;
   padding: 5px;
@@ -417,16 +416,16 @@ h4 {
   border: 1px solid #eeeeee;
 }
 
-.categories-item-description:hover {
+.categories__description:hover {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.categories-item-description img {
+.categories__description img {
   border: solid 1px lightgray;
   border-radius: 50%;
   margin-right: 10px;
-}
+} */
 
 /* ============== FOOTER ============== */
 
@@ -559,9 +558,9 @@ h4 {
 
 /* ============== END FOOTER ============== */
 
-.show {
+/* .show {
   display: block;
-}
+} */
 
 /* .backdrop {
   position: fixed;
@@ -761,4 +760,64 @@ button.slick-next:before {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+/* .dropdown-section {
+  position: relative;
+  display: inline-block;
+} */
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown__content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-section__content {
+  display: none;
+  position: absolute;
+  left: 150px;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+/* Links inside the dropdown */
+.dropdown__content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-section__content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown__content a:hover {
+  background-color: #ddd;
+}
+.dropdown-section__content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown__content {
+  display: block;
+}
+.dropdown-section:hover .dropdown-section__content {
+  display: block;
 }

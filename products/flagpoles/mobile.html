@@ -10,8 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css" />
-  <link rel="stylesheet" href="../../css/styles.css" />
+  <link rel="stylesheet" href="../../css1/styles.css" />
   <link rel="stylesheet" href="../../css1/products.css" />
+  <link rel="stylesheet" href="../../css/main.min.css" />
+
 </head>
 
 <body>
@@ -53,40 +55,119 @@
 
     <section class="section products">
       <h2 class="section__main-title">Флагштоки мобільні</h2>
-      <div class="container">
+      <div class="container" style="display: flex; flex-direction: column; align-items: center;">
         <!-- Фильтр продуктов -->
-        <ul id="myBtnContainer" class="filter flex list">
-          <li>
-            <button type="button" class="button secondary active" onclick="filterSelection('all')">Усі</button>
-          </li>
-          <li>
-            <button type="button" class="button secondary" onclick="filterSelection('sets')">Комплекти</button>
-          </li>
-          <li>
-            <button type="button" class="button secondary" onclick="filterSelection('stands')">Підставки</button>
-          </li>
-          <li>
-            <button type="button" class="button secondary" onclick="filterSelection('poles')">Древка</button>
-          </li>
-          <li>
-            <button type="button" class="button secondary" onclick="filterSelection('pommels')">Навершя</button>
-          </li>
-        </ul>
 
-        <select onchange="filterSelection(this.value)" name="filter" class="products-groupes-switcher">
-          <option value="all" selected="selected">Усі</option>
-          <option value="sets">Комплекти</option>
-          <option value="stands">Підставки</option>
-          <option value="poles">Древка</option>
-          <option value="pommels">Навершя</option>
-        </select>
+        <div id="mobFilter" class="select">
+          <select onchange="filterSelection(this.value)" class="products-groupes-switcher">
+            <option value="all" selected="selected">Усі</option>
+            <option value="sets">Комплекти</option>
+            <option value="stands">Підставки</option>
+            <option value="poles">Древка</option>
+            <option value="pommels">Навершя</option>
+          </select>
+          <span class="focus"></span>
+        </div>
+
+
+        <div id="tabletFilter">
+          <ul id="myBtnContainer" class="filter flex list">
+            <li>
+              <button type="button" class="button secondary active round" onclick="filterSelection('all')">
+                <svg viewBox="0 0 100 100" width="30" height="30">
+                  <defs>
+                    <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
+                  </defs>
+                  <text font-size="20" style="font-weight: 700;">
+                    <textPath xlink:href="#circle">
+                      Усі--------------
+                    </textPath>
+                  </text>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="button secondary round" onclick="filterSelection('sets')"><svg
+                  viewBox="0 0 100 100" width="30" height="30">
+                  <defs>
+                    <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
+                  </defs>
+                  <text font-size="20" style="font-weight: 700;">
+                    <textPath xlink:href="#circle">
+                      Комплекти--------------
+                    </textPath>
+                  </text>
+                </svg></button>
+            </li>
+            <li>
+              <button type="button" class="button secondary round" onclick="filterSelection('stands')"><svg
+                  viewBox="0 0 100 100" width="30" height="30">
+                  <defs>
+                    <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
+                  </defs>
+                  <text font-size="20" style="font-weight: 700;">
+                    <textPath xlink:href="#circle">
+                      Підставки--------------
+                    </textPath>
+                  </text>
+                </svg></button>
+            </li>
+            <li>
+              <button type="button" class="button secondary round" onclick="filterSelection('poles')"><svg
+                  viewBox="0 0 100 100" width="30" height="30">
+                  <defs>
+                    <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
+                  </defs>
+                  <text font-size="20" style="font-weight: 700;">
+                    <textPath xlink:href="#circle">
+                      Древка--------------
+                    </textPath>
+                  </text>
+                </svg></button>
+            </li>
+            <li>
+              <button type="button" class="button secondary round" onclick="filterSelection('pommels')"><svg
+                  viewBox="0 0 100 100" width="30" height="30">
+                  <defs>
+                    <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
+                  </defs>
+                  <text font-size="20" style="font-weight: 700;">
+                    <textPath xlink:href="#circle">
+                      Навершя--------------
+                    </textPath>
+                  </text>
+                </svg></button>
+            </li>
+          </ul>
+        </div>
+
+        <div id="desctopFilter">
+          <ul id="myBtnContainer" class="filter flex list">
+            <li>
+              <button type="button" class="button secondary active" onclick="filterSelection('all')">Усі</button>
+            </li>
+            <li>
+              <button type="button" class="button secondary" onclick="filterSelection('sets')">Комплекти</button>
+            </li>
+            <li>
+              <button type="button" class="button secondary" onclick="filterSelection('stands')">Підставки</button>
+            </li>
+            <li>
+              <button type="button" class="button secondary" onclick="filterSelection('poles')">Древка</button>
+            </li>
+            <li>
+              <button type="button" class="button secondary" onclick="filterSelection('pommels')">Навершя</button>
+            </li>
+          </ul>
+        </div>
+
 
         <!-- Список продуктів -->
 
         <ul class="products-list list">
 
           <li class="products-item sets">
-            <div style="display: flex; justify-content:space-between; font-size: 20px;">
+            <div class="products-item-btnContainer">
               <button id="heart010201" class="heart" style="background: transparent; border: none;"
                 onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -112,7 +193,7 @@
 
           </li>
           <li class="products-item sets">
-            <div style="display: flex; justify-content:space-between; font-size: 20px;">
+            <div class="products-item-btnContainer">
               <button id="heart010202" class="heart" style="background: transparent; border: none;"
                 onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -138,7 +219,7 @@
 
           </li>
           <li class="products-item sets">
-            <div style="display: flex; justify-content:space-between; font-size: 20px;">
+            <div class="products-item-btnContainer">
               <button id="heart010203" class="heart" style="background: transparent; border: none;"
                 onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -164,7 +245,7 @@
 
           </li>
           <li class="products-item sets">
-            <div style="display: flex; justify-content:space-between; font-size: 20px;">
+            <div class="products-item-btnContainer">
               <button id="heart010204" class="heart" style="background: transparent; border: none;"
                 onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>

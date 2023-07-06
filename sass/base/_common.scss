@@ -45,6 +45,19 @@ img {
   flex-direction: row;
 }
 
+.accent {
+  color: var(--accent-color);
+}
+
+.accent-rev {
+  color: var(--secondary-text-color);
+}
+.accent-rev:hover,
+.accent-rev:focus,
+.accent-rev:active {
+  color: var(--accent-color);
+}
+
 // .no-margin.list {
 //   margin: 0;
 // }

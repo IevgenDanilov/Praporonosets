@@ -50,135 +50,240 @@
     <h2 class="section__main-title">Наші проекти</h2>
 
     <section>
-      <div class="container">
+      <div class="container" style="display: flex; flex-direction: column; align-items: center;">
 
         <!-- Кнопки фільтру -->
 
-        <ul id="myBtnContainer" class="filter flex list">
-          <li>
-            <button type="button" class="button secondary active" onclick="filterSelection('all')">Усі</button>
-          </li>
-          <li>
-            <button type="button" class="button secondary" onclick="filterSelection('flagpoles')">Прапори та
-              флагштоки</button>
-          </li>
-          <li>
-            <button type="button" class="button secondary" onclick="filterSelection('symbols')">Символіка</button>
-          </li>
-          <li>
-            <button type="button" class="button secondary" onclick="filterSelection('infostands')">Інфостенди</button>
-          </li>
-          <li>
-            <button type="button" class="button secondary" onclick="filterSelection('fences')">Мобільні огорожі</button>
-          </li>
-          <li>
-            <button type="button" class="button secondary" onclick="filterSelection('accessories')">Аксесуари</button>
-          </li>
-          <li>
-            <button type="button" class="button secondary" onclick="filterSelection('exclusive')">Ексклюзив</button>
-          </li>
-        </ul>
 
-        <select onchange="filterSelection(this.value)" name="filter" class="projects-groupes-switcher">
-          <option value="all" selected="selected">Усі</option>
-          <option value="flagpoles">Прапори та
-            флагштоки</option>
-          <option value="symbols">Символіка</option>
-          <option value="infostands">Інфостенди</option>
-          <option value="fences">Мобільні огорожі</option>
-          <option value="accessories">Аксесуари</option>
-          <option value="exclusive">Ексклюзив</option>
-        </select>
+
+        <div id="mobFilter" class="select">
+          <select onchange="filterSelection(this.value)" name="filter" class="projects-groupes-switcher">
+            <option value="all" selected="selected">Усі</option>
+            <option value="flagpoles">Прапори та
+              флагштоки</option>
+            <option value="symbols">Символіка</option>
+            <option value="infostands">Інфостенди</option>
+            <option value="fences">Мобільні огорожі</option>
+            <option value="accessories">Аксесуари</option>
+            <option value="exclusive">Ексклюзив</option>
+          </select>
+          <span class="focus"></span>
+        </div>
+
+        <div id="tabletFilter">
+          <ul id="myBtnContainer" class="filter flex list">
+            <li>
+              <button type="button" class="button secondary active round" onclick="filterSelection('all')">
+                <svg viewBox="0 0 100 100" width="30" height="30">
+                  <defs>
+                    <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
+                  </defs>
+                  <text font-size="20" style="font-weight: 700;">
+                    <textPath xlink:href="#circle">
+                      Усі--------------
+                    </textPath>
+                  </text>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="button secondary round" onclick="filterSelection('flagpoles')"><svg
+                  viewBox="0 0 100 100" width="30" height="30">
+                  <defs>
+                    <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
+                  </defs>
+                  <text font-size="20" style="font-weight: 700;">
+                    <textPath xlink:href="#circle">
+                      Прапори-------------
+                    </textPath>
+                  </text>
+                </svg></button>
+            </li>
+            <li>
+              <button type="button" class="button secondary round" onclick="filterSelection('symbols')"><svg
+                  viewBox="0 0 100 100" width="30" height="30">
+                  <defs>
+                    <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
+                  </defs>
+                  <text font-size="20" style="font-weight: 700;">
+                    <textPath xlink:href="#circle">
+                      Символіка--------------
+                    </textPath>
+                  </text>
+                </svg></button>
+            </li>
+            <li>
+              <button type="button" class="button secondary round" onclick="filterSelection('infostands')"><svg
+                  viewBox="0 0 100 100" width="30" height="30">
+                  <defs>
+                    <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
+                  </defs>
+                  <text font-size="20" style="font-weight: 700;">
+                    <textPath xlink:href="#circle">
+                      Інфостенди--------------
+                    </textPath>
+                  </text>
+                </svg></button>
+            </li>
+            <li>
+              <button type="button" class="button secondary round" onclick="filterSelection('fences')"><svg
+                  viewBox="0 0 100 100" width="30" height="30">
+                  <defs>
+                    <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
+                  </defs>
+                  <text font-size="20" style="font-weight: 700;">
+                    <textPath xlink:href="#circle">
+                      Огорожі--------------
+                    </textPath>
+                  </text>
+                </svg></button>
+            </li>
+            <li>
+              <button type="button" class="button secondary round" onclick="filterSelection('accessories')"><svg
+                  viewBox="0 0 100 100" width="30" height="30">
+                  <defs>
+                    <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
+                  </defs>
+                  <text font-size="20" style="font-weight: 700;">
+                    <textPath xlink:href="#circle">
+                      Аксесуари--------------
+                    </textPath>
+                  </text>
+                </svg></button>
+            </li>
+            <li>
+              <button type="button" class="button secondary round" onclick="filterSelection('exclusive')"><svg
+                  viewBox="0 0 100 100" width="30" height="30">
+                  <defs>
+                    <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
+                  </defs>
+                  <text font-size="20" style="font-weight: 700;">
+                    <textPath xlink:href="#circle">
+                      Ексклюзив--------------
+                    </textPath>
+                  </text>
+                </svg></button>
+            </li>
+          </ul>
+        </div>
+
+        <div id="desctopFilter">
+          <ul id="myBtnContainer" class="filter list">
+            <li>
+              <button type="button" class="button secondary active" onclick="filterSelection('all')">Усі</button>
+            </li>
+            <li>
+              <button type="button" class="button secondary" onclick="filterSelection('flagpoles')">Прапори та
+                флагштоки</button>
+            </li>
+            <li>
+              <button type="button" class="button secondary" onclick="filterSelection('symbols')">Символіка</button>
+            </li>
+            <li>
+              <button type="button" class="button secondary" onclick="filterSelection('infostands')">Інфостенди</button>
+            </li>
+            <li>
+              <button type="button" class="button secondary" onclick="filterSelection('fences')">Мобільні
+                огорожі</button>
+            </li>
+            <li>
+              <button type="button" class="button secondary" onclick="filterSelection('accessories')">Аксесуари</button>
+            </li>
+            <li>
+              <button type="button" class="button secondary" onclick="filterSelection('exclusive')">Ексклюзив</button>
+            </li>
+          </ul>
+        </div>
 
         <!-- Список проектів -->
 
         <ul class="projects list">
-          <li class="projects-item fences accessories">
+          <li class="projects__item fences accessories">
             <img src="./images/projects/icons/ukr_bez.jpg" alt="Проект нашої компанії"
-              style="width: 370px; height: 278px; cursor: zoom-in;"
+              style="width: 340px; height: 256px; cursor: zoom-in;"
               ondblclick="this.src='./images/projects/ukr_bez.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='./images/projects/icons/ukr_bez.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
-            <div class="projects-item-description">
+              onclick="this.src='./images/projects/icons/ukr_bez.jpg'; this.style='width: 340px; height: 256px; cursor: zoom-in;'" />
+            <div class="projects__description">
               <h4>Україна без сміття</h4>
               <p>мобільні огорожі, червона доріжка</p>
             </div>
           </li>
-          <li class="projects-item infostands">
+          <li class="projects__item infostands">
             <img src="./images/projects/icons/energoatom.jpg" alt="Проект нашої компанії"
-              style="width: 370px; height: 278px; cursor: zoom-in;"
+              style="width: 340px; height: 256px; cursor: zoom-in;"
               ondblclick="this.src='./images/projects/energoatom.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='./images/projects/icons/energoatom.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
-            <div class="projects-item-description">
+              onclick="this.src='./images/projects/icons/energoatom.jpg'; this.style='width: 340px; height: 256px; cursor: zoom-in;'" />
+            <div class="projects__description">
               <h4>Енергоатом</h4>
               <p>інформаційні стенди</p>
             </div>
           </li>
-          <li class="projects-item flagpoles">
+          <li class="projects__item flagpoles">
             <img src="./images/projects/icons/ministry_of_defence_of_ukraine_1.jpg" alt="Проект нашої компанії"
-              style="width: 370px; height: 278px; cursor: zoom-in;"
+              style="width: 340px; height: 256px; cursor: zoom-in;"
               ondblclick="this.src='./images/projects/ministry_of_defence_of_ukraine_1.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='./images/projects/icons/ministry_of_defence_of_ukraine_1.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
-            <div class="projects-item-description">
+              onclick="this.src='./images/projects/icons/ministry_of_defence_of_ukraine_1.jpg'; this.style='width: 340px; height: 256px; cursor: zoom-in;'" />
+            <div class="projects__description">
               <h4>Військовий полк АЗОВ</h4>
               <p>прапор з флагштоком</p>
             </div>
           </li>
-          <li class="projects-item flagpoles symbols">
+          <li class="projects__item flagpoles symbols">
             <img src="./images/projects/icons/ministry_of_defence_of_ukraine_2.jpg" alt="Проект нашої компанії"
-              style="width: 370px; height: 278px; cursor: zoom-in;"
+              style="width: 340px; height: 256px; cursor: zoom-in;"
               ondblclick="this.src='./images/projects/ministry_of_defence_of_ukraine_2.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='./images/projects/icons/ministry_of_defence_of_ukraine_2.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
-            <div class="projects-item-description">
+              onclick="this.src='./images/projects/icons/ministry_of_defence_of_ukraine_2.jpg'; this.style='width: 340px; height: 256px; cursor: zoom-in;'" />
+            <div class="projects__description">
               <h4>Міністерство оборони України</h4>
               <p>прапори, флагштоки, герби</p>
             </div>
           </li>
-          <li class="projects-item flagpoles accessories">
+          <li class="projects__item flagpoles accessories">
             <img src="./images/projects/icons/police_1.jpg" alt="Проект нашої компанії"
-              style="width: 370px; height: 278px; cursor: zoom-in;"
+              style="width: 340px; height: 256px; cursor: zoom-in;"
               ondblclick="this.src='./images/projects/police_1.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='./images/projects/icons/police_1.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
-            <div class="projects-item-description">
+              onclick="this.src='./images/projects/icons/police_1.jpg'; this.style='width: 340px; height: 256px; cursor: zoom-in;'" />
+            <div class="projects__description">
               <h4>Національна поліція України</h4>
               <p>прапори, флагштоки, панталери</p>
             </div>
           </li>
-          <li class="projects-item flagpoles">
+          <li class="projects__item flagpoles">
             <img src="./images/projects/icons/balkansky.jpg" alt="Проект нашої компанії"
-              style="width: 370px; height: 278px; cursor: zoom-in;"
+              style="width: 340px; height: 256px; cursor: zoom-in;"
               ondblclick="this.src='./images/projects/balkansky.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='./images/projects/icons/balkansky.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
-            <div class="projects-item-description">
+              onclick="this.src='./images/projects/icons/balkansky.jpg'; this.style='width: 340px; height: 256px; cursor: zoom-in;'" />
+            <div class="projects__description">
               <h4>Ресторан BalkanSky</h4>
               <p>прапори з флагштоками мобільні</p>
             </div>
           </li>
-          <li class="projects-item fences">
+          <li class="projects__item fences">
             <img src="./images/projects/icons/bsm.jpg" alt="Проект нашої компанії"
-              style="width: 370px; height: 278px; cursor: zoom-in;"
+              style="width: 340px; height: 256px; cursor: zoom-in;"
               ondblclick="this.src='./images/projects/bsm.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='./images/projects/icons/bsm.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
-            <div class="projects-item-description">
+              onclick="this.src='./images/projects/icons/bsm.jpg'; this.style='width: 340px; height: 256px; cursor: zoom-in;'" />
+            <div class="projects__description">
               <h4>BSM</h4>
               <p>мобільні огорожі</p>
             </div>
           </li>
-          <li class="projects-item accessories">
+          <li class="projects__item accessories">
             <img src="./images/projects/icons/theater_of_shevchenko.jpg" alt="Проект нашої компанії"
-              style="width: 370px; height: 278px; cursor: zoom-in;"
+              style="width: 340px; height: 256px; cursor: zoom-in;"
               ondblclick="this.src='./images/projects/theater_of_shevchenko.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='./images/projects/icons/theater_of_shevchenko.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
-            <div class="projects-item-description">
+              onclick="this.src='./images/projects/icons/theater_of_shevchenko.jpg'; this.style='width: 340px; height: 256px; cursor: zoom-in;'" />
+            <div class="projects__description">
               <h4>Театр опери та балету</h4>
               <p>червона доріжка</p>
             </div>
           </li>
-          <li class="projects-item exclusive">
+          <li class="projects__item exclusive">
             <img src="./images/projects/icons/kahl.jpg" alt="Проект нашої компанії"
-              style="width: 370px; height: 278px; cursor: zoom-in;"
+              style="width: 340px; height: 256px; cursor: zoom-in;"
               ondblclick="this.src='./images/projects/kahl.jpg'; this.style='cursor: zoom-out; position: fixed; top:50%; left:50%; margin: -278px 0 0 -370px; width: 740px; height: 556px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
-              onclick="this.src='./images/projects/icons/kahl.jpg'; this.style='width: 370px; height: 278px; cursor: zoom-in;'" />
-            <div class="projects-item-description">
+              onclick="this.src='./images/projects/icons/kahl.jpg'; this.style='width: 340px; height: 256px; cursor: zoom-in;'" />
+            <div class="projects__description">
               <h4>Київська аматорська хокейна ліга</h4>
               <p>кубок чемпіонів КАХЛ</p>
             </div>

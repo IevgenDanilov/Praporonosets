@@ -1,32 +1,46 @@
 .filter {
-  align-items: center;
-  margin: 0 auto 30px 0;
   display: flex;
+  margin-bottom: 10px;
   flex-wrap: wrap;
-  // flex-direction: reverse;
-  justify-content: start;
-}
-
-.filter {
-  & .button {
-    margin-right: 30px;
-  }
+  justify-content: space-around;
+  align-items: center;
 }
 
 @media screen and (min-width: 768px) {
-  .filter {
-    margin: 0 auto 25px 0;
-    justify-content: center;
-  }
+  // .filter {
+  //   margin-bottom: 20px;
+  // }
 }
 
 @media screen and (min-width: 1200px) {
   .filter {
-    margin: 0 auto 50px 0;
-    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
 
-    & .button {
-      margin-right: 8px;
-    }
+#tabletFilter {
+  display: none;
+}
+#desctopFilter {
+  display: none;
+}
+
+@media screen and (min-width: 480px) {
+  #mobFilter {
+    display: none;
+  }
+  #tabletFilter {
+    display: block;
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #tabletFilter {
+    display: none;
+  }
+  #desctopFilter {
+    display: block;
+    width: 100%;
   }
 }
