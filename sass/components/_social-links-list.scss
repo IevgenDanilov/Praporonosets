@@ -2,6 +2,7 @@
   &list {
     display: flex;
     justify-content: space-around;
+    margin-top: 20px;
   }
 
   &link {
@@ -14,9 +15,8 @@
     background-color: var(--primary-white-color);
     cursor: pointer;
   }
-  &item {
-    margin-top: 16px;
-  }
+  // &item {
+  // }
   &item:not(:last-child) {
     margin-right: 10px;
   }
