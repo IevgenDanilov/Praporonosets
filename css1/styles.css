@@ -150,6 +150,25 @@
   text-decoration: none;
 } */
 
+/* .nav-list__item a {
+} */
+
+.nav-list__item .link {
+  display: flex;
+  align-items: center;
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.nav-list__item .link:hover,
+.nav-list__item .link:focus {
+  color: var(--accent-color);
+}
+
 /* .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
@@ -429,15 +448,15 @@ h4 {
 
 /* ============== FOOTER ============== */
 
-.footer {
+/* .footer {
   background-color: var(--secondary-background-color);
   padding: 60px 0;
-}
+} */
 
-.footer-container {
+/* .footer-container {
   justify-content: space-between;
   align-items: center;
-}
+} */
 
 /* .logo__footer {
   color: var(--title-text-color);
@@ -460,7 +479,7 @@ h4 {
   color: var(--primary-white-color);
   font-style: normal;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.6;
   text-decoration: none;
 }
 
@@ -475,7 +494,7 @@ h4 {
 }
 
 .address-margin {
-  margin-bottom: 9px;
+  margin-bottom: 5px;
 }
 /* ============== END CONTACT INFORMATION ============== */
 
@@ -743,15 +762,16 @@ button.slick-next:before {
   fill: var(--accent-color);
 }
 
-.cart-icon {
+.nav-icons {
   fill: var(--secondary-accent-color);
+  stroke: var(--secondary-accent-color);
   opacity: 0.9;
   margin: 0 10px;
 }
 
-.cart-icon:hover,
-.cart-icon:focus,
-.cart-icon:active {
+.nav-icons:hover,
+.nav-icons:focus,
+.nav-icons:active {
   fill: var(--accent-color);
 }
 

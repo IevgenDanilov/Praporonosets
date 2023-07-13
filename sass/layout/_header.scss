@@ -199,9 +199,10 @@
     border: none;
     padding: 0;
     line-height: 0;
+    margin-left: auto;
 
     &__icon {
-      fill: #212121;
+      fill: var(--secondary-accent-color);
       width: 40px;
       height: 40px;
     }
@@ -287,9 +288,14 @@
 
   .mobile-social-list {
     display: flex;
-    margin: 65px 0 0 -10px;
+    flex-wrap: wrap;
+    margin: 20px 0 0 0;
 
     &__item {
+      // margin: 10px 0;
+      // width: 50%;
+      text-align: center;
+      // &:not(:nth-child(2n)) {
       &:not(:last-child) {
         border-right: 1px solid #303030;
       }
@@ -297,10 +303,11 @@
 
     &__link {
       padding: 0 10px;
+      margin-top: 10px;
       color: var(--accent-color);
       font-style: normal;
       font-weight: 500;
-      font-size: 18px;
+      font-size: 14px;
       line-height: 1.22px;
       letter-spacing: 0.02em;
     }

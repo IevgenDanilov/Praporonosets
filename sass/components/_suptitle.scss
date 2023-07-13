@@ -5,12 +5,13 @@
 
 .invite__text,
 .subscribe__text {
+  margin-top: 20px;
   color: var(--primary-white-color);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  text-align: right;
+  text-align: center;
   // margin-bottom: 20px;
 }
 
@@ -37,6 +38,17 @@
 @media screen and (min-width: 768px) {
   .invite {
     margin-top: 0;
+  }
+
+  .invite__text,
+  .subscribe__text {
+    // color: var(--primary-white-color);
+    // font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    text-align: center;
+    // margin-bottom: 20px;
   }
 }
 

@@ -35,10 +35,12 @@
           <li><a href="./index.html" class="link current">Про нас</a></li>
           <li><a href="./portfolio.html" class="link">Портфоліо</a></li>
           <!-- <li><a href="./shop.html" class="link">Магазин</a></li> -->
-          <li>
 
+          <!-- Спадаюче меню магазину-->
+          <li>
             <div class="dropdown">
               <a href="./shop.html" class="link">Магазин</a>
+              <!-- <br style="position: relative;"></br> -->
               <div class="dropdown__content">
                 <div class="dropdown-section">
                   <div class="dropdown-section__content">
@@ -86,7 +88,7 @@
                 <use href="./images/icons.svg#icon-heart"></use>
               </svg></a>
             <a href="./cart.html" class="link">
-              <svg width="24" height="24" class="cart-icon">
+              <svg width="24" height="24" class="nav-icons">
                 <use href="./images/icons.svg#icon-cart"></use>
               </svg></a>
           </li>
@@ -97,11 +99,91 @@
         <li><a href="mailto:pp_danilov@ukr.net" class="button">pp_danilov@ukr.net</a></li>
         <li><a href="tel:+380667700520" class="button">+380 66 770 05 20</a></li>
       </ul>
+
+      <!-- burger  -->
+
+      <button class="burger-btn" data-menu-open>
+        <svg class="burger-btn__icon">
+          <use href="./images/icons.svg#icon-burger"></use>
+        </svg>
+      </button>
+    </div>
+
+    <!-- burger modal window -->
+
+    <div class="mobile-menu" data-menu>
+      <div class="container mobile-menu__container">
+        <button class="mobile-menu__close-btn" data-menu-close>
+          <svg class="mobile-menu__close-icon">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <ul class="nav-list list">
+          <li class="nav-list__item">
+            <a href="./index.html" class="link current">
+              <svg width="24" height="24" class="nav-icons">
+                <use href="./images/icons.svg#icon-aboutus"></use>
+              </svg> Про нас</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="./portfolio.html" class="link">
+              <svg width="24" height="24" class="nav-icons">
+                <use href="./images/icons.svg#icon-portfolio"></use>
+              </svg>Портфоліо</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="./shop.html" class="link">
+              <svg width="24" height="24" class="nav-icons">
+                <use href="./images/icons.svg#icon-shop"></use>
+              </svg>Магазин</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="./wishList.html" class="link"><svg width="24" height="24" class="wishlist-icon">
+                <use href="./images/icons.svg#icon-heart"></use>
+              </svg> Обрані</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="./cart.html" class="link">
+              <svg width="24" height="24" class="nav-icons">
+                <use href="./images/icons.svg#icon-cart"></use>
+              </svg>
+              Корзина</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="link" href="tel:+380667700520">
+              <svg width="24" height="24" class="nav-icons">
+                <use href="./images/icons.svg#icon-telephone"></use>
+              </svg> +380 66 770 05 20</a>
+
+          </li>
+          <li class="nav-list__item">
+
+            <a href="mailto:pp_danilov@ukr.net" class="link"><svg width="24" height="24" class="nav-icons">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg> pp_danilov@ukr.net</a>
+          </li>
+        </ul>
+        <ul class="mobile-social-list list">
+          <li class="mobile-social-list__item">
+            <a href="" class="mobile-social-list__link link">Telegram</a>
+          </li>
+          <li class="mobile-social-list__item">
+            <a href="" class="mobile-social-list__link link">Facebook</a>
+          </li>
+          <li class="mobile-social-list__item">
+            <a href="" class="mobile-social-list__link link">Instagram</a>
+          </li>
+          <li class="mobile-social-list__item">
+            <a href="" class="mobile-social-list__link link">Pinterest</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
 
   <main>
     <!-- Герой -->
+
     <!-- style="color: gold; mix-blend-mode: overlay; " -->
 
     <section class="hero overlay">
@@ -157,25 +239,25 @@
 
         <ul class="list services__list">
           <li class="services__item">
-            <img src="./images/nato.jpg" alt="прапори кабінетні" width="370" />
+            <img src="./images/nato.jpg" alt="прапори кабінетні" />
             <p class="services__description">Прапори, флагштоки, символіка</p>
           </li>
           <li class="services__item">
-            <img src="./images/mobile_fences.jpg" alt="мобільні огорожі" width="370" />
+            <img src="./images/mobile_fences.jpg" alt="мобільні огорожі" />
             <p class="services__description">Обладнання для урочистих церемоній</p>
           </li>
           <li class="services__item">
-            <img src="./images/donbas.jpg" alt="виставкові стенди" width="370" />
+            <img src="./images/donbas.jpg" alt="виставкові стенди" />
             <p class="services__description">Інформаційні та рекламні стенди</p>
           </li>
         </ul>
       </div>
-    </section>
+      <!-- </section> -->
 
-    <!-- Наші принципи -->
+      <!-- Наші принципи -->
 
-    <section class="section section-special-second">
-      <div class="container">
+      <!-- <section class="section"> -->
+      <div class="container section-special-first">
         <h2 class="section__main-title">Наші принципи</h2>
 
         <ul class="feature__list list">
@@ -374,11 +456,11 @@
             </div>
           </div>
           <div class="clients__item" style="min-height: 200px;">
-            <img src="./images/clients/deutsche_gesellschaft_für_internationale_zusammenarbeit.jpg"
-              alt="Німецьке товариство міжнародного співробітництва" width="100" height="100" />
+            <img src="./images/clients/invictus_games.jpg" alt="Німецьке товариство міжнародного співробітництва"
+              width="100" height="100" />
             <div class="clients__description">
-              <h3 class="clients__title">GIZ</h3>
-              <p>міжнародна організіція</p>
+              <h3 class="clients__title">Ігри нескорених</h3>
+              <p>громадська організіція</p>
             </div>
           </div>
           <div class="clients__item" style="min-height: 200px;">
@@ -405,7 +487,7 @@
   <!-- Футер -->
 
   <footer class="footer">
-    <div class="container flex footer-container">
+    <div class="container flex footer-wrapper">
       <div>
         <a href="./index.html" class="logo__footer logo">
           <span class="accent">Прапори</span><span class="second-part"> & Символи</span>
@@ -468,6 +550,8 @@
     integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="./js/slider.js"></script>
+  <script src="./js/modal.js"></script>
+  <script src="./js/menu.js"></script>
 </body>
 
 </html>

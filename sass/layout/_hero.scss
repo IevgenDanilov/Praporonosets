@@ -2,19 +2,18 @@
   background-color: var(--secondary-background-color);
   padding-bottom: 118px;
   padding-top: 118px;
-  text-align: center;
+  margin: 0 auto;
 }
 
 .hero__content {
   margin: 0 auto;
-  max-width: 360px;
+  width: 360px;
 }
 
 .overlay {
-  width: 480px;
-  height: 400px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  min-width: 320px;
+  height: 300px;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/bg-flags.jpg');
   background-repeat: no-repeat;
@@ -25,7 +24,7 @@
 // 768px+
 @media screen and (min-width: 768px) {
   .overlay {
-    width: 768px;
+    min-width: 768px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url('../images/bg-flags.jpg');
   }
@@ -34,17 +33,16 @@
 // 1200px+
 @media screen and (min-width: 1200px) {
   .hero {
-    padding-bottom: 200px;
-    padding-top: 200px;
+    padding-bottom: 150px;
+    padding-top: 150px;
   }
 
   .hero__content {
-    max-width: 700px;
+    width: 700px;
   }
 
   .overlay {
-    // min-width: 1200px;
-    width: 1600px;
+    min-width: 1200px;
     height: 500px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url('../images/bg-flags.jpg');

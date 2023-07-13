@@ -17,7 +17,8 @@
 
   &item {
     width: 88%;
-    text-align: center;
+    // text-align: center;
+    margin: 0 auto;
 
     // margin-top: 30px;
     // margin-left: 30px;
@@ -28,9 +29,9 @@
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-bottom: 10px;
-    text-align: center;
+    // text-align: center;
   }
 
   // &item::before {
