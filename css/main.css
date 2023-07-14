@@ -452,7 +452,7 @@ img {
 }
 
 .nav-list .link {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .current {
@@ -577,6 +577,10 @@ img {
   }
 }
 
+.nav-list {
+  margin-bottom: 20px;
+}
+
 .nav-list__item {
   font-style: normal;
   font-weight: 500;
@@ -584,7 +588,7 @@ img {
   line-height: 1.18;
   text-align: left;
   letter-spacing: 0.02em;
-  margin-bottom: 2vh;
+  margin-bottom: 0.4vh;
 }
 
 .nav-list__link {
@@ -596,6 +600,7 @@ img {
 }
 
 .mobile-social-list {
+  margin-left: -35px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

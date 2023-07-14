@@ -52,7 +52,7 @@
 }
 
 .nav-list .link {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .current {
@@ -256,7 +256,7 @@
 // }
 
 .nav-list {
-  // margin-bottom: 50px;
+  margin-bottom: 20px;
   &__item {
     font-style: normal;
     font-weight: 500;
@@ -265,7 +265,7 @@
     text-align: left;
     letter-spacing: 0.02em;
     // margin-bottom: 14px;
-    margin-bottom: 2vh;
+    margin-bottom: 0.4vh;
   }
 
   // &__item:not(:last-child) {
@@ -282,6 +282,7 @@
 }
 
 .mobile-social-list {
+  margin-left: -35px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
