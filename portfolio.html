@@ -26,7 +26,54 @@
         <ul class="site-nav list">
           <li><a href="./index.html" class="link">Про нас</a></li>
           <li><a href="./portfolio.html" class="link current">Портфоліо</a></li>
-          <li><a href="./shop.html" class="link">Магазин</a></li>
+          <!-- <li><a href="./shop.html" class="link">Магазин</a></li> -->
+
+          <!-- Спадаюче меню магазину-->
+          <li>
+            <div class="dropdown">
+              <a href="./shop.html" class="link">Магазин</a>
+              <div class="dropdown__content">
+                <div class="dropdown-section">
+                  <div class="dropdown-section__content">
+                    <a href="./products/flags/ukraine.html" class="link">України</a>
+                    <a href="./products/flags/state.html" class="link">Державні</a>
+                    <a href="./products/flags/corporate.html" class="link">Корпоративні</a>
+                  </div>
+                  <a href="./products/flags.html" class="link">Прапори</a>
+                </div>
+                <div class="dropdown-section">
+                  <div class="dropdown-section__content">
+                    <a href="./products/flagpoles/street.html" class="link">Вуличні</a>
+                    <a href="./products/flagpoles/cabinet.html" class="link">Кабінетні</a>
+                    <a href="./products/flagpoles/mobile.html" class="link">Мобільні</a>
+                    <a href="./products/flagpoles/facade.html" class="link">Фасадні</a>
+                    <a href="./products/flagpoles/desktop.html" class="link">Настільні</a>
+                    <a href="./products/flagpoles/automobile.html" class="link">Автомобільні</a>
+                  </div>
+                  <a href="./products/flagpoles.html" class="link">Флагштоки</a>
+                </div>
+                <a href="./products/symbolics.html" class="link">Символіка</a>
+                <div class="dropdown-section">
+                  <div class="dropdown-section__content">
+                    <a href="./products/infostands/a4stands.html" class="link">Стійки А4</a>
+                    <a href="./products/infostands/bookletcases.html" class="link">Буклетниці</a>
+                    <a href="./products/infostands/brandwalls.html" class="link">Брендволи</a>
+                    <a href="./products/infostands/rollups.html" class="link">Ролл-апи</a>
+                    <a href="./products/infostands/perfostands.html" class="link">Перфостенди</a>
+                  </div>
+                  <a href="./products/infostands.html" class="link">Інфостенди</a>
+                </div>
+
+                <a href="./products/fences.html" class="link">Мобільні огорожі</a>
+                <a href="./products/accessories.html" class="link">Аксесуари</a>
+                <a href="./products/exclusive.html" class="link">Ексклюзив</a>
+              </div>
+
+
+            </div>
+
+
+          </li>
           <li>
             <a href="./wishList.html" class="link"><svg width="24" height="24" class="wishlist-icon">
                 <use href="./images/icons.svg#icon-heart"></use>
@@ -40,9 +87,88 @@
       </nav>
 
       <ul class="auth-nav list">
-        <li><a href="mailto:pp_danilov@ukr.net" class="button">pp_danilov@ukr.net</a></li>
         <li><a href="tel:+380667700520" class="button">+380 66 770 05 20</a></li>
+        <li><a href="mailto:pp_danilov@ukr.net" class="button">pp_danilov@ukr.net</a></li>
       </ul>
+
+      <!-- burger  -->
+
+      <button class="burger-btn" data-menu-open>
+        <svg class="burger-btn__icon">
+          <use href="./images/icons.svg#icon-burger"></use>
+        </svg>
+      </button>
+    </div>
+
+    <!-- burger modal window -->
+
+    <div class="mobile-menu" data-menu>
+      <div class="mobile-menu__container">
+        <button class="mobile-menu__close-btn" data-menu-close>
+          <svg class="mobile-menu__close-icon">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <ul class="nav-list list">
+          <li class="nav-list__item">
+            <a href="./index.html" class="link current">
+              <svg width="24" height="24" class="nav-icons">
+                <use href="./images/icons.svg#icon-aboutus"></use>
+              </svg> Про нас</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="./portfolio.html" class="link">
+              <svg width="24" height="24" class="nav-icons">
+                <use href="./images/icons.svg#icon-portfolio"></use>
+              </svg>Портфоліо</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="./shop.html" class="link">
+              <svg width="24" height="24" class="nav-icons">
+                <use href="./images/icons.svg#icon-shop"></use>
+              </svg>Магазин</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="./wishList.html" class="link"><svg width="24" height="24" class="wishlist-icon">
+                <use href="./images/icons.svg#icon-heart"></use>
+              </svg> Обрані</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="./cart.html" class="link">
+              <svg width="24" height="24" class="nav-icons">
+                <use href="./images/icons.svg#icon-cart"></use>
+              </svg>
+              Корзина</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="link" href="tel:+380667700520">
+              <svg width="24" height="24" class="nav-icons">
+                <use href="./images/icons.svg#icon-telephone"></use>
+              </svg> +380 66 770 05 20</a>
+
+          </li>
+          <li class="nav-list__item">
+
+            <a href="mailto:pp_danilov@ukr.net" class="link"><svg width="24" height="24" class="nav-icons">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg> pp_danilov@ukr.net</a>
+          </li>
+        </ul>
+        <ul class="mobile-social-list list">
+          <li class="mobile-social-list__item">
+            <a href="" class="mobile-social-list__link link">Telegram</a>
+          </li>
+          <li class="mobile-social-list__item">
+            <a href="" class="mobile-social-list__link link">Facebook</a>
+          </li>
+          <li class="mobile-social-list__item">
+            <a href="" class="mobile-social-list__link link">Instagram</a>
+          </li>
+          <li class="mobile-social-list__item">
+            <a href="" class="mobile-social-list__link link">Pinterest</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
 
@@ -296,7 +422,7 @@
   <!-- Футер -->
 
   <footer class="footer">
-    <div class="container flex footer-container">
+    <div class="container flex footer-wrapper">
       <div>
         <a href="./index.html" class="logo__footer logo">
           <span class="accent">Прапори</span><span class="second-part"> & Символи</span>
@@ -344,12 +470,15 @@
               </svg>
             </a>
           </li>
+
+
         </ul>
 
       </div>
     </div>
   </footer>
 
+  <script src="./js/menu.js"></script>
   <script src="./js/filterProjects.js"></script>
 </body>
 
