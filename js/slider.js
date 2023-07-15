@@ -11,7 +11,7 @@ function sliderChange(mobileSize, tabletSize) {
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
-      arrows: false,
+      arrows: true,
       dots: false,
     });
   } else if (tabletSize.matches) {
@@ -20,7 +20,7 @@ function sliderChange(mobileSize, tabletSize) {
       infinite: true,
       slidesToShow: 3,
       slidesToScroll: 1,
-      arrows: false,
+      arrows: true,
       dots: false,
     });
   } else {
