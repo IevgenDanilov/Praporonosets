@@ -854,6 +854,7 @@ img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .categories a {
@@ -869,14 +870,7 @@ img {
 
 .categories__item {
   margin: 10px 10px 0 0;
-}
-
-.categories__item.x3 {
-  width: 32%;
-}
-
-.categories__item.x4 {
-  width: 24%;
+  width: 100%;
 }
 
 .categories__description {
@@ -895,6 +889,12 @@ img {
 
 .categories__description:hover {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-width: 768px) {
+  .categories__item {
+    width: 350px;
+  }
 }
 
 :root {
