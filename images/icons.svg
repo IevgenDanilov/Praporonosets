@@ -195,5 +195,17 @@
 <polyline style=" fill: none;" points="-9,-3 0,3 9,-3 " />
 </g>
 </g></symbol>
+<symbol id="icon-move" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24">
+<g transform="matrix(0.83 0 0 0.83 12 12)" >
+<g style="" >
+<g transform="matrix(1 0 0 1 -2.5 -5.5)" >
+<path style="stroke: rgb(0,0,0); stroke-width: 1; stroke-dasharray: none; stroke-linecap: round; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;" transform=" translate(-9.5, -6.5)" d="M 7 3.499 L 0.5 9.499 L 18.5 9.499" stroke-linecap="round" />
+</g>
+<g transform="matrix(1 0 0 1 2.5 5.5)" >
+<path style="stroke: rgb(0,0,0); stroke-width: 1; stroke-dasharray: none; stroke-linecap: round; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;" transform=" translate(-14.5, -17.5)" d="M 17 20.499 L 23.5 14.499 L 5.5 14.499" stroke-linecap="round" />
+</g>
+</g>
+</g>
+</symbol>
 </defs>
 </svg>
