@@ -410,6 +410,7 @@ img {
   line-height: 1.17;
   text-decoration: none;
   margin: 0;
+  filter: drop-shadow(3px 3px 10px lightgrey);
 }
 
 .logo .second-part {
