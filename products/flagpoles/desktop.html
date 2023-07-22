@@ -181,7 +181,16 @@
       <h2 class="section__main-title">Флагштоки настільні</h2>
       <div class="container" style="display: flex; flex-direction: column; align-items: center;">
 
+        <!-- Сортер продуктів -->
 
+
+        <select onchange="sortByPrice(this.value)" style="border: solid gray 1px; width: 200px;">
+          <option value="" selected="selected"></option>
+          <option value="min-price">min-price</option>
+          <option value="max-price">max-price</option>
+        </select>
+
+        </br>
 
         <!-- Список продуктів -->
 
@@ -204,7 +213,7 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
+              <p class="price">100 ₴</p>
               <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
@@ -1168,7 +1177,7 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
+              <p class="price">1000 ₴</p>
               <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
@@ -1199,7 +1208,7 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
+              <p class="price">1200 ₴</p>
               <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
@@ -1230,7 +1239,7 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
+              <p class="price">2000 ₴</p>
               <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
@@ -1401,6 +1410,38 @@
   <script src="../../js/filterProducts.js"></script>
   <script src="../../js/favorites.js"></script>
   <!-- <script src="../../js/ordered.js"></script> -->
+  <script>
+
+    const sortByPrice = (key) => {
+      console.log('key', key)
+
+      // fetch products-items.  Returns an HTMLCollection
+      let items = document.querySelectorAll('.products-item');
+
+      // items = Array.prototype.slice.call(items);
+      items = Array.from(items);
+
+      // Now we can sort it.  Sort alphabetically
+      key === "max-price" && items.sort((a, b) =>
+        parseFloat(b.querySelector('.price').innerHTML) - parseFloat(a.querySelector('.price').innerHTML)
+      );
+      key === "min-price" && items.sort((a, b) =>
+        parseFloat(a.querySelector('.price').innerHTML) - parseFloat(b.querySelector('.price').innerHTML)
+      );
+
+      // reatach the sorted elements
+      for (let i = 0, len = items.length; i < len; i++) {
+        // store the parent node so we can reatach the item
+        let parent = items[i].parentNode;
+        // detach it from wherever it is in the DOM
+        let detatchedItem = parent.removeChild(items[i]);
+        // reatach it.  This works because we are itterating
+        // over the items in the same order as they were re-
+        // turned from being sorted.
+        parent.appendChild(detatchedItem);
+      }
+    }
+  </script>
 </body>
 
 </html>

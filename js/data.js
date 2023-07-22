@@ -39,8 +39,8 @@
 //     {
 //       id: 'fps01',
 //       categotiesClassList: '',
-//       imgSrc: '../../images/products/flagpoles/street/flagpole-street-alum.jpg',
-//       imgIconSrc: '../../images/products/flagpoles/street/icons/flagpole-street-alum.jpg',
+//       imgSrc: '../../images/products/flagpoles/street/flagpole_street_alum.jpg',
+//       imgIconSrc: '../../images/products/flagpoles/street/icons/flagpole_street_alum.jpg',
 //       imgAlt: 'флагшток вуличний',
 //       name: 'Флагшток для вулиці',
 //       material: 'алюміній',
@@ -50,8 +50,8 @@
 //     {
 //       id: 'fps02',
 //       categotiesClassList: '',
-//       imgSrc: '../../images/products/flagpoles/street/flagpole-street-alum.jpg',
-//       imgIconSrc: '../../images/products/flagpoles/street/icons/flagpole-street-alum.jpg',
+//       imgSrc: '../../images/products/flagpoles/street/flagpole_street_alum.jpg',
+//       imgIconSrc: '../../images/products/flagpoles/street/icons/flagpole_street_alum.jpg',
 //       imgAlt: 'флагшток вуличний',
 //       name: 'Флагшток для вулиці',
 //       material: 'алюміній',
@@ -61,8 +61,8 @@
 //     {
 //       id: 'fps03',
 //       categotiesClassList: '',
-//       imgSrc: '../../images/products/flagpoles/street/flagpole-street-alum.jpg',
-//       imgIconSrc: '../../images/products/flagpoles/street/icons/flagpole-street-alum.jpg',
+//       imgSrc: '../../images/products/flagpoles/street/flagpole_street_alum.jpg',
+//       imgIconSrc: '../../images/products/flagpoles/street/icons/flagpole_street_alum.jpg',
 //       imgAlt: 'флагшток вуличний',
 //       name: 'Флагшток для вулиці',
 //       material: 'алюміній',

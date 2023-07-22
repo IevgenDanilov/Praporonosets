@@ -313,6 +313,21 @@
           </ul>
         </div>
 
+
+
+
+        <!-- Сортер продуктів -->
+
+
+        <select onchange="sortByPrice(this.value)" style="border: solid gray 1px; width: 200px;">
+          <option value="" selected="selected"></option>
+          <option value="min-price">min-price</option>
+          <option value="max-price">max-price</option>
+        </select>
+
+        </br>
+
+
         <!-- Список продуктів -->
 
         <ul class="products-list list">
@@ -1964,6 +1979,38 @@
   <script src="../../js/filterProducts.js"></script>
   <script src="../../js/favorites.js"></script>
   <!-- <script src="../../js/ordered.js"></script> -->
+  <script>
+
+    const sortByPrice = (key) => {
+      console.log('key', key)
+
+      // fetch products-items.  Returns an HTMLCollection
+      let items = document.querySelectorAll('.products-item');
+
+      // items = Array.prototype.slice.call(items);
+      items = Array.from(items);
+
+      // Now we can sort it.  Sort alphabetically
+      key === "max-price" && items.sort((a, b) =>
+        parseFloat(b.querySelector('.price').innerHTML) - parseFloat(a.querySelector('.price').innerHTML)
+      );
+      key === "min-price" && items.sort((a, b) =>
+        parseFloat(a.querySelector('.price').innerHTML) - parseFloat(b.querySelector('.price').innerHTML)
+      );
+
+      // reatach the sorted elements
+      for (let i = 0, len = items.length; i < len; i++) {
+        // store the parent node so we can reatach the item
+        let parent = items[i].parentNode;
+        // detach it from wherever it is in the DOM
+        let detatchedItem = parent.removeChild(items[i]);
+        // reatach it.  This works because we are itterating
+        // over the items in the same order as they were re-
+        // turned from being sorted.
+        parent.appendChild(detatchedItem);
+      }
+    }
+  </script>
 </body>
 
 </html>
