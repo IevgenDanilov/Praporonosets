@@ -1,0 +1,24 @@
+.wishlist-icon {
+  fill: #c0392b;
+  opacity: 0.9;
+  margin: 0 10px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    fill: var(--accent-color);
+  }
+}
+
+.nav-icons {
+  fill: var(--secondary-accent-color);
+  stroke: var(--secondary-accent-color);
+  opacity: 0.9;
+  margin: 0 10px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    fill: var(--accent-color);
+  }
+}

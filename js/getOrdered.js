@@ -8,7 +8,7 @@ function getOrdered() {
   cart.innerHTML = JSON.parse(window.localStorage.getItem('cartList'));
   cart.innerHTML = cart.innerHTML.split('</li>,').join('</li> ');
 
-  // let cartArr = Array.from(cart.querySelectorAll('.products-item'));
+  // let cartArr = Array.from(cart.querySelectorAll('.products__item'));
   // cartArr.length &&
   //   cartArr.map(item => {
   //     item.innerHTML =

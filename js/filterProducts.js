@@ -3,7 +3,7 @@ filterSelection('all');
 function filterSelection(c) {
   console.log('filter on');
   var x, i;
-  x = document.querySelectorAll('.products-item');
+  x = document.querySelectorAll('.products__item');
   if (c == 'all') c = '';
   // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
   for (i = 0; i < x.length; i++) {

@@ -85,7 +85,7 @@ const data = {
   ],
 };
 
-let list = document.querySelector('.products-list');
+let list = document.querySelector('.products__list');
 let category = list.id;
 
 let listMarkup = '';
@@ -98,7 +98,7 @@ data[category].map(
       id +
       `" id="` +
       id +
-      `" class="products-item` +
+      `" class="products__item` +
       (isFavorite ? ` favorite` : ``) +
       `">
     <div style="display: flex; justify-content:space-between; font-size: 20px;">
@@ -151,7 +151,7 @@ data[category].map(
       imgIconSrc +
       `'; this.title = 'click+click'; this.style='width: 150px; cursor: zoom-in;'"
     />
-    <div class="products-item-description">
+    <div class="products__item-description">
       <h4>` +
       name +
       `</h4>

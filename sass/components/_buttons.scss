@@ -93,3 +93,27 @@
       box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
+
+button.slick-prev:before,
+button.slick-next:before {
+  color: var(--secondary-accent-color);
+  opacity: 0.6;
+}
+
+// .close-btn {
+//   position: absolute;
+//   top: 8px;
+//   right: 8px;
+//   width: 30px;
+//   height: 30px;
+//   border-radius: 50%;
+//   border: 1px solid rgba(0, 0, 0, 0.1);
+//   background-color: transparent;
+//   cursor: pointer;
+//   padding: 0;
+
+//   &:hover {
+//     fill: var(--accent-color);
+//     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+//   }
+// }
