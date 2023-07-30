@@ -14,7 +14,6 @@ function getOrdered() {
         cart.innerHTML += item;
       }
     });
-  // cart.innerHTML.replaceAll('3500 ₴', 'кількість');
 
   // let cartArr = Array.from(cart.querySelectorAll('.products__item'));
   // cartArr.length &&
@@ -42,19 +41,6 @@ function getPrices(object = document) {
 }
 
 function getPrewOrders() {
-  let prewProducts = document.querySelector('#prewProducts');
-  const prewProductsList = window.localStorage.getItem('marked');
-  let prewProductsListArr = JSON.parse(prewProductsList);
-
-  prewProductsListArr &&
-    prewProductsListArr.map(item => {
-      prewProducts.innerHTML += item.replaceAll('li', 'div');
-      // .replaceAll('ordered', '')
-      // .replaceAll('chosen-cart', '')
-      // .replaceAll('favorites', '')
-      // .replaceAll('chosen-heart', '');
-    });
-
   let orders = document.querySelector('#orders');
 
   // const prewOrdersList = window.localStorage.getItem('ordersList');
@@ -66,13 +52,16 @@ function getPrewOrders() {
 
   prewOrdersListArr &&
     prewOrdersListArr.map(item => {
+      // if (item.includes('ordered')) {
       orders.innerHTML += item;
+      // }
     });
 }
 
 function setOrders() {
   const order = document.querySelector('#cart');
 
+  // const markedString = window.localStorage.getItem('marked');
   let ordersList = JSON.parse(window.localStorage.getItem('ordersList')) || [];
 
   if (order.innerHTML.length) {
@@ -88,10 +77,23 @@ function setOrders() {
 
   window.localStorage.setItem('ordersList', JSON.stringify(ordersList));
 
-  const markedString = window.localStorage.getItem('marked');
-  let marked = markedString.replaceAll('ordered', '').replaceAll('chosen-cart', '');
+  // let marked = markedString.split('ordered').join('');
+  // window.localStorage.setItem('marked', marked);
 
-  window.localStorage.setItem('marked', marked);
+  // Отримуємо зі сховища масив позначених товарів
+  let marked = JSON.parse(window.localStorage.getItem('marked')) || [];
+  marked = marked.split('ordered').join('');
+  marked = Array.from(marked);
+
+  // попередній варіант продукту (при наявності) прибираємо з масиву marked
+  // marked = marked.filter(item => !item.includes("ordered"));
+
+  // якщо продукт містить клас favorites чи ordered то його оновлений варіант записуємо в масив marked
+  if (product.classList.contains('favorites') || product.classList.contains('ordered')) {
+    marked.push(product.outerHTML);
+  }
+
+  window.localStorage.setItem('marked', JSON.stringify(marked));
 
   // marked.filter(item => {
   //   item.includes('ordered');

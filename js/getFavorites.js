@@ -1,9 +1,15 @@
 getFavorites();
 
 function getFavorites() {
-  const wishList = document.getElementById('wishList');
+  const wishList = document.querySelector('#wishList');
 
-  const markup = window.localStorage.getItem('wishList');
-  wishList.innerHTML = JSON.parse(markup);
-  wishList.innerHTML = wishList.innerHTML.split('</li>,').join('</li> ');
+  const marked = window.localStorage.getItem('marked');
+  let markedListArr = JSON.parse(marked);
+
+  markedListArr &&
+    markedListArr.map(item => {
+      if (item.includes('favorite')) {
+        wishList.innerHTML += item;
+      }
+    });
 }

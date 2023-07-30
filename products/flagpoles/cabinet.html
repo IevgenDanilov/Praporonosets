@@ -10,8 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css" />
-  <link rel="stylesheet" href="../../css1/styles.css" />
-  <link rel="stylesheet" href="../../css1/products.css" />
   <link rel="stylesheet" href="../../css/main.min.css" />
 </head>
 
@@ -335,7 +333,7 @@
         <!-- Список продуктів -->
 
         <ul class="products__list list">
-          <li class="products__item sets" style="position: relative;">
+          <li id="product1" class="products__item sets" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -365,7 +363,7 @@
               </div>
             </div>
           </li>
-          <li class="products__item sets" style="position: relative;">
+          <li id="product2" class="products__item sets" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -385,7 +383,7 @@
               <p>ДхШхВ: 350х350х2500</p>
               <p class="price">5000 ₴</p>
               <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
-                style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
+                style="position: absolute; top: 10%; left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <!-- <button onclick="this.parentElement.hidden='until-found'" class="button accent-rev"
                   style="background: #ffffff; margin: 10px; margin-left: auto; display: block; border:solid 1px; border-radius: 50%; font-size: 8px; padding: 2px; width: 16px; height: 16px; ">⛌</button> -->
                 <p style="font-size: 14px; margin: 10px;">Флагшток кабінетний серії Економ є простим і
@@ -397,7 +395,7 @@
               </div>
             </div>
           </li>
-          <li class="products__item sets" style="position: relative;">
+          <li id="product3" class="products__item sets" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -428,7 +426,7 @@
               </div>
             </div>
           </li>
-          <li class="products__item sets" style="position: relative;">
+          <li id="product4" class="products__item sets" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -459,7 +457,7 @@
               </div>
             </div>
           </li>
-          <li class="products__item sets" style="position: relative;">
+          <li id="product5" class="products__item sets" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -490,7 +488,7 @@
               </div>
             </div>
           </li>
-          <li class="products__item sets" style="position: relative;">
+          <li id="product6" class="products__item sets" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -523,7 +521,7 @@
           </li>
 
 
-          <li class="products__item stands">
+          <li id="product7" class="products__item stands">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -551,7 +549,7 @@
               </p>
             </div>
           </li>
-          <li class="products__item stands">
+          <li id="product8" class="products__item stands">
             <div class="products__btnContainer">
               <button id="heart2" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -572,7 +570,7 @@
               <p class="price">1500 ₴</p>
             </div>
           </li>
-          <li class="products__item stands">
+          <li id="product9" class="products__item stands">
             <div class="products__btnContainer">
               <button id="heart3" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -593,7 +591,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products__item stands">
+          <li id="product10" class="products__item stands">
             <div class="products__btnContainer">
               <button id="heart4" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -614,7 +612,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products__item stands econom">
+          <li id="product11" class="products__item stands econom">
             <div class="products__btnContainer">
               <button id="heart5" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -635,7 +633,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products__item stands classic">
+          <li id="product12" class="products__item stands classic">
             <div class="products__btnContainer">
               <button id="heart6" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -656,7 +654,7 @@
               <p class="price">2000 ₴</p>
             </div>
           </li>
-          <li class="products__item stands classic">
+          <li id="product13" class="products__item stands classic">
             <div class="products__btnContainer">
               <button id="heart7" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -677,7 +675,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products__item stands classic">
+          <li id="product14" class="products__item stands classic">
             <div class="products__btnContainer">
               <button id="heart8" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -698,7 +696,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products__item stands classic">
+          <li id="product15" class="products__item stands classic">
             <div class="products__btnContainer">
               <button id="heart9" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -719,7 +717,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products__item stands premium">
+          <li id="product16" class="products__item stands premium">
             <div class="products__btnContainer">
               <button id="heart10" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -740,7 +738,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products__item stands premium">
+          <li id="product17" class="products__item stands premium">
             <div class="products__btnContainer">
               <button id="heart11" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -761,7 +759,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products__item stands premium">
+          <li id="product18" class="products__item stands premium">
             <div class="products__btnContainer">
               <button id="heart12" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -782,7 +780,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products__item stands">
+          <li id="product19" class="products__item stands">
             <div class="products__btnContainer">
               <button id="heart13" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -803,7 +801,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products__item stands">
+          <li id="product20" class="products__item stands">
             <div class="products__btnContainer">
               <button id="heart14" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -824,7 +822,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products__item stands">
+          <li id="product21" class="products__item stands">
             <div class="products__btnContainer">
               <button id="heart15" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -845,7 +843,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products__item stands">
+          <li id="product22" class="products__item stands">
             <div class="products__btnContainer">
               <button id="heart16" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -866,7 +864,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products__item stands">
+          <li id="product23" class="products__item stands">
             <div class="products__btnContainer">
               <button id="heart17" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -887,7 +885,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products__item stands">
+          <li id="product24" class="products__item stands">
             <div class="products__btnContainer">
               <button id="heart18" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -909,7 +907,7 @@
             </div>
           </li>
 
-          <li class="products__item poles">
+          <li id="product25" class="products__item poles">
             <div class="products__btnContainer">
               <button id="heart19" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -930,7 +928,7 @@
               <p class="price">600 ₴</p>
             </div>
           </li>
-          <li class="products__item poles">
+          <li id="product26" class="products__item poles">
             <div class="products__btnContainer">
               <button id="heart19" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -951,7 +949,7 @@
               <p class="price">800 ₴</p>
             </div>
           </li>
-          <li class="products__item poles">
+          <li id="product27" class="products__item poles">
             <div class="products__btnContainer">
               <button id="heart19" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -972,7 +970,7 @@
               <p class="price">800 ₴</p>
             </div>
           </li>
-          <li class="products__item poles">
+          <li id="product28" class="products__item poles">
             <div class="products__btnContainer">
               <button id="heart19" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -993,7 +991,7 @@
               <p class="price">800 ₴</p>
             </div>
           </li>
-          <li class="products__item poles">
+          <li id="product29" class="products__item poles">
             <div class="products__btnContainer">
               <button id="heart19" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1014,7 +1012,7 @@
               <p class="price">800 ₴</p>
             </div>
           </li>
-          <li class="products__item poles">
+          <li id="product30" class="products__item poles">
             <div class="products__btnContainer">
               <button id="heart19" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1036,7 +1034,7 @@
               <p class="price">800 ₴</p>
             </div>
           </li>
-          <li class="products__item poles">
+          <li id="product31" class="products__item poles">
             <div class="products__btnContainer">
               <button id="heart19" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1058,7 +1056,7 @@
               <p class="price">800 ₴</p>
             </div>
           </li>
-          <li class="products__item poles">
+          <li id="product32" class="products__item poles">
             <div class="products__btnContainer">
               <button id="heart19" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1079,7 +1077,7 @@
               <p class="price">800 ₴</p>
             </div>
           </li>
-          <li class="products__item poles">
+          <li id="product33" class="products__item poles">
             <div class="products__btnContainer">
               <button id="heart19" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1101,7 +1099,7 @@
               <p class="price">800 ₴</p>
             </div>
           </li>
-          <li class="products__item poles">
+          <li id="product34" class="products__item poles">
             <div class="products__btnContainer">
               <button id="heart19" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1123,7 +1121,7 @@
               <p class="price">800 ₴</p>
             </div>
           </li>
-          <li class="products__item poles">
+          <li id="product35" class="products__item poles">
             <div class="products__btnContainer">
               <button id="heart21" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1144,7 +1142,7 @@
               <p class="price">1000 ₴</p>
             </div>
           </li>
-          <li class="products__item poles">
+          <li id="product36" class="products__item poles">
             <div class="products__btnContainer">
               <button id="heart21" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1165,7 +1163,7 @@
               <p class="price">1000 ₴</p>
             </div>
           </li>
-          <li class="products__item poles">
+          <li id="product37" class="products__item poles">
             <div class="products__btnContainer">
               <button id="heart21" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1186,7 +1184,7 @@
               <p class="price">1000 ₴</p>
             </div>
           </li>
-          <li class="products__item poles">
+          <li id="product38" class="products__item poles">
             <div class="products__btnContainer">
               <button id="heart21" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1207,7 +1205,7 @@
               <p class="price">1000 ₴</p>
             </div>
           </li>
-          <li class="products__item poles">
+          <li id="product39" class="products__item poles">
             <div class="products__btnContainer">
               <button id="heart20" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1228,7 +1226,7 @@
               <p class="price">1200 ₴</p>
             </div>
           </li>
-          <li class="products__item poles">
+          <li id="product40" class="products__item poles">
             <div class="products__btnContainer">
               <button id="heart20" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1249,7 +1247,7 @@
               <p class="price">1200 ₴</p>
             </div>
           </li>
-          <li class="products__item poles">
+          <li id="product41" class="products__item poles">
             <div class="products__btnContainer">
               <button id="heart20" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1270,7 +1268,7 @@
               <p class="price">1200 ₴</p>
             </div>
           </li>
-          <li class="products__item poles">
+          <li id="product42" class="products__item poles">
             <div class="products__btnContainer">
               <button id="heart20" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1291,7 +1289,7 @@
               <p class="price">1200 ₴</p>
             </div>
           </li>
-          <li class="products__item pommels">
+          <li id="product43" class="products__item pommels">
             <div class="products__btnContainer">
               <button id="heart300" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1312,7 +1310,7 @@
               <p class="price">450 ₴</p>
             </div>
           </li>
-          <li class="products__item pommels">
+          <li id="product44" class="products__item pommels">
             <div class="products__btnContainer">
               <button id="heart301" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1333,7 +1331,7 @@
               <p class="price">2500 ₴</p>
             </div>
           </li>
-          <li class="products__item pommels">
+          <li id="product45" class="products__item pommels">
             <div class="products__btnContainer">
               <button id="heart302" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1354,7 +1352,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products__item pommels">
+          <li id="product46" class="products__item pommels">
             <div class="products__btnContainer">
               <button id="heart301" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1375,7 +1373,7 @@
               <p class="price">1500 ₴</p>
             </div>
           </li>
-          <li class="products__item pommels">
+          <li id="product47" class="products__item pommels">
             <div class="products__btnContainer">
               <button id="heart302" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1396,7 +1394,7 @@
               <p class="price">1500 ₴</p>
             </div>
           </li>
-          <li class="products__item pommels">
+          <li id="product48" class="products__item pommels">
             <div class="products__btnContainer">
               <button id="heart301" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1417,7 +1415,7 @@
               <p class="price">1500 ₴</p>
             </div>
           </li>
-          <li class="products__item pommels">
+          <li id="product49" class="products__item pommels">
             <div class="products__btnContainer">
               <button id="heart302" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1438,7 +1436,7 @@
               <p class="price">1500 ₴</p>
             </div>
           </li>
-          <li class="products__item pommels">
+          <li id="product50" class="products__item pommels">
             <div class="products__btnContainer">
               <button id="heart303" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1459,7 +1457,7 @@
               <p class="price">2500 ₴</p>
             </div>
           </li>
-          <li class="products__item pommels">
+          <li id="product51" class="products__item pommels">
             <div class="products__btnContainer">
               <button id="heart304" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1480,7 +1478,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products__item pommels">
+          <li id="product52" class="products__item pommels">
             <div class="products__btnContainer">
               <button id="heart303" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1501,7 +1499,7 @@
               <p class="price">2500 ₴</p>
             </div>
           </li>
-          <li class="products__item pommels">
+          <li id="product53" class="products__item pommels">
             <div class="products__btnContainer">
               <button id="heart304" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1522,7 +1520,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products__item pommels">
+          <li id="product54" class="products__item pommels">
             <div class="products__btnContainer">
               <button id="heart305" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1543,7 +1541,7 @@
               <p class="price">2500 ₴</p>
             </div>
           </li>
-          <li class="products__item pommels">
+          <li id="product55" class="products__item pommels">
             <div class="products__btnContainer">
               <button id="heart306" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1564,7 +1562,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products__item pommels">
+          <li id="product56" class="products__item pommels">
             <div class="products__btnContainer">
               <button id="heart305" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1586,7 +1584,7 @@
               <p class="price">2500 ₴</p>
             </div>
           </li>
-          <li class="products__item pommels">
+          <li id="product57" class="products__item pommels">
             <div class="products__btnContainer">
               <button id="heart306" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1608,7 +1606,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products__item pommels">
+          <li id="product58" class="products__item pommels">
             <div class="products__btnContainer">
               <button id="heart307" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1629,7 +1627,7 @@
               <p class="price">2500 ₴</p>
             </div>
           </li>
-          <li class="products__item pommels">
+          <li id="product59" class="products__item pommels">
             <div class="products__btnContainer">
               <button id="heart308" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1650,7 +1648,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products__item pommels">
+          <li id="product60" class="products__item pommels">
             <div class="products__btnContainer">
               <button id="heart309" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1671,7 +1669,7 @@
               <p class="price">2500 ₴</p>
             </div>
           </li>
-          <li class="products__item pommels">
+          <li id="product61" class="products__item pommels">
             <div class="products__btnContainer">
               <button id="heart310" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1692,7 +1690,7 @@
               <p class="price">3500 ₴</p>
             </div>
           </li>
-          <li class="products__item pommels">
+          <li id="product62" class="products__item pommels">
             <div class="products__btnContainer">
               <button id="heart309" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1713,7 +1711,7 @@
               <p class="price">600 ₴</p>
             </div>
           </li>
-          <li class="products__item pommels">
+          <li id="product63" class="products__item pommels">
             <div class="products__btnContainer">
               <button id="heart310" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1734,7 +1732,7 @@
               <p class="price">600 ₴</p>
             </div>
           </li>
-          <li class="products__item pommels">
+          <li id="product64" class="products__item pommels">
             <div class="products__btnContainer">
               <button id="heart309" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1756,7 +1754,7 @@
               <p class="price">600 ₴</p>
             </div>
           </li>
-          <li class="products__item pommels">
+          <li id="product65" class="products__item pommels">
             <div class="products__btnContainer">
               <button id="heart310" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1778,7 +1776,7 @@
               <p class="price">600 ₴</p>
             </div>
           </li>
-          <li class="products__item pommels">
+          <li id="product66" class="products__item pommels">
             <div class="products__btnContainer">
               <button id="heart309" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1800,7 +1798,7 @@
               <p class="price">600 ₴</p>
             </div>
           </li>
-          <li class="products__item pommels">
+          <li id="product67" class="products__item pommels">
             <div class="products__btnContainer">
               <button id="heart310" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
@@ -1977,7 +1975,7 @@
   <script src="../../js/menu.js"></script>
   <!-- <script src="../../js/stylesChange.js"></script> -->
   <script src="../../js/filterProducts.js"></script>
-  <script src="../../js/favorites.js"></script>
+  <script src="../../js/marked.js"></script>
   <!-- <script src="../../js/ordered.js"></script> -->
   <script>
 
