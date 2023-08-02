@@ -1,5 +1,5 @@
 getOrdered();
-// getPrices();
+getPrices();
 getPrewOrders();
 
 function getOrdered() {
@@ -14,18 +14,16 @@ function getOrdered() {
         cart.innerHTML += item;
       }
     });
-  // cart.innerHTML.replaceAll('3500 ₴', 'кількість');
 
-  // let cartArr = Array.from(cart.querySelectorAll('.products__item'));
-  // cartArr.length &&
-  //   cartArr.map(item => {
-  //     item.innerHTML =
-  //       item.innerHTML +
-  //       '<input onChange="getPrices(this.parentNode)" type="number" min="1" max="100" class="num" value="1" style="width: 80px; text-align: center; border: none">' +
-  //       'шт' +
-  //       '<input readonly type="number" class="sum" style="width: 80px; text-align: center; border: none">' +
-  //       'грн';
-  //   });
+  let cartArr = Array.from(cart.querySelectorAll('.products__item'));
+  cartArr.length &&
+    cartArr.map(item => {
+      item.innerHTML +=
+        '<input onChange="getPrices(this.parentNode)" type="number" min="1" max="100" class="num" value="1" style="width: 80px; text-align: center; border: none">' +
+        'шт' +
+        '<input readonly type="number" class="sum" style="width: 80px; text-align: center; border: none">' +
+        'грн';
+    });
 }
 
 function getPrices(object = document) {
@@ -34,11 +32,32 @@ function getPrices(object = document) {
   const sumArr = object.querySelectorAll('.sum');
 
   for (let i = 0; i < priceArr.length; i++) {
-    sumArr[i].value = numArr[i].value * priceArr[i].innerHTML.replace(/[^\d\.]*/g, '');
+    // sumArr[i].value = numArr[i].value * priceArr[i].innerHTML.replace(/[^\d\.]*/g, '');
+    numArr[i].setAttribute('value', numArr[i].value);
+    sumArr[i].setAttribute(
+      'value',
+      numArr[i].value * priceArr[i].innerHTML.replace(/[^\d\.]*/g, ''),
+    );
+
     // console.log('sumArr[i].value', sumArr[i].value);
     // console.log('numArr[i].value', numArr[i].value);
     // console.log('priceArr[i].value', priceArr[i].innerHTML.replace(/[^\d\.]*/g, ''));
   }
+
+  const totalPrice = document.querySelector('#totalPrice');
+  const cartBox = document.querySelector('.cart-box');
+  const allSumArr = cartBox.querySelectorAll('.sum');
+
+  let total = 0;
+
+  for (let index = 0; index < allSumArr.length; index++) {
+    total += Number(allSumArr[index].value);
+  }
+
+  // allSumArr.map(item => {
+  //   total += Number(item.value);
+  // });
+  totalPrice.setAttribute('value', total + ' ₴');
 }
 
 function getPrewOrders() {
@@ -48,11 +67,12 @@ function getPrewOrders() {
 
   prewProductsListArr &&
     prewProductsListArr.map(item => {
-      prewProducts.innerHTML += item.replaceAll('li', 'div');
-      // .replaceAll('ordered', '')
-      // .replaceAll('chosen-cart', '')
-      // .replaceAll('favorites', '')
-      // .replaceAll('chosen-heart', '');
+      prewProducts.innerHTML += item
+        .replaceAll('li', 'div')
+        .replaceAll('ordered', '')
+        .replaceAll('chosen-cart', '')
+        .replaceAll('favorites', '')
+        .replaceAll('chosen-heart', '');
     });
 
   let orders = document.querySelector('#orders');
@@ -62,25 +82,33 @@ function getPrewOrders() {
   // orders.innerHTML = orders.innerHTML.split('</ul>,').join('</ul> ');
 
   const prewOrdersList = window.localStorage.getItem('ordersList');
-  let prewOrdersListArr = JSON.parse(prewOrdersList);
+  let prewOrdersListArr = JSON.parse(prewOrdersList).reverse();
 
   prewOrdersListArr &&
     prewOrdersListArr.map(item => {
-      orders.innerHTML += item;
+      orders.innerHTML += item
+        .replaceAll('ordered', '')
+        .replaceAll('chosen-cart', '')
+        .replaceAll('favorites', '')
+        .replaceAll('chosen-heart', '');
     });
 }
 
 function setOrders() {
   const order = document.querySelector('#cart');
+  const totalPrice = document.querySelector('#totalPrice');
+  // console.log('order!', order);
 
   let ordersList = JSON.parse(window.localStorage.getItem('ordersList')) || [];
 
   if (order.innerHTML.length) {
-    ordersList.unshift(
+    ordersList.push(
       '</br>' +
         '<h4><time>' +
         new Date(Date.now()).toLocaleString() +
-        '</time></h4>' +
+        '</time>, сума замовлення: ' +
+        totalPrice.value +
+        '</h4>' +
         '</br>' +
         order.outerHTML,
     );

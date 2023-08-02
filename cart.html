@@ -190,15 +190,21 @@
         </form> -->
         <button class="button secondary" onclick="setOrders()">Оформити замовлення</button>
         <div class="section cart-box">
+          <label for="totalPrice">Загальна сума: </label>
+          <input id="totalPrice" name="totalPrice" readonly
+            style="font-size: 24px; font-weight: 700; width: 200px; text-align: center; border: none; color: var(--accent-color); background-color: transparent; margin-bottom: 50px;">
           <ul id="cart" class="products__list list"></ul>
         </div>
         <div class="section">
 
-          <h4>Попередні замовлення</h4>
-          <div id="orders" style="pointer-events: none; opacity: 0.6;">
-          </div>
-          <h4>Товари, якими цікавились раніше</h4>
+          <h4 style="margin: 20px 0;">Товари, якими цікавились раніше</h4>
           <div id="prewProducts" class="products__list list clients-slider">
+          </div>
+          <button style="margin: 20px 0;"
+            onclick="document.querySelector('#orders').hidden=!document.querySelector('#orders').hidden">
+            <h4>Попередні замовлення</h4>
+          </button>
+          <div hidden id="orders" style="pointer-events: none; opacity: 0.6;">
           </div>
         </div>
       </div>
@@ -266,8 +272,8 @@
   </footer>
 
   <script src="./js/menu.js"></script>
-  <script src="./js/getOrdered.js"></script>
   <script src="./js/marked.js"></script>
+  <script src="./js/getOrdered.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
     integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
