@@ -5,8 +5,6 @@ const desctopSize = window.matchMedia('(min-width: 1201px)');
 
 function sliderChange(mobileSize, tabletSize) {
   if (mobileSize.matches) {
-    // If media query matches
-    // document.body.style.backgroundColor = 'yellow';
     $('.clients-slider').slick({
       infinite: true,
       slidesToShow: 1,
@@ -15,7 +13,6 @@ function sliderChange(mobileSize, tabletSize) {
       dots: false,
     });
   } else if (tabletSize.matches) {
-    // document.body.style.backgroundColor = 'pink';
     $('.clients-slider').slick({
       infinite: true,
       slidesToShow: 3,
@@ -24,7 +21,6 @@ function sliderChange(mobileSize, tabletSize) {
       dots: false,
     });
   } else {
-    // document.body.style.backgroundColor = 'red';
     $('.clients-slider').slick({
       infinite: true,
       slidesToShow: 6,
@@ -35,7 +31,7 @@ function sliderChange(mobileSize, tabletSize) {
   }
 }
 
-sliderChange(mobileSize, tabletSize); // Call listener function at run time
-mobileSize.addListener(sliderChange); // Attach listener function on state changes
-tabletSize.addListener(sliderChange); // Attach listener function on state changes
-desctopSize.addListener(sliderChange); // Attach listener function on state changes
+sliderChange(mobileSize, tabletSize);
+mobileSize.addListener(sliderChange);
+tabletSize.addListener(sliderChange);
+desctopSize.addListener(sliderChange);

@@ -1,5 +1,3 @@
-// import data from './data.js';
-
 const data = {
   flagpolesForAutomobile: [
     {
@@ -126,7 +124,9 @@ data[category].map(
         id="cart` +
       id +
       `"
-        class="cart"
+        class="cart` +
+      (isOrdered ? ` ordered` : ``) +
+      `"
         style="background: transparent; border: none;"
         onclick="toggleOrdered(this.id)"
       >
@@ -170,5 +170,3 @@ data[category].map(
 );
 
 list.innerHTML = listMarkup;
-
-// console.log('list', list);

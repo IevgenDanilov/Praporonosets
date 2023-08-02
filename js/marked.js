@@ -19,25 +19,18 @@ function markFavorites() {
 }
 
 function toggleFavorites(id) {
-  // знаходимо кнопку сердечко по id
   const heart = document.getElementById(id);
 
-  // визначаємо продукт який містить цю кнопку
   const product = heart.parentElement.parentElement;
 
-  // змінюємо клас в сердечку
   heart.classList.toggle('chosen-heart');
-  // змінюємо клас в продукті
   product.classList.toggle('favorites');
 
-  // Отримуємо зі сховища масив позначених товарів
   let marked = JSON.parse(window.localStorage.getItem('marked')) || [];
   marked = Array.from(marked);
 
-  // попередній варіант продукту (при наявності) прибираємо з масиву marked
   marked = marked.filter(item => !item.includes(product.id));
 
-  // якщо продукт містить клас favorites чи ordered то його оновлений варіант записуємо в масив marked
   if (product.classList.contains('favorites') || product.classList.contains('ordered')) {
     marked.push(product.outerHTML);
   }
@@ -72,10 +65,8 @@ function toggleOrdered(id) {
   let marked = JSON.parse(window.localStorage.getItem('marked')) || [];
   marked = Array.from(marked);
 
-  // попередній варіант продукту (при наявності) прибираємо з масиву marked
   marked = marked.filter(item => !item.includes(product.id));
 
-  // якщо продукт містить клас favorites чи ordered то його оновлений варіант записуємо в масив marked
   if (product.classList.contains('favorites') || product.classList.contains('ordered')) {
     marked.push(product.outerHTML);
   }

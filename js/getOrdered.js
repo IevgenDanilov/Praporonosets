@@ -32,16 +32,11 @@ function getPrices(object = document) {
   const sumArr = object.querySelectorAll('.sum');
 
   for (let i = 0; i < priceArr.length; i++) {
-    // sumArr[i].value = numArr[i].value * priceArr[i].innerHTML.replace(/[^\d\.]*/g, '');
     numArr[i].setAttribute('value', numArr[i].value);
     sumArr[i].setAttribute(
       'value',
       numArr[i].value * priceArr[i].innerHTML.replace(/[^\d\.]*/g, ''),
     );
-
-    // console.log('sumArr[i].value', sumArr[i].value);
-    // console.log('numArr[i].value', numArr[i].value);
-    // console.log('priceArr[i].value', priceArr[i].innerHTML.replace(/[^\d\.]*/g, ''));
   }
 
   const totalPrice = document.querySelector('#totalPrice');
@@ -54,9 +49,6 @@ function getPrices(object = document) {
     total += Number(allSumArr[index].value);
   }
 
-  // allSumArr.map(item => {
-  //   total += Number(item.value);
-  // });
   totalPrice.setAttribute('value', total + ' ₴');
 }
 
@@ -77,10 +69,6 @@ function getPrewOrders() {
 
   let orders = document.querySelector('#orders');
 
-  // const prewOrdersList = window.localStorage.getItem('ordersList');
-  // orders.innerHTML = JSON.parse(prewOrdersList);
-  // orders.innerHTML = orders.innerHTML.split('</ul>,').join('</ul> ');
-
   const prewOrdersList = window.localStorage.getItem('ordersList');
   let prewOrdersListArr = JSON.parse(prewOrdersList).reverse();
 
@@ -97,7 +85,6 @@ function getPrewOrders() {
 function setOrders() {
   const order = document.querySelector('#cart');
   const totalPrice = document.querySelector('#totalPrice');
-  // console.log('order!', order);
 
   let ordersList = JSON.parse(window.localStorage.getItem('ordersList')) || [];
 
@@ -120,12 +107,6 @@ function setOrders() {
   let marked = markedString.replaceAll('ordered', '').replaceAll('chosen-cart', '');
 
   window.localStorage.setItem('marked', marked);
-
-  // marked.filter(item => {
-  //   item.includes('ordered');
-  // });
-
-  // window.localStorage.setItem('cartList', JSON.stringify([]));
 
   window.location.reload();
 }

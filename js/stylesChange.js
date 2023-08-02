@@ -9,7 +9,6 @@ const desctopSize = window.matchMedia('(min-width: 1201px)');
 
 function stylesChange(mobileSize, tabletSize, mobFilter, tabletFilter, desctopFilter) {
   if (mobileSize.matches) {
-    // If media query matches
     mobFilter.hidden = false;
     tabletFilter.hidden = true;
     desctopFilter.hidden = true;
@@ -24,7 +23,6 @@ function stylesChange(mobileSize, tabletSize, mobFilter, tabletFilter, desctopFi
   }
 }
 
-stylesChange(mobileSize, tabletSize, mobFilter, tabletFilter, desctopFilter); // Call listener function at run time
-mobileSize.addListener(stylesChange); // Attach listener function on state changes
-tabletSize.addListener(stylesChange); // Attach listener function on state changes
-desctopSize.addListener(stylesChange); // Attach listener function on state changes
+mobileSize.addListener(stylesChange);
+tabletSize.addListener(stylesChange);
+desctopSize.addListener(stylesChange);
