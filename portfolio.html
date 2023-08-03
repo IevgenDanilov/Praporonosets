@@ -26,7 +26,7 @@
         <ul class="site-nav list">
           <li><a href="./index.html" class="link">Про нас</a></li>
           <li><a href="./portfolio.html" class="link current">Портфоліо</a></li>
-          <!-- <li><a href="./shop.html" class="link">Магазин</a></li> -->
+
 
           <!-- dropdown -->
           <li>
@@ -181,7 +181,7 @@
         <!-- filter -->
 
         <div id="mobFilter" class="select">
-          <select onchange="filterSelection(this.value)" name="filter" class="projects-groupes-switcher">
+          <select onchange="filterSelection(this.value), 'projects'" name="filter" class="projects-groupes-switcher">
             <option value="all" selected="selected">Усі</option>
             <option value="flagpoles">Прапори та
               флагштоки</option>
@@ -197,7 +197,7 @@
         <div id="tabletFilter">
           <ul id="myBtnContainer" class="filter flex list">
             <li>
-              <button type="button" class="button secondary active round" onclick="filterSelection('all')">
+              <button type="button" class="button secondary active round" onclick="filterSelection('all', 'projects')">
                 <svg viewBox="0 0 100 100" width="30" height="30">
                   <defs>
                     <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
@@ -211,8 +211,8 @@
               </button>
             </li>
             <li>
-              <button type="button" class="button secondary round" onclick="filterSelection('flagpoles')"><svg
-                  viewBox="0 0 100 100" width="30" height="30">
+              <button type="button" class="button secondary round"
+                onclick="filterSelection('flagpoles', 'projects')"><svg viewBox="0 0 100 100" width="30" height="30">
                   <defs>
                     <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
                   </defs>
@@ -224,7 +224,7 @@
                 </svg></button>
             </li>
             <li>
-              <button type="button" class="button secondary round" onclick="filterSelection('symbols')"><svg
+              <button type="button" class="button secondary round" onclick="filterSelection('symbols', 'projects')"><svg
                   viewBox="0 0 100 100" width="30" height="30">
                   <defs>
                     <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
@@ -237,8 +237,8 @@
                 </svg></button>
             </li>
             <li>
-              <button type="button" class="button secondary round" onclick="filterSelection('infostands')"><svg
-                  viewBox="0 0 100 100" width="30" height="30">
+              <button type="button" class="button secondary round"
+                onclick="filterSelection('infostands', 'projects')"><svg viewBox="0 0 100 100" width="30" height="30">
                   <defs>
                     <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
                   </defs>
@@ -250,7 +250,7 @@
                 </svg></button>
             </li>
             <li>
-              <button type="button" class="button secondary round" onclick="filterSelection('fences')"><svg
+              <button type="button" class="button secondary round" onclick="filterSelection('fences', 'projects')"><svg
                   viewBox="0 0 100 100" width="30" height="30">
                   <defs>
                     <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
@@ -263,8 +263,8 @@
                 </svg></button>
             </li>
             <li>
-              <button type="button" class="button secondary round" onclick="filterSelection('accessories')"><svg
-                  viewBox="0 0 100 100" width="30" height="30">
+              <button type="button" class="button secondary round"
+                onclick="filterSelection('accessories', 'projects')"><svg viewBox="0 0 100 100" width="30" height="30">
                   <defs>
                     <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
                   </defs>
@@ -276,8 +276,8 @@
                 </svg></button>
             </li>
             <li>
-              <button type="button" class="button secondary round" onclick="filterSelection('exclusive')"><svg
-                  viewBox="0 0 100 100" width="30" height="30">
+              <button type="button" class="button secondary round"
+                onclick="filterSelection('exclusive', 'projects')"><svg viewBox="0 0 100 100" width="30" height="30">
                   <defs>
                     <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
                   </defs>
@@ -294,27 +294,33 @@
         <div id="desctopFilter">
           <ul id="myBtnContainer" class="filter list">
             <li>
-              <button type="button" class="button secondary active" onclick="filterSelection('all')">Усі</button>
+              <button type="button" class="button secondary active"
+                onclick="filterSelection('all', 'projects')">Усі</button>
             </li>
             <li>
-              <button type="button" class="button secondary" onclick="filterSelection('flagpoles')">Прапори та
+              <button type="button" class="button secondary" onclick="filterSelection('flagpoles', 'projects')">Прапори
+                та
                 флагштоки</button>
             </li>
             <li>
-              <button type="button" class="button secondary" onclick="filterSelection('symbols')">Символіка</button>
+              <button type="button" class="button secondary"
+                onclick="filterSelection('symbols', 'projects')">Символіка</button>
             </li>
             <li>
-              <button type="button" class="button secondary" onclick="filterSelection('infostands')">Інфостенди</button>
+              <button type="button" class="button secondary"
+                onclick="filterSelection('infostands', 'projects')">Інфостенди</button>
             </li>
             <li>
-              <button type="button" class="button secondary" onclick="filterSelection('fences')">Мобільні
+              <button type="button" class="button secondary" onclick="filterSelection('fences', 'projects')">Мобільні
                 огорожі</button>
             </li>
             <li>
-              <button type="button" class="button secondary" onclick="filterSelection('accessories')">Аксесуари</button>
+              <button type="button" class="button secondary"
+                onclick="filterSelection('accessories', 'projects')">Аксесуари</button>
             </li>
             <li>
-              <button type="button" class="button secondary" onclick="filterSelection('exclusive')">Ексклюзив</button>
+              <button type="button" class="button secondary"
+                onclick="filterSelection('exclusive', 'projects')">Ексклюзив</button>
             </li>
           </ul>
         </div>
@@ -568,7 +574,8 @@
   </footer>
 
   <script src="./js/menu.js"></script>
-  <script src="./js/filterProjects.js"></script>
+  <script src="./js/filter.js"></script>
+  <script>filterSelection('all', 'projects');</script>
 </body>
 
 </html>

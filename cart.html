@@ -182,18 +182,23 @@
 
     <section class="section products">
       <div class="container">
-        <form action="mailto:pp_danilov@ukr.net" method="post" enctype="text/plain">
-          FirstName: <input type="text" name="FirstName">
-          Email: <input type="text" name="Email">
-          <input type="submit" name="submit" value="Submit">
-        </form>
-        <button class="button secondary" onclick="setOrders()">Оформити замовлення</button>
+
         <div class="section cart-box">
           <label for="totalPrice">Загальна сума: </label>
           <input id="totalPrice" name="totalPrice" readonly
             style="font-size: 24px; font-weight: 700; width: 200px; text-align: center; border: none; color: var(--accent-color); background-color: transparent; margin-bottom: 50px;">
           <ul id="cart" class="products__list list"></ul>
         </div>
+
+        <!-- <button class="button secondary" onclick="setOrders()">Оформити замовлення</button> -->
+        <form action="mailto:pp_danilov@ukr.net" method="post" enctype="text/plain" style="margin-top: 50px;">
+          FirstName: <input type="text" name="FirstName">
+          Email: <input type="text" name="Email">
+          <!-- New order: <input type="text" name="new order" value="dgsdhfdjd"> -->
+          <button type="submit" onclick="setOrders()">Оформити
+            замовлення</button>
+        </form>
+
         <div class="section">
 
           <h4 style="margin: 20px 0;">Товари, якими цікавились раніше</h4>

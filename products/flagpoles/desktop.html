@@ -27,7 +27,7 @@
         <ul class="site-nav list">
           <li><a href="../../index.html" class="link">Про нас</a></li>
           <li><a href="../../portfolio.html" class="link">Портфоліо</a></li>
-          <!-- <li><a href="../../shop.html" class="link">Магазин</a></li> -->
+
 
           <!-- dropdown -->
           <li>
@@ -180,7 +180,7 @@
       <h2 class="section__main-title">Флагштоки настільні</h2>
       <div class="container" style="display: flex; flex-direction: column; align-items: center;">
 
-        <!-- Сортер продуктів -->
+        <!-- sorter -->
 
 
         <select class="select" onchange="sortBy(this.value)" style="border: solid gray 1px; width: 200px;">
@@ -193,7 +193,7 @@
 
         </br>
 
-        <!-- Список продуктів -->
+        <!-- products -->
 
         <ul class="products__list list">
           <li class="products__item" style="position: relative;">
@@ -1407,48 +1407,10 @@
 
 
   <script src="../../js/menu.js"></script>
-  <!-- <script src="../../js/stylesChange.js"></script> -->
-  <script src="../../js/filterProducts.js"></script>
+  <script src="../../js/filter.js"></script>
+  <script>filterSelection('all', 'products');</script>
   <script src="../../js/marked.js"></script>
-  <!-- <script src="../../js/ordered.js"></script> -->
-  <script>
-
-    const sortBy = (key) => {
-      console.log('key', key)
-
-      // fetch products__items.  Returns an HTMLCollection
-      let items = document.querySelectorAll('.products__item');
-
-      // items = Array.prototype.slice.call(items);
-      items = Array.from(items);
-
-      // Now we can sort it.  Sort alphabetically
-      key === "А-Я" && items.sort((a, b) =>
-        a.querySelector('h4').textContent.localeCompare(b.querySelector('h4').textContent)
-      );
-      key === "Я-А" && items.sort((a, b) =>
-        b.querySelector('h4').textContent.localeCompare(a.querySelector('h4').textContent)
-      );
-      key === "min-price" && items.sort((a, b) =>
-        parseFloat(a.querySelector('.price').innerHTML) - parseFloat(b.querySelector('.price').innerHTML)
-      );
-      key === "max-price" && items.sort((a, b) =>
-        parseFloat(b.querySelector('.price').innerHTML) - parseFloat(a.querySelector('.price').innerHTML)
-      );
-
-      // reatach the sorted elements
-      for (let i = 0, len = items.length; i < len; i++) {
-        // store the parent node so we can reatach the item
-        let parent = items[i].parentNode;
-        // detach it from wherever it is in the DOM
-        let detatchedItem = parent.removeChild(items[i]);
-        // reatach it.  This works because we are itterating
-        // over the items in the same order as they were re-
-        // turned from being sorted.
-        parent.appendChild(detatchedItem);
-      }
-    }
-  </script>
+  <script src="../../js/sortBy.js"></script>
 </body>
 
 </html>

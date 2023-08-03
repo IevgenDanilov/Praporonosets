@@ -1,8 +1,7 @@
-filterSelection('all');
-
-function filterSelection(c) {
+function filterSelection(c, type = 'products') {
   var x, i;
-  x = document.querySelectorAll('.projects__item');
+
+  x = document.querySelectorAll('.' + type + '__item');
   if (c == 'all') c = '';
   for (i = 0; i < x.length; i++) {
     removeClass(x[i], 'show');

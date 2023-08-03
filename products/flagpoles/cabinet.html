@@ -26,7 +26,7 @@
         <ul class="site-nav list">
           <li><a href="../../index.html" class="link">Про нас</a></li>
           <li><a href="../../portfolio.html" class="link">Портфоліо</a></li>
-          <!-- <li><a href="../../shop.html" class="link">Магазин</a></li> -->
+
 
           <!-- dropdown -->
           <li>
@@ -178,35 +178,8 @@
     <section class="section products">
       <h2 class="section__main-title">Флагштоки кабінетні</h2>
       <div class="container" style="display: flex; flex-direction: column; align-items: center;">
-        <!-- Фильтр продуктов -->
 
-
-        <!-- <div>
-          Серія
-          <hr />
-          <ul id="myBtnContainer" class="filter flex list">
-            <li>
-              <button type="button" class="button secondary active" onclick="filterSelection('all')">Усі</button>
-            </li>
-            <li>
-              <button type="button" class="button secondary" onclick="filterSelection('econom')">Економ</button>
-            </li>
-            <li>
-              <button type="button" class="button secondary" onclick="filterSelection('classic')">Класик</button>
-            </li>
-            <li>
-              <button type="button" class="button secondary" onclick="filterSelection('premium')">Преміум</button>
-            </li>
-            <li>
-              <button type="button" class="button secondary" onclick="filterSelection('profi')">Профі</button>
-            </li>
-            <li>
-              <button type="button" class="button secondary" onclick="filterSelection('elite')">Еліт</button>
-            </li>
-
-          </ul>
-        </div> -->
-
+        <!-- filter -->
 
 
         <div id="mobFilter" class="select">
@@ -314,7 +287,7 @@
 
 
 
-        <!-- Сортер продуктів -->
+        <!-- sorter -->
 
         <div class="select">
           <select class="products-groupes-switcher" onchange="sortBy(this.value)">
@@ -330,7 +303,7 @@
 
         </br>
 
-        <!-- Список продуктів -->
+        <!-- products -->
 
         <ul class="products__list list">
           <li id="02020101" class="products__item sets" style="position: relative;">
@@ -384,8 +357,6 @@
               <p class="price">5000 ₴</p>
               <div id="h02" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: fixed; z-index:1; top:50%; left:50%; margin: -250px 0 0 -200px; width: 400px; border-radius: 4px; background: #e7e7e7; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);">
-                <!-- <button onclick="this.parentElement.hidden='until-found'" class="button accent-rev"
-                  style="background: #ffffff; margin: 10px; margin-left: auto; display: block; border:solid 1px; border-radius: 50%; font-size: 8px; padding: 2px; width: 16px; height: 16px; ">⛌</button> -->
                 <p style="font-size: 14px; margin: 10px;">Флагшток кабінетний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з таких матеріалів як ДСП, металопластик та
                   нержавіюча сталь. Прапор під такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
@@ -1974,51 +1945,11 @@
   </footer>
 
   <script src="../../js/menu.js"></script>
-  <!-- <script src="../../js/stylesChange.js"></script> -->
-  <script src="../../js/filterProducts.js"></script>
+  <script src="../../js/filter.js"></script>
+  <script>filterSelection('all', 'products');</script>
   <script src="../../js/marked.js"></script>
-  <!-- <script src="../../js/ordered.js"></script> -->
-  <script>
+  <script src="../../js/sortBy.js"></script>
 
-
-    const sortBy = (key) => {
-
-      // fetch products__items.  Returns an HTMLCollection
-      let items = document.querySelectorAll('.products__item');
-
-      // items = Array.prototype.slice.call(items);
-      items = Array.from(items);
-
-      // Now we can sort it.  Sort alphabetically
-      key === "А-Я" && items.sort((a, b) =>
-        a.querySelector('h4').textContent.localeCompare(b.querySelector('h4').textContent)
-      );
-      key === "Я-А" && items.sort((a, b) =>
-        b.querySelector('h4').textContent.localeCompare(a.querySelector('h4').textContent)
-      );
-      key === "by color" && items.sort((a, b) =>
-        a.querySelector('.materials').textContent.localeCompare(b.querySelector('.materials').textContent)
-      );
-      key === "min-price" && items.sort((a, b) =>
-        parseFloat(a.querySelector('.price').innerHTML) - parseFloat(b.querySelector('.price').innerHTML)
-      );
-      key === "max-price" && items.sort((a, b) =>
-        parseFloat(b.querySelector('.price').innerHTML) - parseFloat(a.querySelector('.price').innerHTML)
-      );
-
-      // reatach the sorted elements
-      for (let i = 0, len = items.length; i < len; i++) {
-        // store the parent node so we can reatach the item
-        let parent = items[i].parentNode;
-        // detach it from wherever it is in the DOM
-        let detatchedItem = parent.removeChild(items[i]);
-        // reatach it.  This works because we are itterating
-        // over the items in the same order as they were re-
-        // turned from being sorted.
-        parent.appendChild(detatchedItem);
-      }
-    }
-  </script>
 </body>
 
 </html>
