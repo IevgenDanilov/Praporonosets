@@ -4,3 +4,31 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+// #form * {
+//   color: red !important;
+//   justify-content: top;
+// }
+
+// input[type='number'] {
+//   -webkit-appearance: textfield;
+//   -moz-appearance: textfield;
+//   appearance: textfield;
+// }
+// input[type='number']::-webkit-inner-spin-button,
+// input[type='number']::-webkit-outer-spin-button {
+//   -webkit-appearance: none;
+// }
+
+input:focus::-webkit-input-placeholder {
+  color: var(--accent-color);
+}
+input:focus:-moz-placeholder {
+  color: var(--accent-color);
+}
+input:focus::-moz-placeholder {
+  color: var(--accent-color);
+}
+input:focus:-ms-input-placeholder {
+  color: var(--accent-color);
+}

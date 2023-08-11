@@ -1,5 +1,6 @@
 getOrdered();
 getPrices();
+setOrderedLetter();
 getPrewOrders();
 
 function getOrdered() {
@@ -19,7 +20,7 @@ function getOrdered() {
   cartArr.length &&
     cartArr.map(item => {
       item.innerHTML +=
-        '<input onChange="getPrices(this.parentNode)" type="number" min="1" max="100" class="num" value="1" style="width: 80px; text-align: center; border: none">' +
+        '<input onChange="getPrices(this.parentNode), setOrderedLetter()" type="number" min="1" max="100" class="num" value="1" style="width: 80px; text-align: center; border: none">' +
         'шт' +
         '<input readonly type="number" class="sum" style="width: 80px; text-align: center; border: none">' +
         'грн';
@@ -40,16 +41,54 @@ function getPrices(object = document) {
   }
 
   const totalPrice = document.querySelector('#totalPrice');
+  const totalQuantity = document.querySelector('#totalQuantity');
   const cartBox = document.querySelector('.cart-box');
   const allSumArr = cartBox.querySelectorAll('.sum');
+  const allNumArr = cartBox.querySelectorAll('.num');
 
   let total = 0;
+  let totalQ = 0;
 
   for (let index = 0; index < allSumArr.length; index++) {
     total += Number(allSumArr[index].value);
   }
 
+  for (let index = 0; index < allNumArr.length; index++) {
+    totalQ += Number(allNumArr[index].value);
+  }
+
   totalPrice.setAttribute('value', total + ' ₴');
+  totalQuantity.setAttribute('value', totalQ);
+}
+
+function setOrderedLetter() {
+  const order = document.querySelector('#cart');
+  const orderLetter = document.querySelector('#orderLetter');
+  let orderedProductsArr = Array.from(order.querySelectorAll('.products__item'));
+
+  orderLetter.value = '\n';
+
+  orderedProductsArr.length &&
+    orderedProductsArr.map(item => {
+      orderLetter.value +=
+        item.id +
+        ' | ' +
+        item.querySelector('h4').innerHTML.replace('<br>', '') +
+        ' - ' +
+        item.querySelector('.price').innerHTML +
+        ' х ' +
+        item.querySelector('.num').value +
+        ' шт' +
+        ' = ' +
+        item.querySelector('.sum').value +
+        ' грн' +
+        '\n\n';
+    });
+
+  orderLetter.value +=
+    'Загальна сума замовлення: ' +
+    document.querySelector('#totalPrice').value.replace(/[^\d\.]*/g, '') +
+    ' грн';
 }
 
 function getPrewOrders() {
@@ -70,7 +109,7 @@ function getPrewOrders() {
   let orders = document.querySelector('#orders');
 
   const prewOrdersList = window.localStorage.getItem('ordersList');
-  let prewOrdersListArr = JSON.parse(prewOrdersList).reverse();
+  let prewOrdersListArr = JSON.parse(prewOrdersList)?.reverse() || [];
 
   prewOrdersListArr &&
     prewOrdersListArr.map(item => {
@@ -107,6 +146,8 @@ function setOrders() {
   let marked = markedString.replaceAll('ordered', '').replaceAll('chosen-cart', '');
 
   window.localStorage.setItem('marked', marked);
+
+  window.alarm('Наш менеджер зателефонує Вам для підтвердження замовлення!');
 
   window.location.reload();
 }

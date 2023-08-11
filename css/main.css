@@ -1184,6 +1184,22 @@ label {
   background-position: center;
 }
 
+input:focus::-webkit-input-placeholder {
+  color: var(--accent-color);
+}
+
+input:focus:-moz-placeholder {
+  color: var(--accent-color);
+}
+
+input:focus::-moz-placeholder {
+  color: var(--accent-color);
+}
+
+input:focus:-ms-input-placeholder {
+  color: var(--accent-color);
+}
+
 .footer {
   background-color: var(--secondary-background-color);
   padding: 10px;
