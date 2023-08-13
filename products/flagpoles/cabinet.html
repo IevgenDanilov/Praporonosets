@@ -289,14 +289,23 @@
 
         <!-- sorter -->
 
+        <div class="filters__sortBy" style="display: flex; align-items: center;">
+          <svg class="icon" style="fill:grey" width="24" height="24">
+            <use href="../../images/icons.svg#icon-filter"></use>
+          </svg>
+          <p class="filters__sortBy-text">Фільтр та сортування</p>
+          <svg class="icon" style="fill:grey" width="24" height="24">
+            <use href="../../images/icons.svg#icon-sort"></use>
+          </svg>
+        </div>
+
         <div class="select">
           <select class="products-groupes-switcher" onchange="sortBy(this.value)">
             <!-- <option value="" selected="selected"> -- оберіть фільтр -- </option> -->
-            <option value="А-Я" selected="selected">А-Я</option>
-            <option value="Я-А">Я-А</option>
-            <option value="by color">За кольором</option>
-            <option value="min-price">Від дешевих до дорогих</option>
-            <option value="max-price">Від дорогих до дешевих</option>
+            <option value="Найменуванню" selected="selected">Найменуванню</option>
+            <option value="by type">Типу</option>
+            <option value="min-price">Зростанню ціни</option>
+            <option value="max-price">Зменшенню ціни</option>
           </select>
           <span class="focus"></span>
         </div>
@@ -1276,7 +1285,7 @@
               onclick="this.title='click+click'; this.src='../../images/products/flagpoles/cabinet/pommels/icons/cone_prestige.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products__item-description">
               <h4>Навершя Конус ПРЕСТИЖ</h4>
-              <p class="materials">дерево</p>
+              <p class="materials">горіх, редвуд, вільха</p>
               <p>ДхШхВ: 35х35х100</p>
               <p class="price">450 ₴</p>
             </div>

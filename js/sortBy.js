@@ -3,15 +3,11 @@ const sortBy = key => {
 
   items = Array.from(items);
 
-  key === 'А-Я' &&
+  key === 'Найменуванню' &&
     items.sort((a, b) =>
       a.querySelector('h4').textContent.localeCompare(b.querySelector('h4').textContent),
     );
-  key === 'Я-А' &&
-    items.sort((a, b) =>
-      b.querySelector('h4').textContent.localeCompare(a.querySelector('h4').textContent),
-    );
-  key === 'by color' &&
+  key === 'by type' &&
     items.sort((a, b) =>
       a
         .querySelector('.materials')

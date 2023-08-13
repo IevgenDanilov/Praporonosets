@@ -182,14 +182,23 @@
 
         <!-- sorter -->
 
+        <div class="filters__sortBy" style="display: flex; align-items: center;">
+          <svg class="icon" style="fill:grey" width="24" height="24">
+            <use href="../../images/icons.svg#icon-filter"></use>
+          </svg>
+          <p class="filters__sortBy-text">Фільтр та сортування</p>
+        </div>
 
-        <select class="select" onchange="sortBy(this.value)" style="border: solid gray 1px; width: 200px;">
-          <option value="" selected="selected"> -- оберіть фільтр -- </option>
-          <option value="А-Я">А-Я</option>
-          <option value="Я-А">Я-А</option>
-          <option value="min-price">min-price</option>
-          <option value="max-price">max-price</option>
-        </select>
+        <div class="select">
+          <select class="products-groupes-switcher" onchange="sortBy(this.value)">
+            <!-- <option value="" selected="selected"> -- оберіть фільтр -- </option> -->
+            <option value="Найменуванню" selected="selected">Найменуванню</option>
+            <option value="by type">Типу</option>
+            <option value="min-price">Зростанню ціни</option>
+            <option value="max-price">Зменшенню ціни</option>
+          </select>
+          <span class="focus"></span>
+        </div>
 
         </br>
 
