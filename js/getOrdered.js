@@ -19,11 +19,14 @@ function getOrdered() {
   let cartArr = Array.from(cart.querySelectorAll('.products__item'));
   cartArr.length &&
     cartArr.map(item => {
-      item.innerHTML +=
-        '<input onChange="getPrices(this.parentNode), setOrderedLetter()" type="number" min="1" max="100" class="num" value="1" style="width: 80px; text-align: center; border: none">' +
-        'шт' +
-        '<input readonly type="number" class="sum" style="width: 80px; text-align: center; border: none">' +
-        'грн';
+      // console.log('item.children', item.children);
+      if (!item.querySelector('.sum')) {
+        item.innerHTML +=
+          '<input name="number" onChange="getPrices(this.parentNode), setOrderedLetter()" type="number" min="1" max="100" class="num" value="1" style="width: 80px; text-align: center; border: none">' +
+          'шт' +
+          '<input readonly name="sum" type="number" class="sum" style="width: 80px; text-align: center; border: none">' +
+          'грн';
+      }
     });
 }
 

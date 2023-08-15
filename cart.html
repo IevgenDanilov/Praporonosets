@@ -2,7 +2,7 @@
 <html lang="uk">
 
 <head>
-  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Корзина</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -196,41 +196,58 @@
               style="font-size: 18px; font-weight: 700; text-align: left; border: none; color: var(--accent-color); background-color: transparent; ">
           </div>
           <!-- <button class="button secondary" onclick="setOrders()">Оформити замовлення</button> -->
-          <form id="form" action="mailto:pp_danilov@ukr.net" method="post" enctype="text/plain"
+
+
+          <form id="form" class="form" action="mailto:pp_danilov@ukr.net" method="post" enctype="text/plain"
             style="margin-top: 50px;">
-            <label for="firstName" style="display: inline-block; width: 70px;">ПІБ* </label>
-            <input required type="text" name="firstName" style="border:none; min-width: 50%;">
-            <br>
-            <br>
-            <label for="client-phone" style="display: inline-block; width: 70px;">tel* </label>
-            <input required type="tel" name="client-phone" pattern="\+38\(0[0-9]{2}\)[0-9]{3}-[0-9]{2}-[0-9]{2}"
-              title="+38(066)770-05-20" placeholder="+38(0__)___-__-__" onfocus="if(this.value==''){this.value='+38(0'}"
-              onblur="if(this.value=='+38(0'){this.value=''}" style="border:none; min-width: 50%;">
-            <br>
-            <br>
-            <label for="client-email" style="display: inline-block; width: 70px;">email* </label>
-            <input required type="email" name="client-email" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}"
-              style="border:none; min-width: 50%;">
-            <br>
-            <br>
-            <label for="order">Замовлено: </label>
-            <br>
-            <br>
-            <textarea readonly id="orderLetter" name="order"
-              style="background-color: rgba(0,0,0, 0.03); width: 100%; min-height:500px; height: auto; border: none; border-radius: 4px; resize:none; overflow:hidden;"></textarea>
-            <!-- rows="4" cols="5" -->
-            <br>
-            <br>
-            <label for="comment">Коментар до замовлення:
+            <label for="firstName" class="form__label"><span class="label__text">ПІБ*</span>
+              <input class="form__input" required type="text" name="firstName" style="min-width: 50%;">
             </label>
             <br>
             <br>
-            <textarea name="comment" placeholder="Введіть текст"
-              style="width: 50%; min-height:100px; resize:none; overflow:hidden; border-radius: 4px;"></textarea>
+            <label for="company" class="form__label"><span class="label__text">Компанія</span>
+              <input class="form__input" type="text" name="company" style="min-width: 50%;">
+            </label>
             <br>
             <br>
-            <button type="submit" onclick="setOrders()">Оформити
-              замовлення</button>
+            <label for="client-phone" class="form__label"><span class="label__text">tel*</span>
+              <input class="form__input" required type="tel" name="client-phone"
+                pattern="\+38\(0[0-9]{2}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" title="+38(066)770-05-20"
+                placeholder="+38(0__)___-__-__" onfocus="if(this.value==''){this.value='+38(0'}"
+                onblur="if(this.value=='+38(0'){this.value=''}" style="min-width: 50%;">
+            </label>
+            <br>
+            <br>
+            <label for="client-email" class="form__label"><span class="label__text">email*</span>
+              <input class="form__input" required type="email" name="client-email"
+                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}" style="min-width: 50%;">
+            </label>
+            <br>
+            <br>
+            <label for="order" class="form__label" style="width: 100%"><span class="label__text">Замовлено:</span>
+              <br>
+              <br>
+              <textarea class="form__input textarea" readonly id="orderLetter" name="order"
+                style="background-color: rgba(0,0,0, 0.03); width: 100%; min-height:300px; height: auto; border: none; border-radius: 4px; resize:none; overflow:hidden;"></textarea>
+              <!-- rows="4" cols="5" -->
+            </label>
+            <br>
+            <br>
+            <label for="comment" class="form__label" style="width: 100%"><span class="label__text">Коментар до
+                замовлення:</span>
+              <br>
+              <br>
+              <textarea class="form__input textarea" name="comment" placeholder="Введіть текст"
+                style="width: 50%; min-height:100px; resize:none; overflow:hidden; border-radius: 4px;"></textarea>
+            </label>
+            <br>
+            <br>
+            <button class="button primary" type="submit" onclick="setOrders()"><svg width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+              <p style="margin-left: 10px;">Відправити
+                замовлення</p>
+            </button>
           </form>
 
 
@@ -242,9 +259,12 @@
           <h4 style="margin: 20px 0;">Товари, якими цікавились раніше</h4>
           <div id="prewProducts" class="products__list list clients-slider">
           </div>
-          <button style="margin: 20px 0;"
+          <button class="button primary"
             onclick="document.querySelector('#orders').hidden=!document.querySelector('#orders').hidden">
-            <h4>Попередні замовлення</h4>
+            <svg width="24" height="24">
+              <use href="./images/icons.svg#icon-todolist"></use>
+            </svg>
+            <p style="margin-left: 10px;">Попередні замовлення</p>
           </button>
           <div hidden id="orders" style="pointer-events: none; opacity: 0.6;">
           </div>
