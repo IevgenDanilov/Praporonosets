@@ -10,14 +10,12 @@ function getFavorites() {
     markedListArr.map(item => {
       if (item.includes('favorite')) {
         console.log('item', item);
-        // let inputsArr = item.querySelectorAll('input');
-        // inputsArr.map(input => {
-        //   input.hidden = 'true';
-        // });
+        const itemUpd = item
+          .replaceAll('<input', '<input hidden="hidden"')
+          .replaceAll('шт', '')
+          .replaceAll('грн', '');
 
-        item.replaceAll('<input', '<input style="display: none"');
-
-        wishList.innerHTML += item;
+        wishList.innerHTML += itemUpd;
       }
     });
 }
