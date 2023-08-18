@@ -5,6 +5,21 @@
   background-position: center;
 }
 
+.cart__title {
+  color: var(--primary-white-color);
+  font-weight: normal;
+  line-height: 2;
+  margin: 20px 0;
+  padding: 0 20px;
+  text-align: left;
+  background: linear-gradient(
+    to right,
+    var(--secondary-accent-color),
+    rgba(256, 256, 256, 0.4),
+    rgba(256, 256, 256, 0)
+  );
+}
+
 .form__input {
   padding: 8px;
   border: 1px solid #2a2a2a;
@@ -34,14 +49,8 @@
 
 .form__label {
   display: inline-block;
-  width: 90px;
+  width: 100%;
   // text-align: right;
-}
-
-.form-label {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 16px;
 }
 
 .label__text {

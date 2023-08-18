@@ -103,7 +103,7 @@ function setOrders() {
   if (order.innerHTML.length) {
     ordersList.push(
       '</br>' +
-        '<h4><time>' +
+        '<h4 class="cart__title"><time>' +
         new Date(Date.now()).toLocaleString() +
         '</time>, сума замовлення: ' +
         totalPrice.value +
