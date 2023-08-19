@@ -196,7 +196,7 @@
   padding: 0 20px; background: linear-gradient(
     to right,
     var(--primary-white-color),
-    rgba(256, 256, 256, 0.4),
+    rgba(256, 256, 256, 0),
     rgba(256, 256, 256, 0)
   );">У кошику <input size="1" id="totalQuantity" name="totalQuantity" readonly
             style="font-size: 18px; font-weight: 700; text-align: center; border: none; color: var(--accent-color); background-color: transparent; ">
@@ -209,8 +209,7 @@
           <h4 class="cart__title">Інформація по замовленню</h4>
           <!-- https://www.w3docs.com/snippets/html/how-to-create-mailto-forms.html -->
 
-          <form id="form" class="form" action="mailto:pp_danilov@ukr.net" method="post" enctype="text/plain"
-            style="margin-top: 50px;">
+          <form id="form" class="form" action="mailto:pp_danilov@ukr.net" method="post" enctype="text/plain">
             <div style="display: flex;">
               <div style="width: 32%;">
                 <label for="firstName" class="form__label"><span class="label__text">ПІБ отримувача*</span>
@@ -250,19 +249,16 @@
                 <br>
                 <label for="comment" class="form__label" style="width: 100%"><span class="label__text">Коментар до
                     замовлення:</span>
-                  <br>
-                  <br>
+                  <p></p>
                   <textarea class="form__input textarea" name="comment" placeholder="Введіть текст"
                     oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'
-                    style="width: 90%; resize:none; overflow:hidden; border-radius: 4px;"></textarea>
+                    style="width: 90%; resize:none; overflow:hidden; border-radius: 4px; min-height: 100px;"></textarea>
                 </label>
               </div>
               <div style="flex-grow: 1;">
                 <label for="order" class="form__label" style="width: 100%;"><span class="label__text">Замовлено:</span>
-                  <br>
-                  <br>
-                  <textarea class="form__input textarea" readonly id="orderLetter" name="order"
-                    style="background-color: rgba(0,0,0, 0.03); width: 100%; height: 450px; border: none; border-radius: 4px; resize:none; overflow:auto;"></textarea>
+                  <p></p>
+                  <textarea class="form__input textarea" readonly id="orderLetter" name="order"></textarea>
                 </label>
               </div>
             </div>

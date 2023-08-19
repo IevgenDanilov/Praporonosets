@@ -39,6 +39,7 @@
     font-size: 11px;
     line-height: 1.2;
     margin: 5px auto;
+    min-height: 28px;
   }
 
   & .price {
@@ -47,6 +48,15 @@
     font-size: 18px;
     line-height: 1.2;
     margin: 5px auto;
+  }
+
+  & input,
+  & span {
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 0 auto;
   }
 
   & a {

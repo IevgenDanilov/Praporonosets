@@ -39,7 +39,7 @@ function setOrderedLetter() {
   const orderLetter = document.querySelector('#orderLetter');
   let orderedProductsArr = Array.from(order.querySelectorAll('.products__item'));
 
-  orderLetter.value = '\n';
+  orderLetter.value = '';
 
   orderedProductsArr.length &&
     orderedProductsArr.map(item => {
@@ -76,7 +76,9 @@ function getPrewOrders() {
         .replaceAll('ordered', '')
         .replaceAll('chosen-cart', '')
         .replaceAll('favorites', '')
-        .replaceAll('chosen-heart', '');
+        .replaceAll('chosen-heart', '')
+        .replaceAll('<input', '<input hidden="hidden"')
+        .replaceAll('<span', '<span hidden="hidden"');
     });
 
   let orders = document.querySelector('#orders');
@@ -102,8 +104,7 @@ function setOrders() {
 
   if (order.innerHTML.length) {
     ordersList.push(
-      '</br>' +
-        '<h4 class="cart__title"><time>' +
+      '<h4 class="cart__title"><time>' +
         new Date(Date.now()).toLocaleString() +
         '</time>, сума замовлення: ' +
         totalPrice.value +
@@ -120,5 +121,5 @@ function setOrders() {
 
   window.localStorage.setItem('marked', marked);
 
-  // window.location.reload();
+  window.location.reload();
 }

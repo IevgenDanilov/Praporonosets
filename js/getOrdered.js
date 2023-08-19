@@ -26,7 +26,7 @@ function getOrdered() {
           '<input name="number" class="num" onChange="getPrices(this.parentElement), setOrderedLetter(), saveValues()" type="number" min="1" max="100" value="1" style="width: 80px; text-align: center; border: none">' +
           '<span class="quantity">шт</span>' +
           '<input readonly name="sum" class="sum" type="number" style="width: 80px; text-align: center; border: none">' +
-          '<span class="UAH">грн</span>';
+          '<span class="uah">грн</span>';
       }
     });
 }

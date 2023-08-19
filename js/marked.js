@@ -68,6 +68,16 @@ function toggleOrdered(id) {
   marked = marked.filter(item => !item.includes(product.id));
 
   if (product.classList.contains('favorites') || product.classList.contains('ordered')) {
+    // const num = product.querySelector('.num');
+    // const quantity = product.querySelector('.quantity');
+    // const sum = product.querySelector('.sum');
+    // const uah = product.querySelector('.uah');
+
+    // num.remove();
+    // quantity.remove();
+    // sum.remove();
+    // uah.remove();
+
     marked.push(product.outerHTML);
   }
 

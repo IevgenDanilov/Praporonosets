@@ -38,6 +38,10 @@
   }
 
   &__description {
+    height: 58px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin-top: 10px;
     text-align: center;
   }
@@ -47,7 +51,7 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 1.2;
-    margin: 0 auto 10px auto;
+    margin: 0 auto;
   }
 
   // &__link {
