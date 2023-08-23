@@ -72,10 +72,10 @@
 #orderLetter {
   color: var(--secondary-accent-color);
   font-weight: 500;
+  // background-color: rgba(0, 0, 0, 0.03);
   background: linear-gradient(
     to right,
     rgba(256, 256, 256, 1),
-    rgba(256, 256, 256, 0),
     rgba(256, 256, 256, 0),
     rgba(256, 256, 256, 0),
     rgba(256, 256, 256, 1)
@@ -86,4 +86,9 @@
   border-radius: 4px;
   resize: none;
   overflow: auto;
+}
+
+.order-box {
+  text-align: left;
+  // margin-top: 50px;
 }

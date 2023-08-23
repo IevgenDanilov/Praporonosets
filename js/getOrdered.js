@@ -19,6 +19,8 @@ function getOrdered() {
     });
 
   let cartArr = Array.from(cart.querySelectorAll('.products__item'));
+  // const orderBox = document.querySelector('#order-box');
+  // !cartArr.length && (orderBox.innerHTML = '');
   cartArr.length &&
     cartArr.map(item => {
       if (!item.querySelector('.sum')) {
