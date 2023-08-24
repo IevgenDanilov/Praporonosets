@@ -44,7 +44,7 @@ function setOrderedLetter() {
   orderedProductsArr.length &&
     orderedProductsArr.map(item => {
       orderLetter.value +=
-        item.id +
+        item.id.replace('ID', 'Код: ') +
         ' | ' +
         item.querySelector('h4').innerHTML.replace('<br>', '') +
         ' - ' +

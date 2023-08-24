@@ -222,8 +222,17 @@
 <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill-rule: nonzero; opacity: 1;" transform=" translate(-24.67, -24.56)" d="M 13.21875 5.375 L 7.375 12.84375 L 4.65625 10.4375 L 3.34375 11.9375 L 6.84375 15.0625 L 7.625 15.75 L 8.28125 14.90625 L 14.78125 6.625 Z M 19 10 L 19 12 L 46 12 L 46 10 Z M 13.21875 19.375 L 7.375 26.84375 L 4.65625 24.4375 L 3.34375 25.9375 L 6.84375 29.0625 L 7.625 29.75 L 8.28125 28.90625 L 14.78125 20.625 Z M 19 24 L 19 26 L 46 26 L 46 24 Z M 13.21875 33.375 L 7.375 40.84375 L 4.65625 38.4375 L 3.34375 39.9375 L 6.84375 43.0625 L 7.625 43.75 L 8.28125 42.90625 L 14.78125 34.625 Z M 19 38 L 19 40 L 46 40 L 46 38 Z" stroke-linecap="round" />
 </g>
 </symbol>
+<symbol id="icon-download" width='24' height='24' viewBox='0 0 24 24'>
+<g transform="matrix(0.83 0 0 0.83 12 12)" >
+<g>
+<g transform="matrix(1 0 0 1 -4 0)" >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; opacity: 1;" transform=" translate(-8, -12)" d="M 4 9 L 12 9 L 12 11 L 4 11 z M 4 13 L 10 13 L 10 15 L 4 15 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(1 0 0 1 -0.15 -0.29)" >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; opacity: 1;" transform=" translate(-11.85, -11.71)" d="M 16 6 L 16 12 L 18 12 L 18 4.586 L 13.414 0 L 2 0 C 0.8954305003384131 0 0 0.8954305003384131 0 2 L 0 20 C 0 21.104569499661586 0.8954305003384131 22 2 22 L 12 22 L 12 20 L 2 20 L 2 2 L 12 2 L 12 6 z M 22.293 17.293 L 20 19.586 L 20 14 L 18 14 L 18 19.586 L 15.707 17.293 L 14.293000000000001 18.707 L 19 23.414 L 23.707 18.707 L 22.293 17.293 z" stroke-linecap="round" />
+</g>
+</g>
+</g>
+</symbol>
 </defs>
 </svg>
-
-
-

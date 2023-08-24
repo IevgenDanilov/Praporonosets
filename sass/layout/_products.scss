@@ -13,16 +13,24 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    margin-left: -20px;
+    margin-left: -10px;
     margin-top: -20px;
+  }
+
+  &__code {
+    margin: 4px auto 0px 10px;
+    text-align: left;
+    color: var(--secondary-accent-color);
+    font-weight: 500;
   }
 }
 
 .products__item {
   display: none;
   background-color: #fff;
-  margin: 0;
+  // margin: 0;
   padding: 10px;
   flex-direction: column;
   align-items: center;
@@ -56,6 +64,10 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 1.2;
+    margin: 0 auto;
+  }
+
+  & img {
     margin: 0 auto;
   }
 

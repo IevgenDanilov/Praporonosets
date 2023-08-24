@@ -11,21 +11,26 @@ function getPrices() {
   window.localStorage.setItem('pricesArr', JSON.stringify(pricesArr));
 }
 
-function convertPrices(currency = 'UAH') {
+function convertPrices(currency = 'UAH', elem) {
+  if (elem) {
+    elem.parentElement.querySelector('.current').classList.remove('current');
+    elem.classList.add('current');
+  }
+
   const prices = document.querySelectorAll('.price');
   const pricesArr = JSON.parse(window.localStorage.getItem('pricesArr'));
 
   for (let i = 0; i < prices.length; i++) {
-    const uahCourse = 42;
-    const usdCourse = 42 / 38;
     const eurCourse = 1;
+    const uahCourse = 42 * eurCourse;
+    const usdCourse = (42 / 38) * eurCourse;
 
     if (currency === 'UAH') {
       prices[i].innerHTML = pricesArr[i] * uahCourse + ' ₴';
     } else if (currency === 'USD') {
-      prices[i].innerHTML = Math.ceil(pricesArr[i] * usdCourse * 100) / 100 + ' $';
+      prices[i].innerHTML = Math.round(pricesArr[i] * usdCourse * 100) / 100 + ' $';
     } else {
-      prices[i].innerHTML = pricesArr[i] * eurCourse + ' €';
+      prices[i].innerHTML = Math.round(pricesArr[i] * eurCourse * 100) / 100 + ' €';
     }
   }
 }
