@@ -31,7 +31,10 @@ function getPrices(object = document) {
   }
 
   totalQuantity.setAttribute('value', totalQ);
+  totalQuantity.style.width = (totalQuantity.value.length + 3) * 8 + 'px';
+
   totalPrice.setAttribute('value', total + ' ₴');
+  totalPrice.style.width = (totalPrice.value.length + 3) * 8 + 'px';
 }
 
 function setOrderedLetter() {
