@@ -32,12 +32,12 @@ function removeClass(element, name) {
   element.className = arr1.join(' ');
 }
 
-var btnContainer = document.querySelector('#myBtnContainer');
-var btns = btnContainer.querySelectorAll('.button');
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener('click', function () {
-    var current = document.querySelectorAll('.active');
-    current[0].className = current[0].className.replace(' active', '');
-    this.className += ' active';
-  });
-}
+// var btnContainer = document.querySelector('#myBtnContainer');
+// var btns = btnContainer.querySelectorAll('.button');
+// for (var i = 0; i < btns.length; i++) {
+//   btns[i].addEventListener('click', function () {
+//     var current = document.querySelectorAll('.active');
+//     current[0].className = current[0].className.replace(' active', '');
+//     this.className += ' active';
+//   });
+// }

@@ -14,20 +14,28 @@ function saveValues() {
     });
   });
 
-  console.log('currentValues', currentValues);
-
   window.localStorage.setItem('savedValues', JSON.stringify(currentValues));
 }
 
 function getValues() {
   const cart = document.querySelector('#cart');
 
-  const currentValues = window.localStorage.getItem('savedValues');
-  const currentValuesArr = JSON.parse(currentValues) || [];
+  if (cart.innerHTML.length) {
+    const currentValues = window.localStorage.getItem('savedValues');
 
-  currentValuesArr.map(item => {
-    const product = cart.querySelector('#' + item.id.toString());
-    const number = product.querySelector('.num');
-    number.setAttribute('value', item.quantity);
-  });
+    let currentValuesArr = [];
+
+    if (currentValues) {
+      currentValuesArr = JSON.parse(currentValues);
+    }
+
+    currentValuesArr.length &&
+      currentValuesArr.map(item => {
+        const product = document.getElementById(item.id);
+        if (product) {
+          const number = product.querySelector('.num');
+          number.setAttribute('value', item.quantity);
+        }
+      });
+  }
 }

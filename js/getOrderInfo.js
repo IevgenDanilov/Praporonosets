@@ -50,7 +50,7 @@ function setOrderedLetter() {
         item.id.replace('ID', 'Код: ') +
         ' | ' +
         item.querySelector('h4').innerHTML.replace('<br>', '') +
-        ' - ' +
+        ' | ' +
         item.querySelector('.price').innerHTML +
         ' х ' +
         item.querySelector('.num').value +
