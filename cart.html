@@ -200,7 +200,7 @@
         <div class="order-box">
           <p class="cart__title">Інформація по замовленню</p>
 
-          <form id="form" class="form" action="mailto:pp_danilov@ukr.net" onsubmit="setOrders()">
+          <form id="form" class="form" action="mailto:pp_danilov@ukr.net" onsubmit="setOrders()" enctype="text/plain">
             <div class="form__container">
               <div class="form__info">
                 <input hidden name="subject" value="Нове_замовлення_з_сайту_praporonosets.ua" />
@@ -232,7 +232,13 @@
                 </label>
                 <br>
                 <br>
-                <label for="client-address" class="form__label"><span class="label__text">Адреса доставки</span>
+                <label id="selfGet" for="extras" class="form__label"
+                  style="display: flex; align-items: center; margin-bottom: 4px;"><input type="checkbox" id="extras"
+                    name="extras" value="Самовивіз" onchange="delivery()"><span class="label__text"
+                    style="margin: 0 0 0 4px;">
+                    Самовивіз з нашого складу</span></label>
+                <label id="delivery-address" for="client-address" class="form__label"><span class="label__text">Адреса
+                    доставки</span>
                   <p></p>
                   <input id="client-address" class="form__input" type="text" name="client-address"
                     placeholder="Адресна або відділення Нової Пошти" autocomplete="address-line1">
@@ -250,7 +256,8 @@
               <div style="flex-grow: 1;">
                 <label for="orderLetter" class="form__label"><span class="label__text">Замовлено:</span>
                   <p></p>
-                  <textarea id="orderLetter" class="form__input textarea" name="body"></textarea>
+                  <textarea id="orderLetter" class="form__input textarea" name="body" readonly
+                    enctype="text/plain"></textarea>
                 </label>
               </div>
             </div>
@@ -410,6 +417,16 @@
 
       orderLetter.value = finalBodyText.replaceAll(" ", "_");
 
+    }
+
+  </script>
+
+  <script>
+
+    function delivery() {
+      let selfGet = document.getElementById("selfGet");
+      let deliveryAddress = document.getElementById("delivery-address");
+      deliveryAddress.classList.toggle('is-hidden');
     }
 
   </script>

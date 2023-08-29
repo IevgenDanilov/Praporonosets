@@ -48,14 +48,13 @@ function setOrderedLetter() {
     orderedProductsArr.map(item => {
       orderLetter.value +=
         item.id.replace('ID', 'Код: ') +
-        ' | ' +
+        ' / ' +
         item.querySelector('h4').innerHTML.replace('<br>', '') +
-        ' | ' +
-        item.querySelector('.price').innerHTML +
-        ' х ' +
+        ' / ' +
+        item.querySelector('.price').innerHTML.replace(/[^\d\.]*/g, '') +
+        ' грн х ' +
         item.querySelector('.num').value +
-        ' шт' +
-        ' = ' +
+        ' шт = ' +
         item.querySelector('.sum').value +
         ' грн' +
         '\n\n';
