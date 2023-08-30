@@ -396,7 +396,8 @@ button.slick-next:before {
   transition: opacity 500ms linear, visibility 500ms linear;
 }
 
-.products-groupes-switcher {
+.products-groupes-switcher,
+.projects-groupes-switcher {
   width: 100%;
   padding: 0 10px;
   font-size: 16px;
@@ -416,6 +417,7 @@ button.slick-next:before {
   flex-direction: column;
   align-items: center;
   margin-bottom: 10px;
+  width: 100%;
 }
 
 .select__box {
@@ -458,7 +460,8 @@ button.slick-next:before {
 }
 
 @media screen and (min-width: 768px) {
-  .products-groupes-switcher {
+  .products-groupes-switcher,
+  .projects-groupes-switcher {
     width: 200px;
   }
   .filter {
@@ -478,6 +481,7 @@ button.slick-next:before {
   .filter__box,
   .sorter__box {
     align-items: initial;
+    width: initial;
   }
   .sorter__sortBy {
     flex-direction: row;
@@ -1381,6 +1385,20 @@ label {
   width: 100%;
 }
 
+.form__checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.form__checkbox input {
+  cursor: pointer;
+  border-color: #4caf50;
+  accent-color: var(--secondary-accent-color);
+  width: 14px;
+  height: 14px;
+}
+
 #orderLetter {
   color: var(--secondary-accent-color);
   font-weight: 500;
@@ -1411,7 +1429,7 @@ label {
     width: 90%;
   }
   #orderLetter {
-    height: 465px;
+    height: 480px;
   }
 }
 

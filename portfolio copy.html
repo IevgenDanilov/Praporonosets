@@ -179,36 +179,153 @@
     <section>
       <div class="container" style="display: flex; flex-direction: column; align-items: center;">
 
+        <!-- filter -->
 
-        <div class="select__box">
-
-          <!-- filter -->
-          <div class="filter__box">
-
-            <div class="filter__sortBy">
-              <svg class="icon" style="fill:grey;" width="24" height="24">
-                <use href="../../images/icons.svg#icon-filter"></use>
-              </svg>
-              <p class="filter__sortBy-text">Фільтр</p>
-            </div>
-
-            <div id="mobFilter" class="select">
-              <select id="filterSelect" onchange="filterSelection(this.value, 'projects')" name="filter"
-                class="projects-groupes-switcher">
-                <option value="all" selected="selected">Усі</option>
-                <option value="flagpoles">Прапори та
-                  флагштоки</option>
-                <option value="symbols">Символіка</option>
-                <option value="infostands">Інфостенди</option>
-                <option value="fences">Мобільні огорожі</option>
-                <option value="accessories">Аксесуари</option>
-                <option value="exclusive">Ексклюзив</option>
-              </select>
-              <span class="focus"></span>
-            </div>
-
-          </div>
+        <div id="mobFilter" class="select">
+          <select onchange="filterSelection(this.value, 'projects')" name="filter" class="projects-groupes-switcher">
+            <option value="all" selected="selected">Усі</option>
+            <option value="flagpoles">Прапори та
+              флагштоки</option>
+            <option value="symbols">Символіка</option>
+            <option value="infostands">Інфостенди</option>
+            <option value="fences">Мобільні огорожі</option>
+            <option value="accessories">Аксесуари</option>
+            <option value="exclusive">Ексклюзив</option>
+          </select>
+          <span class="focus"></span>
         </div>
+
+        <div id="tabletFilter">
+          <ul id="myBtnContainer" class="filter flex list">
+            <li>
+              <button type="button" class="button secondary active round" onclick="filterSelection('all', 'projects')">
+                <svg viewBox="0 0 100 100" width="30" height="30">
+                  <defs>
+                    <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
+                  </defs>
+                  <text font-size="20" style="font-weight: 700;">
+                    <textPath xlink:href="#circle">
+                      Усі--------------
+                    </textPath>
+                  </text>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="button secondary round"
+                onclick="filterSelection('flagpoles', 'projects')"><svg viewBox="0 0 100 100" width="30" height="30">
+                  <defs>
+                    <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
+                  </defs>
+                  <text font-size="20" style="font-weight: 700;">
+                    <textPath xlink:href="#circle">
+                      Прапори-------------
+                    </textPath>
+                  </text>
+                </svg></button>
+            </li>
+            <li>
+              <button type="button" class="button secondary round" onclick="filterSelection('symbols', 'projects')"><svg
+                  viewBox="0 0 100 100" width="30" height="30">
+                  <defs>
+                    <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
+                  </defs>
+                  <text font-size="20" style="font-weight: 700;">
+                    <textPath xlink:href="#circle">
+                      Символіка--------------
+                    </textPath>
+                  </text>
+                </svg></button>
+            </li>
+            <li>
+              <button type="button" class="button secondary round"
+                onclick="filterSelection('infostands', 'projects')"><svg viewBox="0 0 100 100" width="30" height="30">
+                  <defs>
+                    <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
+                  </defs>
+                  <text font-size="20" style="font-weight: 700;">
+                    <textPath xlink:href="#circle">
+                      Інфостенди--------------
+                    </textPath>
+                  </text>
+                </svg></button>
+            </li>
+            <li>
+              <button type="button" class="button secondary round" onclick="filterSelection('fences', 'projects')"><svg
+                  viewBox="0 0 100 100" width="30" height="30">
+                  <defs>
+                    <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
+                  </defs>
+                  <text font-size="20" style="font-weight: 700;">
+                    <textPath xlink:href="#circle">
+                      Огорожі--------------
+                    </textPath>
+                  </text>
+                </svg></button>
+            </li>
+            <li>
+              <button type="button" class="button secondary round"
+                onclick="filterSelection('accessories', 'projects')"><svg viewBox="0 0 100 100" width="30" height="30">
+                  <defs>
+                    <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
+                  </defs>
+                  <text font-size="20" style="font-weight: 700;">
+                    <textPath xlink:href="#circle">
+                      Аксесуари--------------
+                    </textPath>
+                  </text>
+                </svg></button>
+            </li>
+            <li>
+              <button type="button" class="button secondary round"
+                onclick="filterSelection('exclusive', 'projects')"><svg viewBox="0 0 100 100" width="30" height="30">
+                  <defs>
+                    <path id="circle" d="M 30, 50 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" />
+                  </defs>
+                  <text font-size="20" style="font-weight: 700;">
+                    <textPath xlink:href="#circle">
+                      Ексклюзив--------------
+                    </textPath>
+                  </text>
+                </svg></button>
+            </li>
+          </ul>
+        </div>
+
+        <div id="desctopFilter">
+          <ul id="myBtnContainer" class="filter list">
+            <li>
+              <button type="button" class="button secondary active"
+                onclick="filterSelection('all', 'projects')">Усі</button>
+            </li>
+            <li>
+              <button type="button" class="button secondary" onclick="filterSelection('flagpoles', 'projects')">Прапори
+                та
+                флагштоки</button>
+            </li>
+            <li>
+              <button type="button" class="button secondary"
+                onclick="filterSelection('symbols', 'projects')">Символіка</button>
+            </li>
+            <li>
+              <button type="button" class="button secondary"
+                onclick="filterSelection('infostands', 'projects')">Інфостенди</button>
+            </li>
+            <li>
+              <button type="button" class="button secondary" onclick="filterSelection('fences', 'projects')">Мобільні
+                огорожі</button>
+            </li>
+            <li>
+              <button type="button" class="button secondary"
+                onclick="filterSelection('accessories', 'projects')">Аксесуари</button>
+            </li>
+            <li>
+              <button type="button" class="button secondary"
+                onclick="filterSelection('exclusive', 'projects')">Ексклюзив</button>
+            </li>
+          </ul>
+        </div>
+
         <!-- projects -->
 
         <ul class="projects list">

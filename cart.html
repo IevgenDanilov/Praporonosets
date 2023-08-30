@@ -232,9 +232,8 @@
                 </label>
                 <br>
                 <br>
-                <label id="selfGet" for="extras" class="form__label"
-                  style="display: flex; align-items: center; margin-bottom: 4px;"><input type="checkbox" id="extras"
-                    name="extras" value="Самовивіз" onchange="delivery()"><span class="label__text"
+                <label id="selfPickup" for="extras" class="form__label form__checkbox"><input type="checkbox"
+                    id="extras" name="extras" value="Самовивіз" onchange="delivery()"><span class="label__text"
                     style="margin: 0 0 0 4px;">
                     Самовивіз з нашого складу</span></label>
                 <label id="delivery-address" for="client-address" class="form__label"><span class="label__text">Адреса
@@ -363,7 +362,7 @@
   <script src="./js/marked.js"></script>
   <script src="./js/getOrdered.js"></script>
   <script src="./js/currentValues.js"></script>
-  <script src="./js/getOrderInfo.js"></script>
+  <script src="./js/orderProcessing.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
     integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -371,65 +370,6 @@
     integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="./js/slider.js"></script>
-
-  <script>
-    function processSubmit(event) {
-      event.preventDefault();
-    }
-
-    let formElement = document.getElementById("form");
-
-    formElement.addEventListener("submit", (event) => {
-
-      event.preventDefault();
-
-      processAdditionalInput();
-
-      formElement.submit();
-
-      setTimeout(() => {
-        window.location.reload();
-      }, 1000);
-
-    }
-
-    );
-
-    function processAdditionalInput() {
-
-      let formElement = document.getElementById("form");
-
-      const orderLetter = document.getElementById("orderLetter");
-      let bodyText = orderLetter.value;
-
-      const additionalElementsArr = formElement.querySelectorAll("input");
-
-      let additionalText = "";
-
-      for (let i = 0; i < additionalElementsArr.length; i++) {
-        if (additionalElementsArr[i].value) {
-          additionalText += additionalElementsArr[i].value + "\n";
-        }
-
-      }
-
-      let finalBodyText = `${additionalText}\n${bodyText}\n\n`;
-
-      orderLetter.value = finalBodyText.replaceAll(" ", "_");
-
-    }
-
-  </script>
-
-  <script>
-
-    function delivery() {
-      let selfGet = document.getElementById("selfGet");
-      let deliveryAddress = document.getElementById("delivery-address");
-      deliveryAddress.classList.toggle('is-hidden');
-    }
-
-  </script>
 
 </body>
 

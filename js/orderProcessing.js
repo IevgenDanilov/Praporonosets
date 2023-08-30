@@ -1,17 +1,22 @@
 getPrices();
 setOrderedLetter();
 getPrewOrders();
+orderSubmit();
 
 function getPrices(object = document) {
   const priceArr = object.querySelectorAll('.price');
   const numArr = object.querySelectorAll('.num');
   const sumArr = object.querySelectorAll('.sum');
 
-  for (let i = 0; i < priceArr.length; i++) {
-    numArr[i].setAttribute('value', numArr[i].value);
-    const currentSum = numArr[i].value * priceArr[i].innerHTML.replace(/[^\d\.]*/g, '');
+  priceArr.forEach((priceEl, i) => {
+    const numValue = numArr[i].value;
+    numArr[i].setAttribute('value', numValue);
+
+    const priceValue = parseFloat(priceEl.textContent.replace(/[^\d.]/g, ''));
+
+    const currentSum = numValue * priceValue;
     sumArr[i].setAttribute('value', currentSum);
-  }
+  });
 
   const totalPrice = document.querySelector('#totalPrice');
   const totalQuantity = document.querySelector('#totalQuantity');
@@ -124,4 +129,44 @@ function setOrders() {
   window.localStorage.setItem('marked', marked);
 
   window.location.reload();
+}
+
+function orderSubmit() {
+  let formElement = document.getElementById('form');
+
+  formElement.addEventListener('submit', event => {
+    event.preventDefault();
+
+    orderAdditionalInput(formElement);
+
+    formElement.submit();
+
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000);
+  });
+}
+
+function orderAdditionalInput(formElement) {
+  const orderLetter = document.getElementById('orderLetter');
+  let bodyText = orderLetter.value;
+
+  const additionalElementsArr = formElement.querySelectorAll('input');
+
+  let additionalText = '';
+
+  additionalElementsArr.forEach(element => {
+    if (element.value) {
+      additionalText += element.value + '\n';
+    }
+  });
+
+  let finalBodyText = `${additionalText}\n${bodyText}\n\n`;
+
+  orderLetter.value = finalBodyText.replaceAll(' ', '_');
+}
+
+function delivery() {
+  let deliveryAddress = document.getElementById('delivery-address');
+  deliveryAddress.classList.toggle('is-hidden');
 }
