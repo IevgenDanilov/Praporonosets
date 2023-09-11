@@ -21,7 +21,7 @@ function convertPrices(currency = 'UAH', elem) {
   const pricesArr = JSON.parse(window.localStorage.getItem('pricesArr'));
 
   for (let i = 0; i < prices.length; i++) {
-    const eurCourse = 1;
+    const eurCourse = 42 / 42;
     const uahCourse = 42 * eurCourse;
     const usdCourse = (42 / 38) * eurCourse;
 

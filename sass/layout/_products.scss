@@ -88,6 +88,7 @@
 }
 
 .heart {
+  cursor: pointer;
   stroke: var(--secondary-background-color);
   fill: var(--primary-white-color);
   background: transparent;
@@ -105,6 +106,7 @@
 }
 
 .cart {
+  cursor: pointer;
   stroke: var(--secondary-background-color);
   fill: var(--primary-white-color);
   background: transparent;

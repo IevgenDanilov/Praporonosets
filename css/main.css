@@ -1168,6 +1168,7 @@ button.slick-next:before {
 }
 
 .heart {
+  cursor: pointer;
   stroke: var(--secondary-background-color);
   fill: var(--primary-white-color);
   background: transparent;
@@ -1185,6 +1186,7 @@ button.slick-next:before {
 }
 
 .cart {
+  cursor: pointer;
   stroke: var(--secondary-background-color);
   fill: var(--primary-white-color);
   background: transparent;
