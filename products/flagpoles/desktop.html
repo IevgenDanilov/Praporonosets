@@ -173,44 +173,87 @@
     </div>
   </header>
 
-  <main>
 
+  <main style="position:relative;">
+    <div>
+      <p
+        style="position: absolute; top:20px; right: 40px; height: 26px; display: flex; justify-content: center; align-items: center;">
+        <button class="button currencyBtn current" onclick="convertPrices('UAH', this)">UAH</button>|<button
+          class="button currencyBtn" onclick="convertPrices('EUR', this)">EUR</button>|<button
+          class="button currencyBtn" onclick="convertPrices('USD', this)">USD</button>
+      </p>
+      <a href="https://www.dropbox.com/scl/fi/sufp65tr5y7if8j8y80qi/price_danilov_01-02-2023.xls?rlkey=f0dx0dhxyzszyfx7xq8cbak3g&dl=0"
+        target="_blank"><button class="button download__button"><svg class="icon download__icon" width="24" height="24">
+            <use href="../../images/icons.svg#icon-download"></use>
+          </svg>Відкрити
+          прайс</button></a>
+    </div>
 
     <section class="section products">
       <h2 class="section__main-title">Флагштоки настільні</h2>
       <div class="container" style="display: flex; flex-direction: column; align-items: center;">
 
-        <!-- sorter -->
 
-        <div class="filters__sortBy" style="display: flex; align-items: center;">
-          <svg class="icon" style="fill:grey" width="24" height="24">
-            <use href="../../images/icons.svg#icon-filter"></use>
-          </svg>
-          <p class="filters__sortBy-text">Фільтр та сортування</p>
+        <div style="display: flex; justify-content: space-between; width: 100%;">
+
+
+          <div class="select__box">
+
+            <!-- filter -->
+            <div class="filter__box">
+              <div class="filter__sortBy">
+                <svg class="icon" style="fill:grey;" width="24" height="24">
+                  <use href="../../images/icons.svg#icon-filter"></use>
+                </svg>
+                <p class="filter__sortBy-text">Фільтр</p>
+              </div>
+
+              <div id="mobFilter" class="select">
+                <select id="filterSelect" onchange="filterSelection(this.value)" class="products-groupes-switcher">
+                  <option value="all" selected="selected">Усі</option>
+                  <option value="plastic">Пластик</option>
+                  <option value="chrome">Хром</option>
+                  <option value="gold">Золото</option>
+                  <option value="wood">Дерево</option>
+                  <option value="stone">Камінь</option>
+                </select>
+                <span class="focus"></span>
+              </div>
+            </div>
+
+
+            <!-- sorter -->
+            <div class="sorter__box">
+              <div class="sorter__sortBy">
+                <p class="sorter__sortBy-text">Сортування</p>
+                <svg class="icon" style="fill:grey;" width="24" height="24">
+                  <use href="../../images/icons.svg#icon-sort"></use>
+                </svg>
+              </div>
+              <div id="mobSorter" class="select">
+                <select id="sorterSelect" class="products-groupes-switcher" onchange="sortBy(this.value)">
+                  <option value="Найменуванню" selected="selected">Найменуванню</option>
+                  <option value="by type">Типу</option>
+                  <option value="min-price">Зростанню ціни</option>
+                  <option value="max-price">Зменшенню ціни</option>
+                </select>
+                <span class="focus"></span>
+              </div>
+            </div>
+          </div>
+
         </div>
-
-        <div class="select">
-          <select class="products-groupes-switcher" onchange="sortBy(this.value)">
-            <!-- <option value="" selected="selected"> -- оберіть фільтр -- </option> -->
-            <option value="Найменуванню" selected="selected">Найменуванню</option>
-            <option value="by type">Типу</option>
-            <option value="min-price">Зростанню ціни</option>
-            <option value="max-price">Зменшенню ціни</option>
-          </select>
-          <span class="focus"></span>
-        </div>
-
         </br>
 
         <!-- products -->
 
         <ul class="products__list list">
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050001" class="products__item wood" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -220,27 +263,31 @@
               ondblclick="this.title='click'; this.src='../../images/products/flagpoles/desktop/wooden_sticks.jpg'; this.style='cursor: zoom-out; position: fixed; z-index:100; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
               onclick="this.title='click+click'; this.src='../../images/products/flagpoles/desktop/icons/wooden_sticks.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products__item-description">
-              <h4>А Флагшток Економ 1-місний</h4>
-              <p>сталь, нікель</p>
-              <p>ДхШхВ: 60х60х330</p>
-              <p class="price">100 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
-                style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
+              <h4>Палички дерев'яні для прапорців (100 шт)</h4>
+              <p>дерево</p>
+              <p>ДхШхВ: 8х8х400</p>
+              <p class="price">25</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
+                style="position: fixed; z-index:1000; top:50%; left:50%; margin: -250px 0 0 -200px; width: 400px; border-radius: 4px; background: #e7e7e7; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);">
+                <p class="products__code" style="margin: 6px auto 0px 20px;
+    text-align: left;
+    color: var(--secondary-accent-color);
+    font-weight: 500;"></p>
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/wooden_sticks.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d02" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -250,27 +297,31 @@
               ondblclick="this.title='click'; this.src='../../images/products/flagpoles/desktop/plastic_tubes.JPG'; this.style='cursor: zoom-out; position: fixed; z-index:100; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
               onclick="this.title='click+click'; this.src='../../images/products/flagpoles/desktop/icons/plastic_tubes.JPG'; this.style='width: 150px; cursor: zoom-in;'" />
             <div class="products__item-description">
-              <h4>Флагшток Економ 1-місний</h4>
-              <p>сталь, нікель</p>
-              <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
-                style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
+              <h4>Палички пластикові для прапорців (1000 шт)</h4>
+              <p>пластик</p>
+              <p>ДхШхВ: 5х5х350</p>
+              <p class="price">12.5</p>
+              <div id="d02" hidden="until-found" onclick="this.hidden='until-found'"
+                style="position: fixed; z-index:1000; top:50%; left:50%; margin: -250px 0 0 -200px; width: 400px; border-radius: 4px; background: #e7e7e7; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);">
+                <p class="products__code" style="margin: 6px auto 0px 20px;
+    text-align: left;
+    color: var(--secondary-accent-color);
+    font-weight: 500;"></p>
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -284,24 +335,24 @@
               <h4>В Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -315,24 +366,24 @@
               <h4>Ж Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -346,24 +397,24 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -377,24 +428,24 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -408,24 +459,24 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -439,24 +490,24 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -470,24 +521,24 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -501,24 +552,24 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -532,24 +583,24 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -563,24 +614,24 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -594,24 +645,24 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -625,24 +676,24 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -656,24 +707,24 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -687,24 +738,24 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -718,24 +769,24 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -749,25 +800,25 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
 
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -781,24 +832,24 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -812,24 +863,24 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -843,24 +894,24 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -874,25 +925,25 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
 
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -906,24 +957,24 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -937,24 +988,24 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -968,24 +1019,24 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -999,25 +1050,25 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
 
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -1031,24 +1082,24 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -1062,24 +1113,24 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -1093,24 +1144,24 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -1124,25 +1175,25 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
 
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -1156,24 +1207,24 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -1187,24 +1238,24 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">1000 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">1000</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -1218,24 +1269,24 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">1200 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">1200</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
           </li>
-          <li class="products__item" style="position: relative;">
+          <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
               <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
-              <a href="#h01" class="info__link">i</a>
+              <a href="#d01" class="info__link">i</a>
               <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
@@ -1249,14 +1300,14 @@
               <h4>Флагшток Економ 1-місний</h4>
               <p>сталь, нікель</p>
               <p>ДхШхВ: 60х60х330</p>
-              <p class="price">2000 ₴</p>
-              <div id="h01" hidden="until-found" onclick="this.hidden='until-found'"
+              <p class="price">2000</p>
+              <div id="d01" hidden="until-found" onclick="this.hidden='until-found'"
                 style="position: absolute;   top: 10%;  left: 10%; width: 340px; border-radius: 4px; background: #e7e7e7;">
                 <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
                   надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
                   такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
                   або атласу.</p>
-                <img src="../../images/products/flagpoles/cabinet/sets/minimal_set.jpg" alt="Підставка для прапору"
+                <img src="../../images/products/flagpoles/desktop/plastic_tubes.jpg" alt="Підставка для прапору"
                   width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
               </div>
             </div>
@@ -1420,6 +1471,8 @@
   <script>filterSelection('all', 'products');</script>
   <script src="../../js/marked.js"></script>
   <script src="../../js/sortBy.js"></script>
+  <script src="../../js/convertPrices.js"></script>
+  <script src="../../js/addCode.js"></script>
 </body>
 
 </html>

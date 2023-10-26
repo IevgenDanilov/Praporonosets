@@ -364,10 +364,6 @@ button.slick-next:before {
   margin-bottom: 20px;
 }
 
-.series__title {
-  text-align: center;
-}
-
 @media screen and (min-width: 768px) {
   .hero__title {
     font-size: 24px;
@@ -939,6 +935,19 @@ button.slick-next:before {
     margin: 10px 0 20px 0;
     font-size: 16px;
   }
+}
+
+.series__description {
+  font-weight: 500;
+  text-align: justify;
+}
+
+.series__info {
+  text-align: justify;
+}
+
+.series__title {
+  text-align: center;
 }
 
 .clients {
