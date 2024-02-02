@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Флагштоки кабінетні</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css" />
+
+  <link rel="stylesheet" href="../../css/main.min.css" />
+</head>
+
+<body>
+
+  <!-- header -->
+  <header class="page-header">
+    <div class="container flex">
+      <nav class="nav flex">
+        <a href="../../index.html" class="logo__header logo">
+          <span class="accent">Прапори </span>& Символи
+        </a>
+
+        <ul class="site-nav list">
+          <li><a href="../../index.html" class="link">Про нас</a></li>
+          <li><a href="../../portfolio.html" class="link">Портфоліо</a></li>
+
+
+          <!-- dropdown -->
+          <li>
+            <div class="dropdown">
+              <a href="../../shop.html" class="link current">Магазин</a>
+              <div class="dropdown__content">
+                <div class="dropdown-section">
+                  <div class="dropdown-section__content">
+                    <a href="../../products/flags/ukraine.html" class="link">України</a>
+                    <a href="../../products/flags/state.html" class="link">Державні</a>
+                    <a href="../../products/flags/corporate.html" class="link">Корпоративні</a>
+                  </div>
+                  <a href="../../products/flags.html" class="link">Прапори</a>
+                </div>
+                <div class="dropdown-section">
+                  <div class="dropdown-section__content">
+                    <a href="../../products/flagpoles/street.html" class="link">Вуличні</a>
+                    <a href="../../products/flagpoles/cabinet.html" class="link">Кабінетні</a>
+                    <a href="../../products/flagpoles/mobile.html" class="link">Мобільні</a>
+                    <a href="../../products/flagpoles/facade.html" class="link">Фасадні</a>
+                    <a href="../../products/flagpoles/desktop.html" class="link">Настільні</a>
+                    <a href="../../products/flagpoles/automobile.html" class="link">Автомобільні</a>
+                  </div>
+                  <a href="../../products/flagpoles.html" class="link">Флагштоки</a>
+                </div>
+                <a href="../../products/symbolics.html" class="link">Символіка</a>
+                <div class="dropdown-section">
+                  <div class="dropdown-section__content">
+                    <a href="../../products/infostands/a4stands.html" class="link">Стійки А4</a>
+                    <a href="../../products/infostands/bookletcases.html" class="link">Буклетниці</a>
+                    <a href="../../products/infostands/brandwalls.html" class="link">Брендволи</a>
+                    <a href="../../products/infostands/rollups.html" class="link">Ролл-апи</a>
+                    <a href="../../products/infostands/perfostands.html" class="link">Перфостенди</a>
+                  </div>
+                  <a href="../../products/infostands.html" class="link">Інфостенди</a>
+                </div>
+
+                <a href="../../products/fences.html" class="link">Мобільні огорожі</a>
+                <a href="../../products/accessories.html" class="link">Аксесуари</a>
+                <a href="../../products/exclusive.html" class="link">Ексклюзив</a>
+              </div>
+
+
+            </div>
+
+
+          </li>
+          <li>
+            <a href="../../wishList.html" class="link"><svg width="24" height="24" class="wishlist-icon">
+                <use href="../../images/icons.svg#icon-heart"></use>
+              </svg></a>
+            <a href="../../cart.html" class="link">
+              <svg width="24" height="24" class="nav-icons">
+                <use href="../../images/icons.svg#icon-cart"></use>
+              </svg></a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="auth-nav list">
+        <li><a href="tel:+380667700520" class="button">+380 66 770 05 20</a></li>
+        <li><a href="mailto:pp_danilov@ukr.net" class="button">pp_danilov@ukr.net</a></li>
+      </ul>
+
+      <!-- burger  -->
+
+      <button class="burger-btn" data-menu-open>
+        <svg class="burger-btn__icon">
+          <use href="../../images/icons.svg#icon-burger"></use>
+        </svg>
+      </button>
+    </div>
+
+    <!-- burger modal window -->
+
+    <div class="mobile-menu" data-menu>
+      <div class="mobile-menu__container">
+        <button class="mobile-menu__close-btn" data-menu-close>
+          <svg class="mobile-menu__close-icon">
+            <use href="../../images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <ul class="nav-list list">
+          <li class="nav-list__item">
+            <a href="../index.html" class="link current">
+              <svg width="24" height="24" class="nav-icons">
+                <use href="../../images/icons.svg#icon-aboutus"></use>
+              </svg> Про нас</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="../portfolio.html" class="link">
+              <svg width="24" height="24" class="nav-icons">
+                <use href="../../images/icons.svg#icon-portfolio"></use>
+              </svg>Портфоліо</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="../shop.html" class="link">
+              <svg width="24" height="24" class="nav-icons">
+                <use href="../../images/icons.svg#icon-shop"></use>
+              </svg>Магазин</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="../wishList.html" class="link"><svg width="24" height="24" class="wishlist-icon">
+                <use href="../../images/icons.svg#icon-heart"></use>
+              </svg> Обрані</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="../cart.html" class="link">
+              <svg width="24" height="24" class="nav-icons">
+                <use href="../../images/icons.svg#icon-cart"></use>
+              </svg>
+              Корзина</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="link" href="tel:+380667700520">
+              <svg width="24" height="24" class="nav-icons">
+                <use href="../../images/icons.svg#icon-telephone"></use>
+              </svg> +380 66 770 05 20</a>
+
+          </li>
+          <li class="nav-list__item">
+
+            <a href="mailto:pp_danilov@ukr.net" class="link"><svg width="24" height="24" class="nav-icons">
+                <use href="../../images/icons.svg#icon-email"></use>
+              </svg> pp_danilov@ukr.net</a>
+          </li>
+        </ul>
+        <ul class="mobile-social-list list">
+          <li class="mobile-social-list__item">
+            <a href="" class="mobile-social-list__link link">Telegram</a>
+          </li>
+          <li class="mobile-social-list__item">
+            <a href="" class="mobile-social-list__link link">Facebook</a>
+          </li>
+          <li class="mobile-social-list__item">
+            <a href="" class="mobile-social-list__link link">Instagram</a>
+          </li>
+          <li class="mobile-social-list__item">
+            <a href="" class="mobile-social-list__link link">Pinterest</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+  <main style="position:relative;">
+    <div>
+      <p
+        style="position: absolute; top:20px; right: 40px; height: 26px; display: flex; justify-content: center; align-items: center;">
+        <button class="button currencyBtn current" onclick="convertPrices('UAH', this)">UAH</button>|<button
+          class="button currencyBtn" onclick="convertPrices('EUR', this)">EUR</button>|<button
+          class="button currencyBtn" onclick="convertPrices('USD', this)">USD</button>
+      </p>
+      <a href="https://www.dropbox.com/scl/fi/sufp65tr5y7if8j8y80qi/price_danilov_01-02-2023.xls?rlkey=f0dx0dhxyzszyfx7xq8cbak3g&dl=0"
+        target="_blank"><button class="button download__button"><svg class="icon download__icon" width="24" height="24">
+            <use href="../../images/icons.svg#icon-download"></use>
+          </svg>Відкрити
+          прайс</button></a>
+    </div>
+
+    <section class="section products">
+      <h2 class="section__main-title">Прапори</h2>
+      <div class="container" style="display: flex; flex-direction: column; align-items: center;">
+
+
+        <div style="display: flex; justify-content: space-between; width: 100%;">
+
+
+          <div class="select__box">
+
+            <!-- filter -->
+            <div class="filter__box">
+              <div class="filter__sortBy">
+                <svg class="icon" style="fill:grey;" width="24" height="24">
+                  <use href="../../images/icons.svg#icon-filter"></use>
+                </svg>
+                <p class="filter__sortBy-text">Фільтр</p>
+              </div>
+
+              <div id="mobFilter" class="select">
+                <select id="filterSelect" onchange="filterSelection(this.value)" class="products-groupes-switcher">
+                  <option value="all" selected="selected">Усі</option>
+                  <option value="silk">Шовк</option>
+                  <option value="atlas">Атлас/габардин</option>
+                  <option value="atlas">Прапорна сітка</option>
+                  <option value="blockout">Блокаут</option>
+                  <option value="vipAtlas">VIP атлас</option>
+                </select>
+                <span class="focus"></span>
+              </div>
+            </div>
+
+
+            <!-- sorter -->
+            <div class="sorter__box">
+              <div class="sorter__sortBy">
+                <p class="sorter__sortBy-text">Сортування</p>
+                <svg class="icon" style="fill:grey;" width="24" height="24">
+                  <use href="../../images/icons.svg#icon-sort"></use>
+                </svg>
+              </div>
+              <div id="mobSorter" class="select">
+                <select id="sorterSelect" class="products-groupes-switcher" onchange="sortBy(this.value)">
+                  <option value="Найменуванню" selected="selected">Найменуванню</option>
+                  <option value="by type">Типу</option>
+                  <option value="min-price">Зростанню ціни</option>
+                  <option value="max-price">Зменшенню ціни</option>
+                </select>
+                <span class="focus"></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        </br>
+
+        <!-- products -->
+        <ul class="products__list list">
+          <li id="ID01000001" class="products__item silk" style="position: relative;">
+            <div class="products__btnContainer">
+              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#f01" class="info__link">i</a>
+              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flags/state/icons/ukraine.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flags/state/ukraine.jpg'; this.style='cursor: zoom-out; position: fixed; z-index:100; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 100, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flags/state/icons/ukraine.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products__item-description">
+              <h4>Прапор України настільний з карманом Ф5 мм</h4>
+              <p>шовк</p>
+              <p>ДхШ: 13х24</p>
+              <p class="price">1</p>
+              <div id="f01" hidden="until-found" onclick="this.hidden='until-found'"
+                style="position: fixed; z-index:1000; top:50%; left:50%; margin: -250px 0 0 -200px; width: 400px; border-radius: 4px; background: #e7e7e7; box-shadow: 0px 200px 600px rgba(0, 100, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);">
+                <p class="products__code" style="margin: 6px auto 0px 20px;
+            text-align: left;
+            color: var(--secondary-accent-color);
+            font-weight: 500;"></p>
+                <p style="font-size: 14px; margin: 10px;">Прапорець настільний є незмінним атрибутом всіх ділових
+                  зустрічей і важливим аксесуаром в оформленні конференц-столів. В нашому асортименті є прапорці з
+                  різних матеріалів та можливістю нанесення друку за Вашим макетом.</p>
+                <img src="../../images/products/flags/state/ukraine.jpg" alt="Підставка для прапору" width="100%"
+                  style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
+              </div>
+            </div>
+          </li>
+          <li id="ID01000002" class="products__item atlas" style="position: relative;">
+            <div class="products__btnContainer">
+              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#f02" class="info__link">i</a>
+              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flags/state/icons/croatia.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flags/state/croatia.jpg'; this.style='cursor: zoom-out; position: fixed; z-index:100; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 100, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flags/state/icons/croatia.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products__item-description">
+              <h4>Прапор України настільний з карманом Ф5 мм</h4>
+              <p>атлас</p>
+              <p>ДхШ: 13х24</p>
+              <p class="price">2</p>
+              <div id="f02" hidden="until-found" onclick="this.hidden='until-found'"
+                style="position: fixed; z-index:1000; top:50%; left:50%; margin: -250px 0 0 -200px; width: 400px; border-radius: 4px; background: #e7e7e7; box-shadow: 0px 200px 600px rgba(0, 100, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);">
+                <p class="products__code" style="margin: 6px auto 0px 20px;
+                                text-align: left;
+                                color: var(--secondary-accent-color);
+                                font-weight: 500;"></p>
+                <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
+                  надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
+                  такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
+                  або атласу.</p>
+                <img src="../../images/products/flags/state/croatia.jpg" alt="Підставка для прапору" width="100%"
+                  style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
+              </div>
+            </div>
+          </li>
+          <li id="ID01000003" class="products__item vipAtlas" style="position: relative;">
+            <div class="products__btnContainer">
+              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#f03" class="info__link">i</a>
+              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flags/state/icons/ukraine.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flags/state/ukraine.jpg'; this.style='cursor: zoom-out; position: fixed; z-index:100; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 100, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flags/state/icons/ukraine.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products__item-description">
+              <h4>Прапор України настільний з карманом Ф5 мм</h4>
+              <p>vip атлас</p>
+              <p>ДхШ: 13х24</p>
+              <p class="price">10</p>
+              <div id="f03" hidden="until-found" onclick="this.hidden='until-found'"
+                style="position: fixed; z-index:1000; top:50%; left:50%; margin: -250px 0 0 -200px; width: 400px; border-radius: 4px; background: #e7e7e7; box-shadow: 0px 200px 600px rgba(0, 100, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);">
+                <p class="products__code" style="margin: 6px auto 0px 20px;
+                                          text-align: left;
+                                          color: var(--secondary-accent-color);
+                                          font-weight: 500;"></p>
+                <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
+                  надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
+                  такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
+                  або атласу.</p>
+                <img src="../../images/products/flags/state/ukraine.jpg" alt="Підставка для прапору" width="100%"
+                  style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
+              </div>
+            </div>
+          </li>
+          <li id="ID01000004" class="products__item wood" style="position: relative;">
+            <div class="products__btnContainer">
+              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#f04" class="info__link">i</a>
+              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flags/state/icons/ukraine.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flags/state/ukraine.jpg'; this.style='cursor: zoom-out; position: fixed; z-index:100; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 100, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flags/state/icons/ukraine.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products__item-description">
+              <h4>Прапор України настільний з карманом Ф5 мм</h4>
+              <p>шовк</p>
+              <p>ДхШ: 13х24</p>
+              <p class="price">1</p>
+              <div id="f04" hidden="until-found" onclick="this.hidden='until-found'"
+                style="position: fixed; z-index:1000; top:50%; left:50%; margin: -250px 0 0 -200px; width: 400px; border-radius: 4px; background: #e7e7e7; box-shadow: 0px 200px 600px rgba(0, 100, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);">
+                <p class="products__code" style="margin: 6px auto 0px 20px;
+                                                    text-align: left;
+                                                    color: var(--secondary-accent-color);
+                                                    font-weight: 500;"></p>
+                <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
+                  надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
+                  такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
+                  або атласу.</p>
+                <img src="../../images/products/flags/state/ukraine.jpg" alt="Підставка для прапору" width="100%"
+                  style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
+              </div>
+            </div>
+          </li>
+          <li id="ID01000005" class="products__item wood" style="position: relative;">
+            <div class="products__btnContainer">
+              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#f05" class="info__link">i</a>
+              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flags/state/icons/ukraine.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flags/state/ukraine.jpg'; this.style='cursor: zoom-out; position: fixed; z-index:100; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 100, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flags/state/icons/ukraine.jpg'; this.style='width: 150px; cursor: zoom-in;'" />
+            <div class="products__item-description">
+              <h4>Прапор України настільний з карманом Ф5 мм</h4>
+              <p>шовк</p>
+              <p>ДхШ: 13х24</p>
+              <p class="price">1</p>
+              <div id="f05" hidden="until-found" onclick="this.hidden='until-found'"
+                style="position: fixed; z-index:1000; top:50%; left:50%; margin: -250px 0 0 -200px; width: 400px; border-radius: 4px; background: #e7e7e7; box-shadow: 0px 200px 600px rgba(0, 100, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);">
+                <p class="products__code" style="margin: 6px auto 0px 20px;
+                                                              text-align: left;
+                                                              color: var(--secondary-accent-color);
+                                                              font-weight: 500;"></p>
+                <p style="font-size: 14px; margin: 10px;">Флагшток настільний серії Економ є простим і
+                  надійним, крім того його ціна дуже приємна. Виготовляється з металу, покриття - нікель. Прапор під
+                  такий флагшток зазвичай виготовляється з тонкого поліестеру, габардину
+                  або атласу.</p>
+                <img src="../../images/products/flags/state/ukraine.jpg" alt="Підставка для прапору" width="100%"
+                  style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
+              </div>
+            </div>
+          </li>
+        </ul>
+
+
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h2 class="section__main-title">Категорії якості</h2>
+        <p>
+          Тканини для прапорів повинні бути легкими, міцними і відмінно утримувати друк, дозволяючи створити яскраві
+          кольорові
+          зображення. Вони також можуть мати різні властивості, включаючи стійкість до погодних умов або блискучу
+          поверхню для
+          відтворення урочистого характеру прапора.
+
+        </p>
+        <br />
+        <br />
+
+        <!-- 1. Шовк - ця тканина часто використовується для виготовлення прапорів через свою
+        легкість та
+        довговічність. Вона має гладку поверхню, яка дозволяє надрукувати на ній яскраві та насичені кольори, що
+        робить її
+        ідеальним вибором для відтворення гербів та зображень на прапорах.
+        
+        2. Прапорна сітка - ця тканина відрізняється відкритою структурою з отворами, які дозволяють вітру проходити
+        через неї,
+        запобігаючи розривам під час сильного вітру. Вона зазвичай використовується для виготовлення прапорів, які
+        повинні бути
+        легкими та стійкими до погодних умов.
+        
+        3. Атлас - ця тканина має блискучу поверхню і виглядає дуже елегантно. Вона використовується для виготовлення
+        прапорів
+        під час святкових та урочистих подій, оскільки вона надає прапору вишуканий вигляд.
+        
+        4. Габардин - ця тканина є відносно міцною і стійкою до зносу. Вона часто використовується для виготовлення
+        прапорів,
+        які будуть використовуватися на вулиці, оскільки вона добре переносить вплив погодних умов.
+        
+        5. Блокаут - ця тканина має властивості затемнення і блокування світла. Вона ідеально підходить для
+        виготовлення
+        прапорів, які будуть використовуватися під час ночних заходів або в місцях зі сильним сонячним
+        випромінюванням, так як
+        вона забезпечує відмінну видимість тексту та зображень в умовах недостатнього освітлення.
+        
+        6. Оксамит - ця м'яка та розкішна тканина часто використовується для виготовлення прапорів під час урочистих
+        та
+        релігійних подій. Вона має вишуканий вигляд і надає прапору елегантний характер. -->
+
+
+        <div class="flex" style="align-items: center;">
+          <img title='click+click' src="../../images/products/flagpoles/cabinet/sets/premium_set.jpg"
+            alt="флагшток класу преміум" width="150" height="150">
+          <div class="info__description"
+            style="margin: 0 10%; padding: 20px; border: solid 2px rgba(0, 100, 0, 0.36); border-radius: 20px; text-align:justify;">
+            <h3 id="econom" class="series__title">ШОВК</h3>
+            <br>
+            Ця
+            тканина часто
+            використовується для виготовлення
+            прапорів через свою
+            економічність та універсальність. Вона гладка і напівпрозора, що дозволяє робити на ній односторонній друк
+            майже зі 100% пробивом кольорів на зворотню сторону. Це вдвічі зменшує витрати на друк і робить такі прапори
+            доступними за ціною. Крім того цей матеріал підходить як для прапорів зовнішнього так і внутрішнього
+            призначення.
+          </div>
+        </div>
+        <br />
+        <div class="flex" style="align-items: center;">
+          <img title='click+click' src="../../images/products/flagpoles/cabinet/sets/premium_set.jpg"
+            alt="флагшток класу преміум" width="150" height="150">
+          <div class="info__description"
+            style="margin: 0 10%; padding: 20px; border: solid 2px rgba(0, 100, 0, 0.36); border-radius: 20px; text-align:justify;">
+            <h3 id="econom" class="series__title">ПРАПОРНА СІТКА</h3>
+            <br>
+            Ця тканина для зовнішнього призначення, товста і міцна. Відрізняється відкритою структурою з отворами, які
+            дозволяють вітру проходити
+            через неї,
+            запобігаючи розривам під час сильного вітру. Вона зазвичай використовується для виготовлення прапорів, які
+            повинні бути
+            довговічними та стійкими до погодних умов.
+          </div>
+        </div>
+        <br />
+        <div class="flex" style="align-items: center;">
+          <img title='click+click' src="../../images/products/flagpoles/cabinet/sets/premium_set.jpg"
+            alt="флагшток класу преміум" width="150" height="150">
+          <div class="info__description"
+            style="margin: 0 10%; padding: 20px; border: solid 2px rgba(0, 100, 0, 0.36); border-radius: 20px; text-align:justify;">
+            <h3 id="econom" class="series__title">АТЛАС</h3>
+            <br>
+            Ця тканина має блискучу поверхню і виглядає дуже елегантно. Вона найбільше використовується для виготовлення
+            кабінетних
+            прапорів, надає прапору вишуканий вигляд і передає максимально насиченими кольори зображення.
+          </div>
+        </div>
+        <br />
+        <div class="flex" style="align-items: center;">
+          <img title='click+click' src="../../images/products/flagpoles/cabinet/sets/premium_set.jpg"
+            alt="флагшток класу преміум" width="150" height="150">
+          <div class="info__description"
+            style="margin: 0 10%; padding: 20px; border: solid 2px rgba(0, 100, 0, 0.36); border-radius: 20px; text-align:justify;">
+            <h3 id="econom" class="series__title">ШОВК</h3>
+            <br>
+            Ця
+            тканина часто
+            використовується для виготовлення
+            прапорів через свою
+            економічність та універсальність. Вона гладка і напівпрозора, що дозволяє робити на ній односторонній друк
+            майже зі 100% пробивом кольорів на зворотню сторону. Це вдвічі зменшує витрати на друк і робить такі прапори
+            доступними за ціною. Крім того цей матеріал підходить як для прапорів зовнішнього так і внутрішнього
+            призначення.
+          </div>
+        </div>
+        <br />
+        <div class="flex" style="align-items: center;">
+          <img title='click+click' src="../../images/products/flagpoles/cabinet/sets/premium_set.jpg"
+            alt="флагшток класу преміум" width="150" height="150">
+          <div class="info__description"
+            style="margin: 0 10%; padding: 20px; border: solid 2px rgba(0, 100, 0, 0.36); border-radius: 20px; text-align:justify;">
+            <h3 id="econom" class="series__title">ШОВК</h3>
+            <br>
+            Ця
+            тканина часто
+            використовується для виготовлення
+            прапорів через свою
+            економічність та універсальність. Вона гладка і напівпрозора, що дозволяє робити на ній односторонній друк
+            майже зі 100% пробивом кольорів на зворотню сторону. Це вдвічі зменшує витрати на друк і робить такі прапори
+            доступними за ціною. Крім того цей матеріал підходить як для прапорів зовнішнього так і внутрішнього
+            призначення.
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- footer -->
+
+  <footer class="footer">
+    <div class="container flex footer-wrapper">
+      <div>
+        <a href="../../index.html" class="logo__footer logo">
+          <span class="accent">Прапори</span><span class="second-part"> & Символи</span>
+        </a>
+
+        <address class="address">
+          <p class="address-margin">м. Київ, вул. Галаганівська, 3</p>
+          <ul class="list">
+            <li class="address-margin">
+              <a href="mailto:pp_danilov@ukr.net" class="button">pp_danilov@ukr.net</a>
+            </li>
+            <li><a href="tel:+380667700520" class="button">+380 66 770 05 20</a></li>
+          </ul>
+        </address>
+      </div>
+
+      <div class="invite">
+        <p class="invite__text">Долучайтесь до наших <span class="accent">каналів</span></p>
+        <ul class="social__list list">
+          <li class="social__item">
+            <a href="" class="social__footer-link">
+              <svg class="social__footer-icon" width="20" height="20">
+                <use href="../../images/icons.svg#icon-send"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="" class="social__footer-link">
+              <svg class="social__footer-icon" width="20" height="20">
+                <use href="../../images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="" class="social__footer-link">
+              <svg class="social__footer-icon" width="20" height="20">
+                <use href="../../images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="" class="social__footer-link">
+              <svg class="social__footer-icon" width="20" height="20">
+                <use href="../../images/icons.svg#icon-pinterest"></use>
+              </svg>
+            </a>
+          </li>
+
+
+        </ul>
+
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <script src="../../js/menu.js"></script>
+  <script src="../../js/filter.js"></script>
+  <script>filterSelection('all', 'products');</script>
+  <script src="../../js/marked.js"></script>
+  <script src="../../js/sortBy.js"></script>
+  <script src="../../js/convertPrices.js"></script>
+  <script src="../../js/addCode.js"></script>
+</body>
+
+</html>
