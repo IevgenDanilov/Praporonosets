@@ -178,7 +178,7 @@
     <div>
       <p
         style="position: absolute; top:20px; right: 40px; height: 26px; display: flex; justify-content: center; align-items: center;">
-        <button class="button currencyBtn current" onclick="convertPrices('UAH', this)">UAH</button>|<button
+        <button id="uahBtn" class="button currencyBtn current" onclick="convertPrices('UAH', this)">UAH</button>|<button
           class="button currencyBtn" onclick="convertPrices('EUR', this)">EUR</button>|<button
           class="button currencyBtn" onclick="convertPrices('USD', this)">USD</button>
       </p>
@@ -250,11 +250,13 @@
         <ul class="products__list list">
           <li id="ID02050001" class="products__item wood" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -284,11 +286,13 @@
           </li>
           <li id="ID02050002" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d02" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -316,13 +320,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050003" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -347,13 +353,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050004" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -378,13 +386,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050005" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -409,13 +419,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050006" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -440,13 +452,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050007" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -471,13 +485,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050008" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -502,13 +518,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050009" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -533,13 +551,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050010" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -564,13 +584,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050011" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -595,13 +617,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050012" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -626,13 +650,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050013" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -657,13 +683,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050014" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -688,13 +716,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050015" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -719,13 +749,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050016" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -750,13 +782,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050017" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -781,13 +815,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050018" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -813,13 +849,15 @@
             </div>
           </li>
 
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050019" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -844,13 +882,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050020" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -875,13 +915,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050021" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -906,13 +948,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050022" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -938,13 +982,15 @@
             </div>
           </li>
 
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050023" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -969,13 +1015,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050024" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -1000,13 +1048,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050025" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -1031,13 +1081,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050026" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -1063,13 +1115,15 @@
             </div>
           </li>
 
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050027" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -1094,13 +1148,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050028" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -1125,13 +1181,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050029" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -1156,13 +1214,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050030" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -1188,13 +1248,15 @@
             </div>
           </li>
 
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050031" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -1219,13 +1281,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050032" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -1250,13 +1314,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050033" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -1281,13 +1347,15 @@
               </div>
             </div>
           </li>
-          <li id="ID02050002" class="products__item" style="position: relative;">
+          <li id="ID02050034" class="products__item" style="position: relative;">
             <div class="products__btnContainer">
-              <button id="heart1" class="heart" onclick="toggleFavorites(this.id)"><svg width="24" height="24">
+              <button id="heart1" class="heart" onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-heart"></use>
                 </svg></button>
               <a href="#d01" class="info__link">i</a>
-              <button id="cart1" class="cart" onclick="toggleOrdered(this.id)"><svg width="24" height="24">
+              <button id="cart1" class="cart" onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg
+                  width="24" height="24">
                   <use href="../../images/icons.svg#icon-cart"></use>
                 </svg></button>
             </div>
@@ -1463,9 +1531,7 @@
     </div>
   </footer>
 
-
-
-
+  <script>const uahButton = document.getElementById("uahBtn")</script>
   <script src="../../js/menu.js"></script>
   <script src="../../js/filter.js"></script>
   <script>filterSelection('all', 'products');</script>
