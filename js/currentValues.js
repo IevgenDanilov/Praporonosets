@@ -6,7 +6,6 @@ function saveValues() {
   const currentValues = [];
 
   currentOrder.map(product => {
-    // console.log('product', product);
     const number = product.querySelector('.num').value;
     currentValues.push({
       id: product.id,
