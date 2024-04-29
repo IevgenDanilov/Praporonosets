@@ -19,8 +19,8 @@
     margin-top: -20px;
   }
 
-  &__code {
-    margin: 4px auto 0px 10px;
+  &__code.main {
+    margin: 6px auto 0px 20px;
     text-align: left;
     color: var(--secondary-accent-color);
     font-weight: 500;
@@ -135,7 +135,8 @@
     }
   }
 
-  &__description {
-    margin-left: 20px;
+  & &__description {
+    font-size: 14px;
+    margin: 10px;
   }
 }

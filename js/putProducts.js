@@ -42,7 +42,7 @@ const data = {
   ],
   flagpolesForStreet: [
     {
-      id: 'fps01',
+      id: '02010001',
       isFavorite: false,
       isOrdered: false,
       categoriesClassList: '',
@@ -55,7 +55,7 @@ const data = {
       price: '15000',
     },
     {
-      id: 'fps02',
+      id: '02010002',
       isFavorite: false,
       isOrdered: false,
       categoriesClassList: '',
@@ -68,7 +68,7 @@ const data = {
       price: '16000',
     },
     {
-      id: 'fps03',
+      id: '02010003',
       isFavorite: false,
       isOrdered: false,
       categoriesClassList: '',

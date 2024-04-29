@@ -1110,8 +1110,8 @@ button.slick-next:before {
   margin-top: -20px;
 }
 
-.products__code {
-  margin: 4px auto 0px 10px;
+.products__code.main {
+  margin: 6px auto 0px 20px;
   text-align: left;
   color: var(--secondary-accent-color);
   font-weight: 500;
@@ -1223,8 +1223,9 @@ button.slick-next:before {
   color: var(--accent-color);
 }
 
-.info__description {
-  margin-left: 20px;
+.info .info__description {
+  font-size: 14px;
+  margin: 10px;
 }
 
 :root {
