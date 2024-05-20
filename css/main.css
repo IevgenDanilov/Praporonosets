@@ -1118,6 +1118,7 @@ button.slick-next:before {
 }
 
 .products__item {
+  position: relative;
   display: none;
   background-color: #fff;
   padding: 10px;

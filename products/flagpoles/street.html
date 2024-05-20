@@ -45,7 +45,7 @@
                 <div class="dropdown-section">
                   <div class="dropdown-section__content">
                     <a href="../../products/flagpoles/street.html" class="link">Вуличні</a>
-                    <a href="../../products/flagpoles/cabinet.html" class="link">Кабінетні</a>
+                    <a href="../../products/flagpoles/street. class=" link">Кабінетні</a>
                     <a href="../../products/flagpoles/mobile.html" class="link">Мобільні</a>
                     <a href="../../products/flagpoles/facade.html" class="link">Фасадні</a>
                     <a href="../../products/flagpoles/desktop.html" class="link">Настільні</a>
@@ -173,20 +173,185 @@
     </div>
   </header>
 
-  <main>
-
+  <main style="position:relative;">
+    <div>
+      <p
+        style="position: absolute; top:20px; right: 40px; height: 26px; display: flex; justify-content: center; align-items: center;">
+        <button id="uahBtn" class="button currencyBtn current" onclick="convertPrices('UAH', this)">UAH</button>|<button
+          class="button currencyBtn" onclick="convertPrices('EUR', this)">EUR</button>|<button
+          class="button currencyBtn" onclick="convertPrices('USD', this)">USD</button>
+      </p>
+      <a href="https://www.dropbox.com/scl/fi/sufp65tr5y7if8j8y80qi/price_danilov_01-02-2023.xls?rlkey=f0dx0dhxyzszyfx7xq8cbak3g&dl=0"
+        target="_blank"><button class="button download__button"><svg class="icon download__icon" width="24" height="24">
+            <use href="../../images/icons.svg#icon-download"></use>
+          </svg>Відкрити
+          прайс</button></a>
+    </div>
 
     <section class="section products">
       <h2 class="section__main-title">Флагштоки вуличні</h2>
       <div class="container">
 
 
+        <div style="display: flex; justify-content: space-between; width: 100%;">
+
+
+          <div class="select__box">
+
+            <!-- filter -->
+            <div class="filter__box">
+              <div class="filter__sortBy">
+                <svg class="icon" style="fill:grey;" width="24" height="24">
+                  <use href="../../images/icons.svg#icon-filter"></use>
+                </svg>
+                <p class="filter__sortBy-text">Фільтр</p>
+              </div>
+
+              <div id="mobFilter" class="select">
+                <select id="filterSelect" onchange="filterSelection(this.value)" class="products-groupes-switcher">
+                  <option value="all" selected="selected">Усі</option>
+                  <option value="sets">Комплекти</option>
+                  <option value="stands">Підставки</option>
+                  <option value="poles">Древка</option>
+                  <option value="pommels">Навершя</option>
+                </select>
+                <span class="focus"></span>
+              </div>
+            </div>
+
+
+            <!-- sorter -->
+            <div class="sorter__box">
+              <div class="sorter__sortBy">
+                <p class="sorter__sortBy-text">Сортування</p>
+                <svg class="icon" style="fill:grey;" width="24" height="24">
+                  <use href="../../images/icons.svg#icon-sort"></use>
+                </svg>
+              </div>
+              <div id="mobSorter" class="select">
+                <select id="sorterSelect" class="products-groupes-switcher" onchange="sortBy(this.value)">
+                  <option value="Найменуванню" selected="selected">Найменуванню</option>
+                  <option value="by type">Типу</option>
+                  <option value="min-price">Зростанню ціни</option>
+                  <option value="max-price">Зменшенню ціни</option>
+                </select>
+                <span class="focus"></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        </br>
+
         <!-- products -->
 
-        <ul id="flagpolesForStreet" class="products__list list"></ul>
+        <ul class="products__list list">
+          <li id="ID02010001" class="products__item sets">
+            <div class="products__btnContainer">
+              <button id="heart_02010001" class="heart"
+                onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#s01" class="info__link">i</a>
+              <button id="cart_02010001" class="cart"
+                onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/street/icons/flagpole_street_alum.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/street/flagpole_street_alum.jpg'; this.style='cursor: zoom-out; position: fixed; z-index:100; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/street/icons/flagpole_street_alum.jpg'; this.style='width: 150px; min-width: 150px; cursor: zoom-in;'" />
+            <div class="products__item-description">
+              <h4>Флагшток метал 6 м </h4>
+              <p class="materials">алюміній/нерж. сталь</p>
+              <p>ДхШхВ: 6000х60х60</p>
+              <p class="price">400</p>
+              <div class="info" id="s01" hidden="until-found" onclick="this.hidden='until-found'"
+                style="position: fixed; z-index:1000; top:50%; left:50%; margin: -250px 0 0 -200px; width: 400px; border-radius: 4px; background: #e7e7e7; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);">
+                <p class="products__code main"></p>
+                <p class="info__description">Флагшток вуличний 6 м, вага - від 15 кг. В комплектацію входить: флагшток,
+                  кнехт/ролики, трос для підняття
+                  прапора, анкерна закладна для встановлення. Додатково може оснащуватись шнеком для монтажу
+                  в грунт або бетонною тумбою для швидкого встановлення і транспортування.</p>
+                <img src="../../images/products/flagpoles/street/flagpole_street_alum.jpg" alt="Підставка для прапору"
+                  width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
+              </div>
+            </div>
+          </li>
+          <li id="ID02010002" class="products__item sets">
+            <div class="products__btnContainer">
+              <button id="heart_02010002" class="heart"
+                onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#s02" class="info__link">i</a>
+              <button id="cart_02010002" class="cart"
+                onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/street/icons/flagpole_street_alum.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/street/flagpole_street_alum.jpg'; this.style='cursor: zoom-out; position: fixed; z-index:100; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/street/icons/flagpole_street_alum.jpg'; this.style='width: 150px; min-width: 150px; cursor: zoom-in;'" />
+            <div class="products__item-description">
+              <h4>Флагшток метал 8 м </h4>
+              <p class="materials">алюміній/нерж. сталь</p>
+              <p>ДхШхВ: 8000х70х70</p>
+              <p class="price">500</p>
+              <div class="info" id="s02" hidden="until-found" onclick="this.hidden='until-found'"
+                style="position: fixed; z-index:1000; top:50%; left:50%; margin: -250px 0 0 -200px; width: 400px; border-radius: 4px; background: #e7e7e7; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);">
+                <p class="products__code main"></p>
+                <p class="info__description">Флагшток вуличний 8 м, вага - від 20 кг. В комплектацію входить: флагшток,
+                  кнехт/ролики, трос для підняття
+                  прапора, анкерна закладна для встановлення. Додатково може оснащуватись шнеком для монтажу
+                  в грунт або бетонною тумбою для швидкого встановлення і транспортування.</p>
+                <img src="../../images/products/flagpoles/street/flagpole_street_alum.jpg" alt="Підставка для прапору"
+                  width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
+              </div>
+            </div>
+          </li>
+          <li id="ID02010003" class="products__item sets">
+            <div class="products__btnContainer">
+              <button id="heart_02010003" class="heart"
+                onclick="convertPrices('UAH', uahButton), toggleFavorites(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-heart"></use>
+                </svg></button>
+              <a href="#s03" class="info__link">i</a>
+              <button id="cart_02010003" class="cart"
+                onclick="convertPrices('UAH', uahButton), toggleOrdered(this.id)"><svg width="24" height="24">
+                  <use href="../../images/icons.svg#icon-cart"></use>
+                </svg></button>
+            </div>
+            <img title='click+click' src="../../images/products/flagpoles/street/icons/flagpole_street_alum.jpg"
+              alt="Підставка для прапору" style="width: 150px; cursor: zoom-in;"
+              ondblclick="this.title='click'; this.src='../../images/products/flagpoles/street/flagpole_street_alum.jpg'; this.style='cursor: zoom-out; position: fixed; z-index:100; top:50%; left:50%; margin: -350px 0 0 -350px; width: 700px; height: 700px; border-radius: 6px; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);'"
+              onclick="this.title='click+click'; this.src='../../images/products/flagpoles/street/icons/flagpole_street_alum.jpg'; this.style='width: 150px; min-width: 150px; cursor: zoom-in;'" />
+            <div class="products__item-description">
+              <h4>Флагшток метал 10 м </h4>
+              <p class="materials">алюміній/нерж. сталь</p>
+              <p>ДхШхВ: 10000х70х70</p>
+              <p class="price">600</p>
+              <div class="info" id="s03" hidden="until-found" onclick="this.hidden='until-found'"
+                style="position: fixed; z-index:1000; top:50%; left:50%; margin: -250px 0 0 -200px; width: 400px; border-radius: 4px; background: #e7e7e7; box-shadow: 0px 200px 600px rgba(0, 0, 0, 0.36), 0px 200px 200px rgba(0, 0, 0, 0.42), 0px 400px 200px rgba(0, 0, 0, 0.6);">
+                <p class="products__code main"></p>
+                <p class="info__description">Флагшток вуличний 10 м, вага - від 25 кг. В комплектацію входить: флагшток,
+                  кнехт/ролики, трос для підняття
+                  прапора, анкерна закладна для встановлення. Додатково може оснащуватись шнеком для монтажу
+                  в грунт або бетонною тумбою для швидкого встановлення і транспортування.</p>
+                <img src="../../images/products/flagpoles/street/flagpole_street_alum.jpg" alt="Підставка для прапору"
+                  width="100%" style="border: solid 1px #e7e7e7; border-top: none; border-radius: 4px; " />
+              </div>
+            </div>
+          </li>
+
+
+        </ul>
 
       </div>
     </section>
+
 
 
   </main>
@@ -254,10 +419,15 @@
 
 
 
-  <script src="../../js/putProducts.js"></script>
+  <!-- <script src="../../js/putProducts.js"></script> -->
+  <script>const uahButton = document.getElementById("uahBtn")</script>
+  <script src="../../js/menu.js"></script>
   <script src="../../js/filter.js"></script>
   <script>filterSelection('all', 'products');</script>
   <script src="../../js/marked.js"></script>
+  <script src="../../js/sortBy.js"></script>
+  <script src="../../js/convertPrices.js"></script>
+  <script src="../../js/addCode.js"></script>
 </body>
 
 </html>
