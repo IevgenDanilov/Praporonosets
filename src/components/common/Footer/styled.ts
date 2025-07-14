@@ -1,0 +1,43 @@
+import styled from "styled-components";
+
+export const Footer = styled.footer`
+  background-color: var(--secondary-background-color);
+  padding: 10px;
+
+& .footer-wrapper {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Примесь логотипа в футере */
+
+& .logo__footer-mix {
+  display: inline-block;
+  margin: 0 0 20px 0;
+}
+
+/* Модификатор логотипа в футере */
+
+& .logo__footer--inverse {
+  color: var(--primary-white-color);
+}
+
+@media screen and (min-width: 768px) {
+  & .footer-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  & .footer-wrapper {
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+`

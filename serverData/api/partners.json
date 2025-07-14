@@ -1,0 +1,181 @@
+{ "list": [
+    {
+        "id":1,
+        "img": "images/clients/ministry_of_defence_of_ukraine.png",
+        "altImg": "Міністерство Оборони України",
+        "title": "Міністерство Оборони України",
+        "department": "державна установа",
+        "typePartner": "government department"
+    },
+    {
+        "id": 2,
+        "img": "images/clients/court_security_service.jpg",
+        "altImg": "Служба судової охорони",
+        "title": "Служба судової охорони",
+        "department": "державна установа",
+        "typePartner": "government department"
+    },
+    {
+        "id": 3,
+        "img": "images/clients/department_of_the_state_guard.jpg",
+        "altImg": "Управління державної охорони України",
+        "title": "Управління державної охорони України",
+        "department": "державна установа",
+        "typePartner": "government department"
+    },
+    {
+        "id": 4,
+        "img": "images/clients/national_university_of_civil_defence_of_ukraine.png",
+        "altImg": "Національний університет цивільного захисту України",
+        "title": "Національний університет цивільного захисту України",
+        "department": "заклад вищої освіти",
+        "typePartner": "government department"
+
+    },
+    {
+        "id": 5,
+        "img": "images/clients/embassy_of_denmark_in_ukraine.png",
+        "altImg": "Посольство Королівства Данія в Україні",
+        "title": "Посольство Королівства Данія в Україні",
+        "department": "державна установа",
+        "typePartner": "government department"
+    },
+    {
+        "id": 6,
+        "img": "images/clients/embassy_of_turkey.png",
+        "altImg": "Посольство Турецької Республіки в Україні",
+        "title": "Посольство Турецької Республіки в Україні",
+        "department": "державна установа",
+        "typePartner":  "government department"
+    },
+    {
+        "id": 7,
+        "img": "images/clients/netherlands_embassy_in_ukraine.jpg",
+        "altImg": "Посольство Нідерландів в Україні",
+        "title": "Посольство Нідерландів в Україні",
+        "department": "державна установа",
+        "typePartner":  "government department"
+    },
+    {
+        "id": 8,
+        "img": "images/clients/Ukrainian_National_Police.png",
+        "altImg": "Центр обслуговування Нацполіції",
+        "title": "Центр обслуговування Нацполіції",
+        "department": "державна установа",
+        "typePartner":  "government department"
+    },
+    {
+        "id": 9,
+        "img": "images/clients/energoatom.jpg",
+        "altImg": "Енергоатом",
+        "title": "Енергоатом",
+        "department": "державне підприємство",
+        "typePartner": "entertainment company"
+    },
+    {
+        "id": 10,
+        "img": "images/clients/toyota_ukraine.jpg",
+        "altImg": "Тойота Україна",
+        "title": "Тойота Україна",
+        "department": "автомобільний салон",
+        "typePartner": "entertainment company"
+    },
+    {
+        "id": 11,
+        "img": "images/clients/royal_palace.jpg",
+        "altImg": "Royal Palace",
+        "title": "Royal Palace",
+        "department": "готель класу люкс",
+        "typePartner": "entertainment company"
+    },
+    {
+        "id": 12,
+        "img": "images/clients/carlsberg_ukraine.jpg",
+        "altImg": "Карлсберг Україна",
+        "title": "Карлсберг Україна",
+        "department": "виробник пива",
+        "typePartner": "entertainment company"
+
+    },
+    {
+        "id": 13,
+        "img": "images/clients/gradinvest.jpg",
+        "altImg": "Град Інвест",
+        "title": "Град Інвест",
+        "department": "юридична компанія",
+        "typePartner": "entertainment company"
+    },
+    {
+        "id": 14,
+        "img": "images/clients/spv.jpg",
+        "altImg": "СПВ Компані Лтд",
+        "title": "СПВ Компані Лтд",
+        "department": "виробнича компанія",
+        "typePartner": "entertainment company"
+    },
+    {
+        "id": 15,
+        "img": "images/clients/investbud.png",
+        "altImg": "ЖИТЛОIНВЕСТБУД УКБ",
+        "title": "ЖИТЛОIНВЕСТБУД УКБ",
+        "department": "виробник пива",
+        "typePartner": "entertainment company"
+    },
+    {
+        "id": 16,
+        "img": "images/clients/newacropolis.jpg",
+        "altImg": "Новий Акрополь",
+        "title": "Новий Акрополь",
+        "department": "громадська організіція",
+        "typePartner": "organization"
+    },
+    {
+        "id": 17,
+        "img": "images/clients/international_police_cooperation_department.png",
+        "altImg": "Міжнародна організація кримінальної поліції",
+        "title": "Інтерпол",
+        "department": "міжнародна організіція",
+        "typePartner": "organization"
+    },
+    {
+        "id": 18,
+        "img": "images/clients/ukraine_without_garbage.jpg",
+        "altImg": "Україна без сміття",
+        "title": "Україна без сміття",
+        "department": "громадська організація",
+        "typePartner": "organization"
+    },
+    {
+        "id": 19,
+        "img": "images/clients/kahl.jpg",
+        "altImg": "КАХЛ",
+        "title": "КАХЛ",
+        "department": "спортивна організація",
+        "typePartner": "organization"
+    },
+    {
+        "id": 20,
+        "img": "images/clients/invictus_games.jpg",
+        "altImg": "Ігри нескорених",
+        "title": "Ігри нескорених",
+        "department": "громадська організіція",
+        "typePartner": "organization"
+    },
+    {
+        "id": 21,
+        "img": "images/clients/edcamp_ukraine.png",
+        "altImg": "ЕдКемп Україна",
+        "title": "ЕдКемп Україна",
+        "department": "громадська організіція",
+        "typePartner": "organization"
+    },
+    {
+        "id": 22,
+        "img": "images/clients/deutsche_gesellschaft_für_internationale_zusammenarbeit.jpg",
+        "altImg": "Німецьке товариство міжнародного співробітництва",
+        "title": "GIZ",
+        "department": "міжнародна організіція",
+        "typePartner": "organization"
+    }
+]}
+                

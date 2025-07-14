@@ -1,0 +1,58 @@
+import styled from "styled-components";
+
+export const Home = styled.div`
+& .hero {
+  background-color: var(--secondary-background-color);
+  padding-bottom: 118px;
+  padding-top: 118px;
+  margin: 0 auto;
+}
+
+& .hero__content {
+  margin: 0 auto;
+  width: 360px;
+}
+
+& .overlay {
+  margin: 0 auto;
+  min-width: 320px;
+  height: 300px;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/bg-flags.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+// 768px+
+@media screen and (min-width: 768px) {
+  & .overlay {
+    min-width: 768px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/bg-flags.jpg');
+  }
+}
+
+// 1200px+
+@media screen and (min-width: 1200px) {
+  & .hero {
+    padding-bottom: 150px;
+    padding-top: 150px;
+  }
+
+  & .hero__content {
+    width: 700px;
+  }
+
+  & .overlay {
+    min-width: 1200px;
+    height: 500px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/bg-flags.jpg');
+  }
+}
+`
+
+export const ClientItem = styled.div`
+  height: 200px;
+`
